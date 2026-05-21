@@ -1,0 +1,52 @@
+name: Daily Box Office Update
+
+on:
+  # Runs Monday–Friday at noon Eastern Time (16:00 UTC during EDT / 17:00 UTC during EST)
+  # Adjust the hour if the clocks change — EDT is UTC-4, EST is UTC-5
+  schedule:
+    - cron: "0 16 * * 1-5"
+
+  # Adds a "Run workflow" button in the GitHub Actions tab for manual triggers
+  workflow_dispatch:
+
+# Required so the pipeline can commit data.json back to the repo
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Check out the repo ──────────────────────────────────
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 2. Set up Python ───────────────────────────────────────
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # ── 3. Install dependencies ────────────────────────────────
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      # ── 4. Run the scraper ─────────────────────────────────────
+      - name: Scrape BOM + Metacritic, update data.json
+        run: python scripts/update_data.py
+
+      # ── 5. Commit updated data.json back to the repo ───────────
+      # The dashboard's GitHub Pages site will auto-refresh with the new data.
+      - name: Commit updated data.json
+        run: |
+          git config user.name  "Movie Challenge Bot"
+          git config user.email "bot@github-actions.com"
+          git add data.json
+          # Only commit if data.json actually changed
+          git diff --staged --quiet \
+            && echo "No changes to data.json — skipping commit" \
+            || git commit -m "chore: daily update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
