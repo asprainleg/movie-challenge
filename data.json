@@ -49,6 +49,25 @@
     { "id": "dogstars",      "title": "The Dog Stars",                                "releaseDate": "2026-08-28", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-dog-stars"                                },
     { "id": "findingemily",  "title": "Finding Emily",                                "releaseDate": "2026-08-28", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "finding-emily"                                }
   ],
-  "participants": [],
+  "participants": [
+    {
+      "id": "abie",
+      "name": "Abie",
+      "picks": ["mando","back","disc","minions","moana","odyssey","spiderman","toy5"],
+      "theaterBonuses": []
+    },
+    {
+      "id": "josh_d",
+      "name": "Josh D",
+      "picks": ["back","pressure","disc","toy5","odyssey","spiderman","minions","mando"],
+      "theaterBonuses": []
+    },
+    {
+      "id": "taylor",
+      "name": "Taylor",
+      "picks": ["minions","spiderman","mando","supergirl","dogstars","odyssey","toy5","moana"],
+      "theaterBonuses": []
+    }
+  ],
   "weeklySnapshots": []
 }
