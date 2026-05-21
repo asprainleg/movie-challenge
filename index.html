@@ -94,6 +94,15 @@
     // ═══════════════════════════════════════════════════════════════
     //  SCORING ENGINE
     // ═══════════════════════════════════════════════════════════════
+    // Today's date in YYYY-MM-DD (local time, not UTC)
+    const TODAY = (() => {
+      const d = new Date();
+      return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+    })();
+    // A movie's Metacritic score is only real once it has released
+    const hasReleased   = (movie) => movie.releaseDate <= TODAY;
+    const effectiveMeta = (movie) => hasReleased(movie) ? movie.metacritic : null;
+
     const fmtGross = (n) => {
       if (n >= 1e9) return `$${(n/1e9).toFixed(2)}B`;
       if (n >= 1e6) return `$${(n/1e6).toFixed(1)}M`;
@@ -153,7 +162,7 @@
       if (!movie || !p) return null;
       const bo        = boPoints(movie.gross);
       const milestone = milestoneBonus(movie.gross);
-      const meta      = metacriticBonus(movie.metacritic);
+      const meta      = metacriticBonus(effectiveMeta(movie));
       const unique    = uniquenessBonus(movieId, participants);
       const theater   = p.theaterBonuses.includes(movieId) ? 50 : 0;
       const subtotal  = bo + milestone + (meta != null ? meta : 0) + unique + theater;
@@ -288,9 +297,79 @@
     }
 
     // ═══════════════════════════════════════════════════════════════
+    //  RULES MODAL
+    // ═══════════════════════════════════════════════════════════════
+    function RulesModal({ onClose }) {
+      const Section = ({ title, children }) => (
+        <div style={{ marginBottom:22 }}>
+          <div style={{ fontSize:10, fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", color:C.textDim, marginBottom:8 }}>{title}</div>
+          {children}
+        </div>
+      );
+      const Row = ({ left, right, highlight }) => (
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", padding:"5px 10px", borderBottom:`1px solid ${C.borderLight}` }}>
+          <span style={{ fontSize:13, color:C.textSub }}>{left}</span>
+          <span style={{ fontSize:13, fontWeight:700, color: highlight || C.text }}>{right}</span>
+        </div>
+      );
+      return (
+        <div
+          onClick={onClose}
+          style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.65)", zIndex:200, display:"flex", alignItems:"center", justifyContent:"center", padding:24 }}
+        >
+          <div
+            onClick={e => e.stopPropagation()}
+            style={{ background:C.surface, border:`1px solid ${C.border}`, borderRadius:10, padding:28, maxWidth:520, width:"100%", maxHeight:"90vh", overflowY:"auto", boxShadow:"0 8px 40px rgba(0,0,0,0.6)" }}
+          >
+            <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:20 }}>
+              <span style={{ fontFamily:"Georgia,'Times New Roman',serif", fontSize:20, fontWeight:700, color:C.text }}>Scoring Rules</span>
+              <button onClick={onClose} style={{ background:"none", border:"none", color:C.textDim, cursor:"pointer", fontSize:18, lineHeight:1, padding:"0 4px" }}>✕</button>
+            </div>
+
+            <Section title="Box Office  ($1M = 1 point)">
+              <div style={{ padding:"8px 10px", background:C.surfaceHigh, borderRadius:6, fontSize:13, color:C.textSub }}>
+                Domestic gross ÷ $1,000,000, rounded down. Updated daily.
+              </div>
+            </Section>
+
+            <Section title="Milestone Bonuses  (cumulative, max +100)">
+              {[["$50M gross","＋25 pts",C.gold],["$100M gross","＋50 pts",C.gold],["$150M gross","＋75 pts",C.gold],["$200M gross","＋100 pts",C.goldLight]].map(([l,r,c]) => (
+                <Row key={l} left={l} right={r} highlight={c} />
+              ))}
+            </Section>
+
+            <Section title="Metacritic Score Bonus  (locks Sept 8, 2026)">
+              {[["90 – 100","＋100 pts",C.greenLight],["80 – 89","＋50 pts",C.greenLight],["70 – 79","＋40 pts","#5ABF5A"],["60 – 69","＋25 pts",C.gold],["50 – 59","＋20 pts",C.gold],["40 – 49","＋10 pts",C.textSub],["20 – 39","0 pts",C.textDim],["0 – 19","−5 pts",C.red]].map(([l,r,c]) => (
+                <Row key={l} left={l} right={r} highlight={c} />
+              ))}
+              <div style={{ padding:"6px 10px", fontSize:11, color:C.textDim }}>
+                Scores only count after a film's release date. All scores officially lock on <span style={{ color:C.textSub }}>September 8, 2026</span>.
+              </div>
+            </Section>
+
+            <Section title="Uniqueness Bonus  (auto-calculated)">
+              {[["Only you picked it","＋50 pts","#A855F7"],["2–3 people picked it","＋25 pts","#C084FC"],["4+ people picked it","No bonus",C.textDim]].map(([l,r,c]) => (
+                <Row key={l} left={l} right={r} highlight={c} />
+              ))}
+            </Section>
+
+            <Section title="Theater Bonus">
+              <Row left="Saw the film in a theater" right="＋50 pts" highlight="#06B6D4" />
+              <div style={{ padding:"6px 10px", fontSize:11, color:C.textDim }}>Applies per film, only to participants who picked that film.</div>
+            </Section>
+
+            <div style={{ marginTop:4, padding:"10px 12px", background:C.surfaceHigh, borderRadius:6, fontSize:12, color:C.textSub, lineHeight:1.6 }}>
+              Each participant picks <strong style={{ color:C.text }}>8 films</strong>. All scoring categories stack. Competition window: <span style={{ color:C.text }}>{fmtDate(DATA.meta.start)} – {fmtDate(DATA.meta.end)}</span>.
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // ═══════════════════════════════════════════════════════════════
     //  NAV
     // ═══════════════════════════════════════════════════════════════
-    function Nav({ active, onNav }) {
+    function Nav({ active, onNav, onShowRules }) {
       const tabs = [
         { id:"leaderboard", label:"Leaderboard" },
         { id:"movies",      label:"Movies"      },
@@ -319,6 +398,19 @@
               <div style={{ fontSize:11, color:C.textDim, whiteSpace:"nowrap" }}>
                 Updated <span style={{ color:C.textSub }}>{DATA.meta.lastUpdated}</span>
               </div>
+              <button
+                onClick={onShowRules}
+                title="Scoring rules"
+                style={{
+                  width:28, height:28, borderRadius:"50%", border:`1px solid ${C.border}`,
+                  background:C.surfaceHigh, color:C.textSub, cursor:"pointer",
+                  fontSize:13, fontWeight:700, lineHeight:1, display:"flex",
+                  alignItems:"center", justifyContent:"center", flexShrink:0,
+                  transition:"all 0.15s",
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = C.surfaceHover; e.currentTarget.style.color = C.text; }}
+                onMouseLeave={e => { e.currentTarget.style.background = C.surfaceHigh; e.currentTarget.style.color = C.textSub; }}
+              >?</button>
             </div>
           </div>
         </header>
@@ -562,7 +654,8 @@
     //  MOVIES VIEW  (card grid + sortable list toggle)
     // ═══════════════════════════════════════════════════════════════
     function MovieCard({ movie, onClick }) {
-      const tier    = metacriticTier(movie.metacritic);
+      const meta    = effectiveMeta(movie);
+      const tier    = metacriticTier(meta);
       const pickers = pickCount(movie.id, DATA.participants);
       const uTier   = uniquenessTier(movie.id, DATA.participants);
       return (
@@ -586,7 +679,9 @@
             : <div style={{ height:8, background:C.surfaceHigh, borderRadius:4 }} />
           }
           <div style={{ display:"flex", justifyContent:"space-between", marginTop:10 }}>
-            <div style={{ fontSize:11, color:tier.color }}>{movie.metacritic != null ? `${movie.metacritic} Metacritic` : "Metacritic pending"}</div>
+            <div style={{ fontSize:11, color:tier.color }}>
+            {meta != null ? `${meta} Metacritic` : hasReleased(movie) ? "Score pending" : "Not yet released"}
+          </div>
             <div style={{ fontSize:11, color: uTier.bonus > 0 ? "#A855F7" : C.textDim }}>{pickers} picker{pickers !== 1 ? "s" : ""}{uTier.bonus > 0 ? ` · +${uTier.bonus}` : ""}</div>
           </div>
         </div>
@@ -637,8 +732,9 @@
           </div>
 
           {sorted.map((movie, i) => {
-            const tier   = metacriticTier(movie.metacritic);
-            const metaB  = metacriticBonus(movie.metacritic);
+            const meta    = effectiveMeta(movie);
+            const tier    = metacriticTier(meta);
+            const metaB   = metacriticBonus(meta);
             const pickers = pickCount(movie.id, DATA.participants);
             const uniqB  = uniquenessBonus(movie.id, DATA.participants);
             const milB   = milestoneBonus(movie.gross);
@@ -665,7 +761,7 @@
                   {milB > 0 ? `+${milB}` : "—"}
                 </div>
                 <div style={{ textAlign:"center", fontSize:13, color: tier.color }}>
-                  {movie.metacritic != null ? movie.metacritic : "—"}
+                  {meta != null ? meta : hasReleased(movie) ? "—" : <span style={{ fontSize:11, color:C.textDim }}>unreleased</span>}
                 </div>
                 <div style={{ textAlign:"center", fontSize:13, color: metaB > 0 ? C.greenLight : metaB < 0 ? C.red : C.textDim }}>
                   {metaB != null ? (metaB > 0 ? `+${metaB}` : metaB === 0 ? "0" : metaB) : "—"}
@@ -683,8 +779,11 @@
 
     function MoviesView({ onSelectMovie }) {
       const [viewMode, setViewMode] = useState("cards");
-      const released   = DATA.movies.filter(m => m.gross > 0);
-      const unreleased = DATA.movies.filter(m => m.gross === 0);
+      // Only show movies that at least one participant has drafted
+      const pickedIds  = useMemo(() => new Set(DATA.participants.flatMap(p => p.picks)), []);
+      const pickedMovies = DATA.movies.filter(m => pickedIds.has(m.id));
+      const released   = pickedMovies.filter(m => m.gross > 0);
+      const unreleased = pickedMovies.filter(m => m.gross === 0);
 
       const ToggleBtn = ({ id, label }) => (
         <button onClick={() => setViewMode(id)} style={{
@@ -699,9 +798,9 @@
         <div style={{ maxWidth:1100, margin:"0 auto", padding:"32px 24px" }}>
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-end", marginBottom:28 }}>
             <div>
-              <h1 style={{ fontFamily:"Georgia,'Times New Roman',serif", fontSize:28, fontWeight:700, color:C.text, margin:0 }}>All Films</h1>
+              <h1 style={{ fontFamily:"Georgia,'Times New Roman',serif", fontSize:28, fontWeight:700, color:C.text, margin:0 }}>Competition Films</h1>
               <p style={{ color:C.textSub, margin:"6px 0 0", fontSize:14 }}>
-                {released.length} released &middot; {unreleased.length} upcoming &middot; Window {fmtDate(DATA.meta.start)} &ndash; {fmtDate(DATA.meta.end)}
+                {pickedMovies.length} films in play &middot; {released.length} released &middot; {unreleased.length} upcoming
               </p>
             </div>
             <div style={{ display:"flex", gap:4 }}>
@@ -749,8 +848,9 @@
     function MovieDetailView({ movieId, scored, onBack }) {
       const movie  = DATA.movies.find(m => m.id === movieId);
       if (!movie) return null;
-      const tier   = metacriticTier(movie.metacritic);
-      const metaB  = metacriticBonus(movie.metacritic);
+      const meta   = effectiveMeta(movie);
+      const tier   = metacriticTier(meta);
+      const metaB  = metacriticBonus(meta);
       const milB   = milestoneBonus(movie.gross);
       const bo     = boPoints(movie.gross);
       const uTier  = uniquenessTier(movieId, DATA.participants);
@@ -781,10 +881,17 @@
 
             <div style={{ background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, padding:20 }}>
               <SectionTitle>Metacritic</SectionTitle>
-              {movie.metacritic != null ? (
+              {!hasReleased(movie) ? (
+                <>
+                  <div style={{ color:C.textDim, fontSize:14, marginTop:8 }}>Opens {fmtDate(movie.releaseDate)}</div>
+                  <div style={{ fontSize:11, color:C.textDim, marginTop:8 }}>
+                    Scores become available after release &middot; Lock on <span style={{ color:C.textSub }}>{DATA.meta.metacriticLockDate}</span>
+                  </div>
+                </>
+              ) : meta != null ? (
                 <>
                   <div style={{ display:"flex", alignItems:"baseline", gap:10, marginBottom:6 }}>
-                    <span style={{ fontFamily:"Georgia,serif", fontSize:40, fontWeight:700, color:tier.color }}>{movie.metacritic}</span>
+                    <span style={{ fontFamily:"Georgia,serif", fontSize:40, fontWeight:700, color:tier.color }}>{meta}</span>
                     <span style={{ fontSize:13, color:tier.color }}>{tier.label}</span>
                   </div>
                   <div style={{ fontSize:13, color: metaB > 0 ? C.greenLight : metaB < 0 ? C.red : C.textDim }}>
@@ -796,7 +903,7 @@
                 </>
               ) : (
                 <>
-                  <div style={{ color:C.textDim, fontSize:14, marginTop:8 }}>Score not yet entered</div>
+                  <div style={{ color:C.textDim, fontSize:14, marginTop:8 }}>Score not yet available</div>
                   <div style={{ fontSize:11, color:C.textDim, marginTop:8 }}>
                     Scores lock for competition on <span style={{ color:C.textSub }}>{DATA.meta.metacriticLockDate}</span>
                   </div>
@@ -1057,6 +1164,7 @@
       const [selectedPid, setSelectedPid] = useState(null);
       const [selectedMid, setSelectedMid] = useState(null);
       const [navActive,   setNavActive]   = useState("leaderboard");
+      const [showRules,   setShowRules]   = useState(false);
 
       const scored = useMemo(() =>
         DATA.participants
@@ -1083,7 +1191,8 @@
 
       return (
         <div style={{ minHeight:"100vh", background:C.bg, color:C.text }}>
-          <Nav active={navActive} onNav={navigate} />
+          <Nav active={navActive} onNav={navigate} onShowRules={() => setShowRules(true)} />
+          {showRules && <RulesModal onClose={() => setShowRules(false)} />}
 
           {view === "leaderboard" && (
             <LeaderboardView scored={scored} snapshots={DATA.weeklySnapshots} onSelectParticipant={openTeam} />
