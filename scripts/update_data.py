@@ -44,20 +44,65 @@ BOM_URL = "https://www.boxofficemojo.com/year/2026/"
 #  TITLE MATCHING  —  add aliases if BOM uses a different title
 # ─────────────────────────────────────────────────────────────────
 MOVIE_ALIASES = {
-    "mi8":          ["mission: impossible", "final reckoning", "mission impossible"],
-    "lilo":         ["lilo & stitch", "lilo and stitch"],
-    "karate":       ["karate kid: legends", "karate kid legends"],
-    "httyd":        ["how to train your dragon"],
-    "materialists": ["materialists"],
-    "28years":      ["28 years later"],
-    "f1":           ["f1"],
-    "m3gan2":       ["m3gan 2", "m3gan2", "megan 2.0", "m3gan 2.0"],
-    "jurassic":     ["jurassic world: rebirth", "jurassic world rebirth"],
-    "superman":     ["superman"],
-    "smurfs":       ["the smurfs", "smurfs"],
-    "ff":           ["fantastic four: first steps", "fantastic four first steps", "the fantastic four"],
-    "nakedgun":     ["the naked gun", "naked gun"],
-    "freakier":     ["freakier friday"],
+    # ── May 22 ──────────────────────────────────────────────────
+    "boosters":      ["i love boosters"],
+    "ladiesfirst":   ["ladies first"],
+    "passenger":     ["passenger"],
+    "mando":         ["star wars: the mandalorian", "the mandalorian & grogu", "mandalorian and grogu",
+                      "mandalorian & grogu", "mandalorian grogu"],
+    # ── May 29 ──────────────────────────────────────────────────
+    "back":          ["the backrooms", "backrooms"],
+    "breadwinner":   ["the breadwinner", "breadwinner"],
+    "pressure":      ["pressure"],
+    "tuner":         ["tuner"],
+    # ── June 5 ──────────────────────────────────────────────────
+    "motu":          ["masters of the universe"],
+    "powerballad":   ["power ballad"],
+    "scarymovie":    ["scary movie"],
+    # ── June 12 ─────────────────────────────────────────────────
+    "disc":          ["disclosure day"],
+    "furious":       ["the furious"],
+    # ── June 19 ─────────────────────────────────────────────────
+    "robinhood":     ["the death of robin hood", "death of robin hood"],
+    "leviticus":     ["leviticus"],
+    "toy5":          ["toy story 5"],
+    # ── June 26 ─────────────────────────────────────────────────
+    "invite":        ["the invite"],
+    "jackass":       ["jackass: best and last", "jackass best and last", "jackass"],
+    "littlebrother": ["little brother"],
+    "supergirl":     ["supergirl: woman of tomorrow", "supergirl woman of tomorrow", "supergirl"],
+    # ── July 1 ──────────────────────────────────────────────────
+    "minions":       ["minions & monsters", "minions and monsters"],
+    # ── July 3 ──────────────────────────────────────────────────
+    "youngwash":     ["young washington"],
+    # ── July 10 ─────────────────────────────────────────────────
+    "evildead":      ["evil dead burn", "evil dead: burn"],
+    "gaildaughtry":  ["gail daughtry and the celebrity sex pass", "gail daughtry"],
+    "moana":         ["moana"],
+    # ── July 17 ─────────────────────────────────────────────────
+    "odyssey":       ["the odyssey", "odyssey"],
+    # ── July 24 ─────────────────────────────────────────────────
+    "hours72":       ["72 hours"],
+    "dink":          ["the dink"],
+    # ── July 31 ─────────────────────────────────────────────────
+    "iwantyoursex":  ["i want your sex"],
+    "spiderman":     ["spider-man: brand new day", "spider-man brand new day",
+                      "spiderman brand new day", "spider man brand new day"],
+    # ── August 7 ────────────────────────────────────────────────
+    "icecream":      ["ice cream man"],
+    "supertroopers": ["super troopers 3", "super troopers3"],
+    "campmiasma":    ["teenage sex and death at camp miasma", "camp miasma"],
+    # ── August 14 ───────────────────────────────────────────────
+    "endofstreet":   ["the end of oak street", "end of oak street",
+                      "the end of the street", "end of the street"],
+    "pawpatrol":     ["paw patrol: the dino movie", "paw patrol the dino movie", "paw patrol"],
+    # ── August 21 ───────────────────────────────────────────────
+    "insidious":     ["insidious: out of the further", "insidious out of the further", "insidious"],
+    "spaweekend":    ["spa weekend"],
+    # ── August 28 ───────────────────────────────────────────────
+    "coyote":        ["coyote vs. acme", "coyote vs acme", "coyote versus acme"],
+    "dogstars":      ["the dog stars", "dog stars"],
+    "findingemily":  ["finding emily"],
 }
 
 
@@ -110,15 +155,20 @@ def fetch_box_office():
 
 def _match_title(title_lower):
     """Return movie_id for a title string, or None if no match."""
+    # Direct ID match (e.g. picks.csv uses short IDs like "mando", "toy5")
+    clean = title_lower.strip()
+    if clean in MOVIE_ALIASES:
+        return clean
+    # Alias substring match
     for movie_id, aliases in MOVIE_ALIASES.items():
         for alias in aliases:
-            if alias in title_lower or title_lower in alias:
+            if alias in clean or clean in alias:
                 return movie_id
     # Fuzzy fallback
     best, best_id = 0.0, None
     for movie_id, aliases in MOVIE_ALIASES.items():
         for alias in aliases:
-            score = SequenceMatcher(None, title_lower, alias).ratio()
+            score = SequenceMatcher(None, clean, alias).ratio()
             if score > best:
                 best, best_id = score, movie_id
     return best_id if best > 0.65 else None
