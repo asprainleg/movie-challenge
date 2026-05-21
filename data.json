@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "name": "Insights Summer Movie Challenge",
+    "season": "Summer 2026",
+    "lastUpdated": "May 22, 2026",
+    "start": "2026-05-22",
+    "end": "2026-09-07",
+    "metacriticLockDate": "September 8, 2026"
+  },
+  "movies": [
+    { "id": "mi8",          "title": "Mission: Impossible – The Final Reckoning", "releaseDate": "2026-05-23", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "mission-impossible-the-final-reckoning" },
+    { "id": "lilo",         "title": "Lilo & Stitch",                             "releaseDate": "2026-05-23", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "lilo-stitch-2026"                        },
+    { "id": "karate",       "title": "Karate Kid: Legends",                       "releaseDate": "2026-05-30", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "karate-kid-legends"                      },
+    { "id": "httyd",        "title": "How to Train Your Dragon",                  "releaseDate": "2026-06-13", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "how-to-train-your-dragon-2026"            },
+    { "id": "materialists", "title": "Materialists",                              "releaseDate": "2026-06-13", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "materialists"                            },
+    { "id": "28years",      "title": "28 Years Later",                            "releaseDate": "2026-06-20", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "28-years-later-2026"                     },
+    { "id": "f1",           "title": "F1",                                        "releaseDate": "2026-06-27", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "f1-2026"                                 },
+    { "id": "m3gan2",       "title": "M3GAN 2.0",                                 "releaseDate": "2026-06-27", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "m3gan-20"                                },
+    { "id": "jurassic",     "title": "Jurassic World: Rebirth",                   "releaseDate": "2026-07-02", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "jurassic-world-rebirth"                  },
+    { "id": "superman",     "title": "Superman",                                  "releaseDate": "2026-07-11", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "superman-2026"                           },
+    { "id": "smurfs",       "title": "The Smurfs",                                "releaseDate": "2026-07-18", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-smurfs-2026"                         },
+    { "id": "ff",           "title": "The Fantastic Four: First Steps",           "releaseDate": "2026-07-25", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-fantastic-four-first-steps"          },
+    { "id": "nakedgun",     "title": "The Naked Gun",                             "releaseDate": "2026-08-01", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-naked-gun-2026"                      },
+    { "id": "freakier",     "title": "Freakier Friday",                           "releaseDate": "2026-08-07", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "freakier-friday"                         }
+  ],
+  "participants": [],
+  "weeklySnapshots": []
+}

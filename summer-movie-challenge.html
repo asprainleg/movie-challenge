@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights Summer Movie Challenge</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { background: #0B1120; color: #EDE5D0; font-family: system-ui, -apple-system, sans-serif; }
+    button { font-family: inherit; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #0B1120; }
+    ::-webkit-scrollbar-thumb { background: #253555; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useMemo, useRef, useCallback } = React;
+
+    // DATA is loaded asynchronously from data.json — do not edit here.
+    // To update scores, edit data.json (done automatically by the pipeline).
+    // To update picks or theater bonuses, edit picks.csv / theater-bonuses.csv.
+    let DATA = null;
+
+    // ── placeholder so the page compiles before data loads ──────────
+    const _DATA_PLACEHOLDER = {
+      meta: {
+        name: "Insights Summer Movie Challenge",
+        season: "Summer 2026",
+        lastUpdated: "June 15, 2026",
+        start: "2026-05-22",
+        end:   "2026-09-07",
+        metacriticLockDate: "September 8, 2026",  // all metacritic scores lock on this date
+      },
+
+      // ── MOVIES ──────────────────────────────────────────────────
+      // gross: domestic box office in dollars (whole number)
+      // metacritic: integer score, or null if not yet entered
+      // metacriticLocked: true once score has been entered (all scores officially
+      //                   lock for the competition on September 8, 2026)
+      // metacriticSlug: used to auto-fetch score from metacritic.com/movie/[slug]/
+      //                 set to null to skip auto-fetch for that movie
+      movies: [
+        { id:"mi8",          title:"Mission: Impossible – The Final Reckoning", releaseDate:"2026-05-23", gross:198500000,  metacritic:78,   metacriticLocked:true,  metacriticSlug:"mission-impossible-the-final-reckoning"  },
+        { id:"lilo",         title:"Lilo & Stitch",                             releaseDate:"2026-05-23", gross:312400000,  metacritic:72,   metacriticLocked:true,  metacriticSlug:"lilo-stitch-2026"                        },
+        { id:"karate",       title:"Karate Kid: Legends",                       releaseDate:"2026-05-30", gross:47200000,   metacritic:58,   metacriticLocked:true,  metacriticSlug:"karate-kid-legends"                      },
+        { id:"httyd",        title:"How to Train Your Dragon",                  releaseDate:"2026-06-13", gross:38100000,   metacritic:65,   metacriticLocked:true,  metacriticSlug:"how-to-train-your-dragon-2026"            },
+        { id:"materialists", title:"Materialists",                              releaseDate:"2026-06-13", gross:12300000,   metacritic:82,   metacriticLocked:true,  metacriticSlug:"materialists"                            },
+        { id:"28years",      title:"28 Years Later",                            releaseDate:"2026-06-20", gross:0,          metacritic:null, metacriticLocked:false, metacriticSlug:"28-years-later-2026"                     },
+        { id:"f1",           title:"F1",                                        releaseDate:"2026-06-27", gross:0,          metacritic:null, metacriticLocked:false, metacriticSlug:"f1-2026"                                 },
+        { id:"m3gan2",       title:"M3GAN 2.0",                                 releaseDate:"2026-06-27", gross:0,          metacritic:null, metacriticLocked:false, metacriticSlug:"m3gan-20"                                },
+        { id:"jurassic",     title:"Jurassic World: Rebirth",                   releaseDate:"2026-07-02", gross:0,          metacritic:null, metacriticLocked:false, metacriticSlug:"jurassic-world-rebirth"                  },
+        { id:"superman",     title:"Superman",                                  releaseDate:"2026-07-11", gross:0,          metacritic:null, metacriticLocked:false, metacriticSlug:"superman-2026"                           },
+        { id:"smurfs",       title:"The Smurfs",                                releaseDate:"2026-07-18", gross:0,          metacritic:null, metacriticLocked:false, metacriticSlug:"the-smurfs-2026"                         },
+        { id:"ff",           title:"The Fantastic Four: First Steps",           releaseDate:"2026-07-25", gross:0,          metacritic:null, metacriticLocked:false, metacriticSlug:"the-fantastic-four-first-steps"          },
+        { id:"nakedgun",     title:"The Naked Gun",                             releaseDate:"2026-08-01", gross:0,          metacritic:null, metacriticLocked:false, metacriticSlug:"the-naked-gun-2026"                      },
+        { id:"freakier",     title:"Freakier Friday",                           releaseDate:"2026-08-07", gross:0,          metacritic:null, metacriticLocked:false, metacriticSlug:"freakier-friday"                         },
+      ],
+
+      // ── PARTICIPANTS ─────────────────────────────────────────────
+      // picks: exactly 8 movie IDs
+      // theaterBonuses: movie IDs the participant has seen in theaters (+50 each)
+      participants: [
+        { id:"alex",    name:"Alex Rivera",    picks:["mi8","lilo","httyd","superman","ff","jurassic","f1","freakier"],             theaterBonuses:["mi8","lilo"]  },
+        { id:"jordan",  name:"Jordan Kim",     picks:["mi8","httyd","superman","ff","f1","m3gan2","nakedgun","28years"],            theaterBonuses:["mi8"]         },
+        { id:"sam",     name:"Sam Patel",      picks:["lilo","karate","httyd","superman","jurassic","ff","freakier","smurfs"],      theaterBonuses:["lilo"]        },
+        { id:"morgan",  name:"Morgan Chen",    picks:["mi8","lilo","f1","superman","jurassic","ff","nakedgun","materialists"],      theaterBonuses:["mi8","lilo"]  },
+        { id:"casey",   name:"Casey Williams", picks:["lilo","httyd","f1","superman","ff","jurassic","smurfs","nakedgun"],          theaterBonuses:["lilo"]        },
+        { id:"taylor",  name:"Taylor Brooks",  picks:["mi8","httyd","28years","superman","jurassic","ff","materialists","m3gan2"],  theaterBonuses:["mi8"]         },
+        { id:"jamie",   name:"Jamie Foster",   picks:["lilo","karate","httyd","f1","superman","ff","freakier","nakedgun"],          theaterBonuses:["lilo"]        },
+        { id:"drew",    name:"Drew Martinez",  picks:["mi8","lilo","httyd","superman","ff","f1","nakedgun","28years"],              theaterBonuses:["mi8"]         },
+        { id:"riley",   name:"Riley Thompson", picks:["mi8","httyd","superman","ff","jurassic","materialists","freakier","smurfs"], theaterBonuses:["mi8"]         },
+        { id:"quinn",   name:"Quinn Nguyen",   picks:["lilo","httyd","superman","ff","f1","jurassic","28years","karate"],           theaterBonuses:["lilo"]        },
+        { id:"blake",   name:"Blake Anderson", picks:["mi8","lilo","httyd","f1","superman","jurassic","m3gan2","smurfs"],           theaterBonuses:["mi8","lilo"]  },
+        { id:"avery",   name:"Avery Johnson",  picks:["httyd","superman","ff","jurassic","f1","lilo","freakier","materialists"],    theaterBonuses:[]              },
+      ],
+
+      // ── WEEKLY SNAPSHOTS (for Trends view) ───────────────────────
+      // Append a new entry each week. scores = total pts per participant id.
+      weeklySnapshots: [
+        { week:1, label:"May 25", scores:{ alex:385, blake:340, morgan:340, drew:290, sam:205, jamie:205, quinn:205, casey:205, avery:155, taylor:135, riley:135, jordan:135 } },
+        { week:2, label:"Jun 1",  scores:{ alex:620, blake:610, morgan:615, drew:550, sam:390, jamie:390, quinn:390, casey:360, avery:320, taylor:295, riley:295, jordan:250 } },
+        { week:3, label:"Jun 8",  scores:{ alex:800, blake:790, morgan:795, drew:720, sam:540, jamie:540, quinn:540, casey:465, avery:465, taylor:400, riley:400, jordan:360 } },
+        { week:4, label:"Jun 15", scores:{ alex:928, blake:928, morgan:927, drew:878, sam:657, jamie:657, quinn:657, avery:577, casey:565, taylor:488, riley:488, jordan:426 } },
+      ],
+    }; // end _DATA_PLACEHOLDER (unused at runtime — real data comes from data.json)
+
+    // ═══════════════════════════════════════════════════════════════
+    //  SCORING ENGINE
+    // ═══════════════════════════════════════════════════════════════
+    const fmtGross = (n) => {
+      if (n >= 1e9) return `$${(n/1e9).toFixed(2)}B`;
+      if (n >= 1e6) return `$${(n/1e6).toFixed(1)}M`;
+      if (n > 0)    return `$${(n/1000).toFixed(0)}K`;
+      return "$0";
+    };
+    const fmtDate = (s) => {
+      const parts = s.split("-");
+      const months = ["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+      return `${months[+parts[1]]} ${+parts[2]}`;
+    };
+    const boPoints       = (gross) => Math.floor(gross / 1000000);
+    const milestoneBonus = (gross) => {
+      let b = 0;
+      if (gross >= 50000000)  b += 25;
+      if (gross >= 100000000) b += 25;
+      if (gross >= 150000000) b += 25;
+      if (gross >= 200000000) b += 25;
+      return b;
+    };
+    const metacriticBonus = (score) => {
+      if (score == null) return null;
+      if (score >= 90) return 100;
+      if (score >= 80) return 50;
+      if (score >= 70) return 40;
+      if (score >= 60) return 25;
+      if (score >= 50) return 20;
+      if (score >= 40) return 10;
+      if (score >= 20) return 0;
+      return -5;
+    };
+    const metacriticTier = (score) => {
+      if (score == null) return { label:"Pending",               color:"#4A6080" };
+      if (score >= 90)   return { label:"Universal Acclaim",     color:"#1A7A42" };
+      if (score >= 80)   return { label:"Generally Favorable",   color:"#2DAA68" };
+      if (score >= 70)   return { label:"Generally Favorable",   color:"#5ABF5A" };
+      if (score >= 60)   return { label:"Mixed or Average",      color:"#C89A28" };
+      if (score >= 50)   return { label:"Mixed or Average",      color:"#C89A28" };
+      if (score >= 40)   return { label:"Generally Unfavorable", color:"#BF1929" };
+      if (score >= 20)   return { label:"Generally Unfavorable", color:"#BF1929" };
+      return               { label:"Overwhelming Dislike",       color:"#8B0000" };
+    };
+    const pickCount       = (movieId, participants) => participants.filter(p => p.picks.includes(movieId)).length;
+    const uniquenessBonus = (movieId, participants) => {
+      const c = pickCount(movieId, participants);
+      return c === 1 ? 50 : c <= 3 ? 25 : 0;
+    };
+    const uniquenessTier  = (movieId, participants) => {
+      const c = pickCount(movieId, participants);
+      if (c === 1) return { label:"Sole Pick (+50)", bonus:50 };
+      if (c <= 3)  return { label:`${c} Pickers (+25)`, bonus:25 };
+      return { label:`${c} Pickers (no bonus)`, bonus:0 };
+    };
+    const scoreMovie = (movieId, participantId, { movies, participants }) => {
+      const movie = movies.find(m => m.id === movieId);
+      const p     = participants.find(x => x.id === participantId);
+      if (!movie || !p) return null;
+      const bo        = boPoints(movie.gross);
+      const milestone = milestoneBonus(movie.gross);
+      const meta      = metacriticBonus(movie.metacritic);
+      const unique    = uniquenessBonus(movieId, participants);
+      const theater   = p.theaterBonuses.includes(movieId) ? 50 : 0;
+      const subtotal  = bo + milestone + (meta != null ? meta : 0) + unique + theater;
+      return { movieId, title: movie.title, bo, milestone, meta, unique, theater, subtotal };
+    };
+    const scoreParticipant = (participantId, data) => {
+      const p = data.participants.find(x => x.id === participantId);
+      if (!p) return null;
+      const breakdown = p.picks.map(id => scoreMovie(id, participantId, data));
+      const total     = breakdown.reduce((s, b) => s + b.subtotal, 0);
+      return { ...p, breakdown, total };
+    };
+
+    // ═══════════════════════════════════════════════════════════════
+    //  DESIGN TOKENS
+    // ═══════════════════════════════════════════════════════════════
+    const C = {
+      bg:           "#0B1120",
+      surface:      "#141D2E",
+      surfaceHigh:  "#1C2B44",
+      surfaceHover: "#243352",
+      border:       "#253555",
+      borderLight:  "#1E2D48",
+      text:         "#EDE5D0",
+      textSub:      "#8090A8",
+      textDim:      "#4A6080",
+      red:          "#BF1929",
+      redLight:     "#E8304A",
+      gold:         "#C89A28",
+      goldLight:    "#F0C060",
+      green:        "#1A7A42",
+      greenLight:   "#2DAA68",
+    };
+    const PLAYER_COLORS = [
+      "#E84060","#4A8AD4","#2DAA68","#D4A017",
+      "#A855F7","#F97316","#06B6D4","#EC4899",
+      "#84CC16","#F59E0B","#94A3B8","#10B981",
+    ];
+
+    // ═══════════════════════════════════════════════════════════════
+    //  SHARED COMPONENTS
+    // ═══════════════════════════════════════════════════════════════
+    function Sparkline({ values, color, w, h }) {
+      w = w || 72; h = h || 24;
+      if (!values || values.length < 2) return null;
+      const min = Math.min(...values), max = Math.max(...values);
+      const rng = max - min || 1;
+      const pts = values.map((v, i) => [
+        (i / (values.length - 1)) * w,
+        h - 2 - ((v - min) / rng) * (h - 4),
+      ]);
+      const d = pts.map((p, i) => `${i === 0 ? "M" : "L"}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(" ");
+      return (
+        <svg width={w} height={h} style={{ display:"block", overflow:"visible" }}>
+          <path d={d} fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx={pts[pts.length-1][0]} cy={pts[pts.length-1][1]} r="2.5" fill={color} />
+        </svg>
+      );
+    }
+
+    function RankBadge({ rank }) {
+      const gold   = { bg:"#2A1F00", border:"#C89A28", text:"#F0C060" };
+      const silver = { bg:"#1A1E24", border:"#8090A8", text:"#B0C0D0" };
+      const bronze = { bg:"#1C1208", border:"#8B5E3C", text:"#C48A60" };
+      const plain  = { bg:C.surfaceHigh, border:C.border, text:C.textSub };
+      const s = rank === 1 ? gold : rank === 2 ? silver : rank === 3 ? bronze : plain;
+      return (
+        <div style={{
+          width:32, height:32, borderRadius:"50%", display:"flex", alignItems:"center",
+          justifyContent:"center", background:s.bg, border:`1.5px solid ${s.border}`,
+          flexShrink:0, fontSize:13, fontWeight:700, color:s.text, fontFamily:"Georgia,serif",
+        }}>{rank}</div>
+      );
+    }
+
+    function SectionTitle({ children }) {
+      return (
+        <div style={{ fontSize:11, fontWeight:700, letterSpacing:"0.14em", textTransform:"uppercase", color:C.textDim, marginBottom:12 }}>
+          {children}
+        </div>
+      );
+    }
+
+    function MilestoneBar({ gross }) {
+      const milestones = [50, 100, 150, 200];
+      const capM = 220;
+      const pct  = Math.min((gross / 1000000) / capM, 1);
+      return (
+        <div>
+          <div style={{ position:"relative", height:8, background:C.surfaceHigh, borderRadius:4 }}>
+            <div style={{ position:"absolute", left:0, top:0, height:"100%", width:`${pct*100}%`, background:`linear-gradient(90deg, ${C.green}, ${C.greenLight})`, borderRadius:4 }} />
+            {milestones.map(m => {
+              const x   = (m / capM) * 100;
+              const hit = gross >= m * 1000000;
+              return (
+                <div key={m} style={{
+                  position:"absolute", top:-2, left:`${x}%`, transform:"translateX(-50%)",
+                  width:12, height:12, borderRadius:"50%", zIndex:2,
+                  background: hit ? C.goldLight : C.surfaceHigh,
+                  border:`1.5px solid ${hit ? C.gold : C.border}`,
+                }} />
+              );
+            })}
+          </div>
+          <div style={{ display:"flex", justifyContent:"space-between", marginTop:10 }}>
+            {milestones.map(m => (
+              <div key={m} style={{ fontSize:10, color: gross >= m * 1000000 ? C.gold : C.textDim }}>${m}M</div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    // Sortable column header component
+    function SortHeader({ label, colKey, sortKey, sortDir, onSort, align }) {
+      const active = sortKey === colKey;
+      const center = align === "center";
+      return (
+        <div
+          onClick={() => onSort(colKey)}
+          style={{
+            display:"flex", alignItems:"center", gap:3, cursor:"pointer", userSelect:"none",
+            justifyContent: center ? "center" : "flex-start",
+          }}
+        >
+          <span style={{ fontSize:10, textTransform:"uppercase", letterSpacing:"0.08em", color: active ? C.textSub : C.textDim, transition:"color 0.1s" }}>{label}</span>
+          <span style={{ fontSize:9, color: active ? C.textSub : C.textDim, lineHeight:1 }}>
+            {active ? (sortDir === "desc" ? " ▼" : " ▲") : " ⇅"}
+          </span>
+        </div>
+      );
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  NAV
+    // ═══════════════════════════════════════════════════════════════
+    function Nav({ active, onNav }) {
+      const tabs = [
+        { id:"leaderboard", label:"Leaderboard" },
+        { id:"movies",      label:"Movies"      },
+        { id:"trends",      label:"Trends"      },
+      ];
+      return (
+        <header style={{ background:C.surface, borderBottom:`1px solid ${C.border}`, position:"sticky", top:0, zIndex:100 }}>
+          <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 24px", display:"flex", alignItems:"center", justifyContent:"space-between", height:60 }}>
+            <div style={{ display:"flex", alignItems:"baseline", gap:12 }}>
+              <span style={{ fontFamily:"Georgia,'Times New Roman',serif", fontWeight:700, fontSize:18, color:C.text, letterSpacing:"-0.01em" }}>
+                {DATA.meta.name}
+              </span>
+              <span style={{ fontSize:12, color:C.textDim, fontStyle:"italic" }}>{DATA.meta.season}</span>
+            </div>
+            <div style={{ display:"flex", alignItems:"center", gap:20 }}>
+              <div style={{ display:"flex", gap:2 }}>
+                {tabs.map(t => (
+                  <button key={t.id} onClick={() => onNav(t.id)} style={{
+                    padding:"6px 14px", borderRadius:4, border:"none", cursor:"pointer",
+                    fontSize:13, fontWeight:600, transition:"all 0.15s",
+                    background: active === t.id ? C.surfaceHigh : "transparent",
+                    color: active === t.id ? C.text : C.textSub,
+                  }}>{t.label}</button>
+                ))}
+              </div>
+              <div style={{ fontSize:11, color:C.textDim, whiteSpace:"nowrap" }}>
+                Updated <span style={{ color:C.textSub }}>{DATA.meta.lastUpdated}</span>
+              </div>
+            </div>
+          </div>
+        </header>
+      );
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  LEADERBOARD VIEW  (sortable columns)
+    // ═══════════════════════════════════════════════════════════════
+    function LeaderboardView({ scored, snapshots, onSelectParticipant }) {
+      const [sortKey, setSortKey] = useState("total");
+      const [sortDir, setSortDir] = useState("desc");
+
+      const handleSort = (key) => {
+        if (key === sortKey) setSortDir(d => d === "desc" ? "asc" : "desc");
+        else { setSortKey(key); setSortDir("desc"); }
+      };
+
+      // Attach derived sums so we can sort by them
+      const withSums = useMemo(() => scored.map((p, i) => ({
+        ...p,
+        rank: i + 1,   // rank is always by total score
+        boSum:     p.breakdown.reduce((s, b) => s + b.bo, 0),
+        mileSum:   p.breakdown.reduce((s, b) => s + b.milestone, 0),
+        metaSum:   p.breakdown.reduce((s, b) => s + (b.meta != null ? b.meta : 0), 0),
+        uniqSum:   p.breakdown.reduce((s, b) => s + b.unique, 0),
+        thtrSum:   p.breakdown.reduce((s, b) => s + b.theater, 0),
+      })), [scored]);
+
+      const display = useMemo(() => {
+        const keyMap = { total:"total", bo:"boSum", milestone:"mileSum", meta:"metaSum", unique:"uniqSum", theater:"thtrSum" };
+        const field  = keyMap[sortKey] || "total";
+        return [...withSums].sort((a, b) => sortDir === "desc" ? b[field] - a[field] : a[field] - b[field]);
+      }, [withSums, sortKey, sortDir]);
+
+      const cols = "40px 1fr 100px 50px 56px 60px 56px 64px 80px";
+
+      return (
+        <div style={{ maxWidth:1100, margin:"0 auto", padding:"32px 24px" }}>
+          <div style={{ marginBottom:28 }}>
+            <h1 style={{ fontFamily:"Georgia,'Times New Roman',serif", fontSize:28, fontWeight:700, color:C.text, margin:0, letterSpacing:"-0.02em" }}>Standings</h1>
+            <p style={{ color:C.textSub, margin:"6px 0 0", fontSize:14 }}>
+              {DATA.meta.season} &middot; Week {snapshots.length} &middot; Competition ends {fmtDate(DATA.meta.end)}
+            </p>
+          </div>
+
+          {/* Column headers */}
+          <div style={{ display:"grid", gridTemplateColumns:cols, gap:"0 10px", alignItems:"center", padding:"0 16px 8px" }}>
+            <div />
+            <div style={{ fontSize:11, color:C.textDim, textTransform:"uppercase", letterSpacing:"0.1em" }}>Participant</div>
+            <div style={{ textAlign:"center" }}>
+              <SortHeader label="Total" colKey="total" sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            </div>
+            <SortHeader label="B.O."     colKey="bo"       sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            <SortHeader label="Mile."    colKey="milestone" sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            <SortHeader label="Meta"     colKey="meta"      sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            <SortHeader label="Uniq."    colKey="unique"    sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            <SortHeader label="Theater"  colKey="theater"   sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            <div style={{ fontSize:10, color:C.textDim, textTransform:"uppercase", letterSpacing:"0.06em", textAlign:"right" }}>Trend</div>
+          </div>
+
+          {display.map((p) => {
+            const pi    = DATA.participants.findIndex(x => x.id === p.id);
+            const color = PLAYER_COLORS[pi % PLAYER_COLORS.length];
+            const spark = snapshots.map(s => s.scores[p.id] || 0);
+            return (
+              <div key={p.id}
+                onClick={() => onSelectParticipant(p.id)}
+                onMouseEnter={e => { e.currentTarget.style.background = C.surfaceHover; e.currentTarget.style.borderColor = C.border; }}
+                onMouseLeave={e => { e.currentTarget.style.background = C.surface; e.currentTarget.style.borderColor = C.borderLight; }}
+                style={{
+                  display:"grid", gridTemplateColumns:cols,
+                  gap:"0 10px", alignItems:"center", padding:"13px 16px",
+                  background:C.surface, borderRadius:8, marginBottom:6,
+                  border:`1px solid ${C.borderLight}`, cursor:"pointer", transition:"all 0.15s",
+                }}
+              >
+                <RankBadge rank={p.rank} />
+                <div>
+                  <div style={{ fontWeight:600, fontSize:15, color:C.text }}>{p.name}</div>
+                  <div style={{ fontSize:11, color:C.textDim, marginTop:2 }}>8 movies</div>
+                </div>
+                <div style={{ textAlign:"center" }}>
+                  <span style={{ fontFamily:"Georgia,serif", fontSize:22, fontWeight:700, color: p.rank <= 3 ? C.goldLight : C.text }}>{p.total}</span>
+                  <span style={{ fontSize:11, color:C.textDim, marginLeft:3 }}>pts</span>
+                </div>
+                <div style={{ textAlign:"center", fontSize:14, fontWeight:600, color:C.textSub }}>{p.boSum}</div>
+                <div style={{ textAlign:"center", fontSize:14, fontWeight:600, color: p.mileSum > 0 ? C.gold : C.textDim }}>{p.mileSum > 0 ? `+${p.mileSum}` : "—"}</div>
+                <div style={{ textAlign:"center", fontSize:14, fontWeight:600, color: p.metaSum > 0 ? C.greenLight : p.metaSum < 0 ? C.red : C.textDim }}>{p.metaSum !== 0 ? (p.metaSum > 0 ? `+${p.metaSum}` : p.metaSum) : "—"}</div>
+                <div style={{ textAlign:"center", fontSize:14, fontWeight:600, color: p.uniqSum > 0 ? "#A855F7" : C.textDim }}>{p.uniqSum > 0 ? `+${p.uniqSum}` : "—"}</div>
+                <div style={{ textAlign:"center", fontSize:14, fontWeight:600, color: p.thtrSum > 0 ? "#06B6D4" : C.textDim }}>{p.thtrSum > 0 ? `+${p.thtrSum}` : "—"}</div>
+                <div style={{ display:"flex", justifyContent:"flex-end" }}>
+                  <Sparkline values={spark} color={color} />
+                </div>
+              </div>
+            );
+          })}
+
+          <div style={{ marginTop:20, padding:"12px 16px", background:C.surface, borderRadius:8, border:`1px solid ${C.borderLight}`, display:"flex", gap:20, flexWrap:"wrap" }}>
+            {[["B.O.","Box office ($1M = 1pt)"],["Mile.","Milestone (+25 per $50M threshold, max +100)"],["Meta","Metacritic bonus — all scores lock September 8, 2026"],["Uniq.","Uniqueness: sole pick=+50, 2–3 pickers=+25"],["Theater","Seen in theaters (+50 each)"]].map(([k,v]) => (
+              <div key={k} style={{ display:"flex", gap:6, alignItems:"baseline" }}>
+                <span style={{ fontSize:11, fontWeight:700, color:C.textSub, textTransform:"uppercase", letterSpacing:"0.06em" }}>{k}</span>
+                <span style={{ fontSize:11, color:C.textDim }}>{v}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  TEAM DETAIL VIEW
+    // ═══════════════════════════════════════════════════════════════
+    function TeamView({ participantId, scored, onBack, onSelectMovie }) {
+      const p    = scored.find(x => x.id === participantId);
+      const rank = scored.findIndex(x => x.id === participantId) + 1;
+      if (!p) return null;
+
+      const [sortKey, setSortKey] = useState("subtotal");
+      const [sortDir, setSortDir] = useState("desc");
+
+      const handleSort = (key) => {
+        if (key === sortKey) setSortDir(d => d === "desc" ? "asc" : "desc");
+        else { setSortKey(key); setSortDir("desc"); }
+      };
+
+      const sortedBreakdown = useMemo(() => {
+        return [...p.breakdown].sort((a, b) => {
+          const av = a[sortKey] != null ? a[sortKey] : -999;
+          const bv = b[sortKey] != null ? b[sortKey] : -999;
+          return sortDir === "desc" ? bv - av : av - bv;
+        });
+      }, [p.breakdown, sortKey, sortDir]);
+
+      const boTotal   = p.breakdown.reduce((s, b) => s + b.bo, 0);
+      const mileTotal = p.breakdown.reduce((s, b) => s + b.milestone, 0);
+      const metaTotal = p.breakdown.reduce((s, b) => s + (b.meta != null ? b.meta : 0), 0);
+      const uniqTotal = p.breakdown.reduce((s, b) => s + b.unique, 0);
+      const thtrTotal = p.breakdown.reduce((s, b) => s + b.theater, 0);
+
+      const cols = "1fr 110px 58px 70px 70px 70px 70px 80px";
+
+      return (
+        <div style={{ maxWidth:1100, margin:"0 auto", padding:"32px 24px" }}>
+          <button onClick={onBack} style={{ background:"none", border:"none", color:C.textSub, cursor:"pointer", fontSize:13, padding:0, marginBottom:20 }}>
+            &larr; Back to Leaderboard
+          </button>
+
+          <div style={{ display:"flex", alignItems:"flex-start", justifyContent:"space-between", marginBottom:28, flexWrap:"wrap", gap:16 }}>
+            <div>
+              <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:4 }}>
+                <RankBadge rank={rank} />
+                <h1 style={{ fontFamily:"Georgia,'Times New Roman',serif", fontSize:28, fontWeight:700, color:C.text, margin:0 }}>{p.name}</h1>
+              </div>
+              <p style={{ color:C.textSub, margin:0, fontSize:14 }}>Rank #{rank} &middot; {DATA.meta.season}</p>
+            </div>
+            <div style={{ textAlign:"right" }}>
+              <div style={{ fontFamily:"Georgia,serif", fontSize:42, fontWeight:700, color:C.text, lineHeight:1 }}>{p.total}</div>
+              <div style={{ fontSize:13, color:C.textSub, marginTop:4 }}>total points</div>
+            </div>
+          </div>
+
+          {/* Summary strip */}
+          <div style={{ display:"flex", gap:1, marginBottom:28, background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, overflow:"hidden" }}>
+            {[["Box Office",boTotal,C.textSub],["Milestones",mileTotal,C.gold],["Metacritic",metaTotal,C.greenLight],["Uniqueness",uniqTotal,"#A855F7"],["Theater",thtrTotal,"#06B6D4"]].map(([label,val,col],i,arr) => (
+              <div key={label} style={{ flex:1, padding:"14px 16px", textAlign:"center", borderRight: i < arr.length-1 ? `1px solid ${C.borderLight}` : "none" }}>
+                <div style={{ fontSize:11, color:C.textDim, textTransform:"uppercase", letterSpacing:"0.08em", marginBottom:6 }}>{label}</div>
+                <div style={{ fontFamily:"Georgia,serif", fontSize:20, fontWeight:700, color: val > 0 ? col : val < 0 ? C.red : C.textDim }}>
+                  {val > 0 ? `+${val}` : val === 0 ? "—" : val}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <SectionTitle>Team Breakdown</SectionTitle>
+          <div style={{ background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, overflow:"hidden" }}>
+            <div style={{ display:"grid", gridTemplateColumns:cols, gap:"0 8px", padding:"10px 16px", borderBottom:`1px solid ${C.border}` }}>
+              <div style={{ fontSize:10, color:C.textDim, textTransform:"uppercase", letterSpacing:"0.08em" }}>Movie</div>
+              <div style={{ fontSize:10, color:C.textDim, textTransform:"uppercase", letterSpacing:"0.08em", textAlign:"center" }}>Status</div>
+              <SortHeader label="B.O."      colKey="bo"       sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+              <SortHeader label="Milestone" colKey="milestone" sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+              <SortHeader label="Metacritic" colKey="meta"    sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+              <SortHeader label="Uniqueness" colKey="unique"  sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+              <SortHeader label="Theater"   colKey="theater"  sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+              <SortHeader label="Total"     colKey="subtotal" sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            </div>
+
+            {sortedBreakdown.map((b, i) => {
+              const movie = DATA.movies.find(m => m.id === b.movieId);
+              return (
+                <div key={b.movieId}
+                  onClick={() => onSelectMovie(b.movieId)}
+                  onMouseEnter={e => e.currentTarget.style.background = C.surfaceHigh}
+                  onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+                  style={{
+                    display:"grid", gridTemplateColumns:cols,
+                    gap:"0 8px", padding:"13px 16px", cursor:"pointer", transition:"background 0.12s",
+                    borderBottom: i < sortedBreakdown.length - 1 ? `1px solid ${C.borderLight}` : "none",
+                  }}
+                >
+                  <div>
+                    <div style={{ fontSize:14, fontWeight:600, color:C.text }}>{b.title}</div>
+                    <div style={{ fontSize:11, color:C.textDim, marginTop:2 }}>{fmtDate(movie.releaseDate)}</div>
+                  </div>
+                  <div style={{ display:"flex", alignItems:"center", justifyContent:"center" }}>
+                    {movie.gross > 0
+                      ? <span style={{ fontSize:12, color:C.greenLight }}>{fmtGross(movie.gross)}</span>
+                      : <span style={{ fontSize:11, color:C.textDim }}>Opens {fmtDate(movie.releaseDate)}</span>
+                    }
+                  </div>
+                  <div style={{ textAlign:"center", fontSize:14, color: b.bo > 0 ? C.text : C.textDim }}>{b.bo > 0 ? b.bo : "—"}</div>
+                  <div style={{ textAlign:"center", fontSize:14, color: b.milestone > 0 ? C.gold : C.textDim }}>{b.milestone > 0 ? `+${b.milestone}` : "—"}</div>
+                  <div style={{ textAlign:"center", fontSize:14, color: b.meta > 0 ? C.greenLight : b.meta < 0 ? C.red : C.textDim }}>{b.meta != null ? (b.meta > 0 ? `+${b.meta}` : b.meta === 0 ? "0" : b.meta) : "—"}</div>
+                  <div style={{ textAlign:"center", fontSize:14, color: b.unique > 0 ? "#A855F7" : C.textDim }}>{b.unique > 0 ? `+${b.unique}` : "—"}</div>
+                  <div style={{ textAlign:"center", fontSize:14, color: b.theater > 0 ? "#06B6D4" : C.textDim }}>{b.theater > 0 ? "+50" : "—"}</div>
+                  <div style={{ textAlign:"center" }}>
+                    <span style={{ fontFamily:"Georgia,serif", fontSize:16, fontWeight:700, color: b.subtotal > 0 ? C.text : C.textDim }}>{b.subtotal}</span>
+                  </div>
+                </div>
+              );
+            })}
+
+            <div style={{ display:"grid", gridTemplateColumns:cols, gap:"0 8px", padding:"12px 16px", background:C.surfaceHigh, borderTop:`1px solid ${C.border}` }}>
+              <div style={{ fontSize:12, fontWeight:700, color:C.textSub, textTransform:"uppercase", letterSpacing:"0.08em" }}>Totals</div>
+              <div />
+              <div style={{ textAlign:"center", fontSize:14, fontWeight:700, color:C.text }}>{boTotal}</div>
+              <div style={{ textAlign:"center", fontSize:14, fontWeight:700, color:C.gold }}>+{mileTotal}</div>
+              <div style={{ textAlign:"center", fontSize:14, fontWeight:700, color:C.greenLight }}>{metaTotal > 0 ? `+${metaTotal}` : metaTotal}</div>
+              <div style={{ textAlign:"center", fontSize:14, fontWeight:700, color:"#A855F7" }}>+{uniqTotal}</div>
+              <div style={{ textAlign:"center", fontSize:14, fontWeight:700, color:"#06B6D4" }}>+{thtrTotal}</div>
+              <div style={{ textAlign:"center" }}>
+                <span style={{ fontFamily:"Georgia,serif", fontSize:18, fontWeight:700, color:C.text }}>{p.total}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  MOVIES VIEW  (card grid + sortable list toggle)
+    // ═══════════════════════════════════════════════════════════════
+    function MovieCard({ movie, onClick }) {
+      const tier    = metacriticTier(movie.metacritic);
+      const pickers = pickCount(movie.id, DATA.participants);
+      const uTier   = uniquenessTier(movie.id, DATA.participants);
+      return (
+        <div onClick={onClick}
+          onMouseEnter={e => { e.currentTarget.style.background = C.surfaceHover; e.currentTarget.style.borderColor = C.border; }}
+          onMouseLeave={e => { e.currentTarget.style.background = C.surface; e.currentTarget.style.borderColor = C.borderLight; }}
+          style={{ background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, padding:16, cursor:"pointer", transition:"all 0.15s" }}
+        >
+          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:10 }}>
+            <div style={{ flex:1, paddingRight:8 }}>
+              <div style={{ fontWeight:700, fontSize:14, color:C.text, lineHeight:1.3 }}>{movie.title}</div>
+              <div style={{ fontSize:11, color:C.textDim, marginTop:3 }}>{fmtDate(movie.releaseDate)}</div>
+            </div>
+            {movie.gross > 0
+              ? <div style={{ fontSize:13, fontWeight:700, color:C.greenLight, flexShrink:0 }}>{fmtGross(movie.gross)}</div>
+              : <div style={{ fontSize:11, color:C.textDim, flexShrink:0 }}>Coming Soon</div>
+            }
+          </div>
+          {movie.gross > 0
+            ? <MilestoneBar gross={movie.gross} />
+            : <div style={{ height:8, background:C.surfaceHigh, borderRadius:4 }} />
+          }
+          <div style={{ display:"flex", justifyContent:"space-between", marginTop:10 }}>
+            <div style={{ fontSize:11, color:tier.color }}>{movie.metacritic != null ? `${movie.metacritic} Metacritic` : "Metacritic pending"}</div>
+            <div style={{ fontSize:11, color: uTier.bonus > 0 ? "#A855F7" : C.textDim }}>{pickers} picker{pickers !== 1 ? "s" : ""}{uTier.bonus > 0 ? ` · +${uTier.bonus}` : ""}</div>
+          </div>
+        </div>
+      );
+    }
+
+    function MoviesListView({ movies, onSelectMovie }) {
+      const [sortKey, setSortKey] = useState("releaseDate");
+      const [sortDir, setSortDir] = useState("asc");
+
+      const handleSort = (key) => {
+        if (key === sortKey) setSortDir(d => d === "desc" ? "asc" : "desc");
+        else { setSortKey(key); setSortDir(key === "title" ? "asc" : "desc"); }
+      };
+
+      const sorted = useMemo(() => {
+        return [...movies].sort((a, b) => {
+          let av, bv;
+          switch (sortKey) {
+            case "title":       av = a.title; bv = b.title; break;
+            case "releaseDate": av = a.releaseDate; bv = b.releaseDate; break;
+            case "gross":       av = a.gross; bv = b.gross; break;
+            case "milestone":   av = milestoneBonus(a.gross); bv = milestoneBonus(b.gross); break;
+            case "metacritic":  av = a.metacritic ?? -1; bv = b.metacritic ?? -1; break;
+            case "metaBonus":   av = metacriticBonus(a.metacritic) ?? -1; bv = metacriticBonus(b.metacritic) ?? -1; break;
+            case "pickers":     av = pickCount(a.id, DATA.participants); bv = pickCount(b.id, DATA.participants); break;
+            case "unique":      av = uniquenessBonus(a.id, DATA.participants); bv = uniquenessBonus(b.id, DATA.participants); break;
+            default: av = a.releaseDate; bv = b.releaseDate;
+          }
+          if (typeof av === "string") return sortDir === "asc" ? av.localeCompare(bv) : bv.localeCompare(av);
+          return sortDir === "desc" ? bv - av : av - bv;
+        });
+      }, [movies, sortKey, sortDir]);
+
+      const cols = "1fr 80px 90px 70px 70px 70px 60px 60px";
+
+      return (
+        <div style={{ background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, overflow:"hidden" }}>
+          <div style={{ display:"grid", gridTemplateColumns:cols, gap:"0 8px", padding:"10px 16px", borderBottom:`1px solid ${C.border}` }}>
+            <SortHeader label="Title"      colKey="title"       sortKey={sortKey} sortDir={sortDir} onSort={handleSort} />
+            <SortHeader label="Release"    colKey="releaseDate" sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            <SortHeader label="Gross"      colKey="gross"       sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            <SortHeader label="Milestone"  colKey="milestone"   sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            <SortHeader label="Metacritic" colKey="metacritic"  sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            <SortHeader label="Meta Pts"   colKey="metaBonus"   sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            <SortHeader label="Pickers"    colKey="pickers"     sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+            <SortHeader label="Uniq. Pts"  colKey="unique"      sortKey={sortKey} sortDir={sortDir} onSort={handleSort} align="center" />
+          </div>
+
+          {sorted.map((movie, i) => {
+            const tier   = metacriticTier(movie.metacritic);
+            const metaB  = metacriticBonus(movie.metacritic);
+            const pickers = pickCount(movie.id, DATA.participants);
+            const uniqB  = uniquenessBonus(movie.id, DATA.participants);
+            const milB   = milestoneBonus(movie.gross);
+            return (
+              <div key={movie.id}
+                onClick={() => onSelectMovie(movie.id)}
+                onMouseEnter={e => e.currentTarget.style.background = C.surfaceHigh}
+                onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+                style={{
+                  display:"grid", gridTemplateColumns:cols, gap:"0 8px",
+                  padding:"12px 16px", cursor:"pointer", transition:"background 0.12s",
+                  borderBottom: i < sorted.length - 1 ? `1px solid ${C.borderLight}` : "none",
+                  alignItems:"center",
+                }}
+              >
+                <div>
+                  <div style={{ fontSize:14, fontWeight:600, color:C.text }}>{movie.title}</div>
+                </div>
+                <div style={{ textAlign:"center", fontSize:12, color:C.textSub }}>{fmtDate(movie.releaseDate)}</div>
+                <div style={{ textAlign:"center", fontSize:13, fontWeight:600, color: movie.gross > 0 ? C.greenLight : C.textDim }}>
+                  {movie.gross > 0 ? fmtGross(movie.gross) : "—"}
+                </div>
+                <div style={{ textAlign:"center", fontSize:13, color: milB > 0 ? C.gold : C.textDim }}>
+                  {milB > 0 ? `+${milB}` : "—"}
+                </div>
+                <div style={{ textAlign:"center", fontSize:13, color: tier.color }}>
+                  {movie.metacritic != null ? movie.metacritic : "—"}
+                </div>
+                <div style={{ textAlign:"center", fontSize:13, color: metaB > 0 ? C.greenLight : metaB < 0 ? C.red : C.textDim }}>
+                  {metaB != null ? (metaB > 0 ? `+${metaB}` : metaB === 0 ? "0" : metaB) : "—"}
+                </div>
+                <div style={{ textAlign:"center", fontSize:13, color:C.textSub }}>{pickers}</div>
+                <div style={{ textAlign:"center", fontSize:13, color: uniqB > 0 ? "#A855F7" : C.textDim }}>
+                  {uniqB > 0 ? `+${uniqB}` : "—"}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      );
+    }
+
+    function MoviesView({ onSelectMovie }) {
+      const [viewMode, setViewMode] = useState("cards");
+      const released   = DATA.movies.filter(m => m.gross > 0);
+      const unreleased = DATA.movies.filter(m => m.gross === 0);
+
+      const ToggleBtn = ({ id, label }) => (
+        <button onClick={() => setViewMode(id)} style={{
+          padding:"5px 12px", border:`1px solid ${viewMode === id ? C.border : C.borderLight}`,
+          borderRadius:4, cursor:"pointer", fontSize:12, fontWeight:600,
+          background: viewMode === id ? C.surfaceHigh : "transparent",
+          color: viewMode === id ? C.text : C.textDim, transition:"all 0.15s",
+        }}>{label}</button>
+      );
+
+      return (
+        <div style={{ maxWidth:1100, margin:"0 auto", padding:"32px 24px" }}>
+          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-end", marginBottom:28 }}>
+            <div>
+              <h1 style={{ fontFamily:"Georgia,'Times New Roman',serif", fontSize:28, fontWeight:700, color:C.text, margin:0 }}>All Films</h1>
+              <p style={{ color:C.textSub, margin:"6px 0 0", fontSize:14 }}>
+                {released.length} released &middot; {unreleased.length} upcoming &middot; Window {fmtDate(DATA.meta.start)} &ndash; {fmtDate(DATA.meta.end)}
+              </p>
+            </div>
+            <div style={{ display:"flex", gap:4 }}>
+              <ToggleBtn id="cards" label="⊞  Cards" />
+              <ToggleBtn id="list"  label="≡  List"  />
+            </div>
+          </div>
+
+          {viewMode === "cards" ? (
+            <>
+              {released.length > 0 && (
+                <>
+                  <SectionTitle>Now Earning</SectionTitle>
+                  <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))", gap:12, marginBottom:32 }}>
+                    {released.map(m => <MovieCard key={m.id} movie={m} onClick={() => onSelectMovie(m.id)} />)}
+                  </div>
+                </>
+              )}
+              <SectionTitle>Coming Soon</SectionTitle>
+              <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))", gap:12 }}>
+                {unreleased.map(m => <MovieCard key={m.id} movie={m} onClick={() => onSelectMovie(m.id)} />)}
+              </div>
+            </>
+          ) : (
+            <>
+              {released.length > 0 && (
+                <>
+                  <SectionTitle>Now Earning</SectionTitle>
+                  <div style={{ marginBottom:28 }}>
+                    <MoviesListView movies={released} onSelectMovie={onSelectMovie} />
+                  </div>
+                </>
+              )}
+              <SectionTitle>Coming Soon</SectionTitle>
+              <MoviesListView movies={unreleased} onSelectMovie={onSelectMovie} />
+            </>
+          )}
+        </div>
+      );
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  MOVIE DETAIL VIEW
+    // ═══════════════════════════════════════════════════════════════
+    function MovieDetailView({ movieId, scored, onBack }) {
+      const movie  = DATA.movies.find(m => m.id === movieId);
+      if (!movie) return null;
+      const tier   = metacriticTier(movie.metacritic);
+      const metaB  = metacriticBonus(movie.metacritic);
+      const milB   = milestoneBonus(movie.gross);
+      const bo     = boPoints(movie.gross);
+      const uTier  = uniquenessTier(movieId, DATA.participants);
+      const pickers = DATA.participants.filter(p => p.picks.includes(movieId));
+
+      return (
+        <div style={{ maxWidth:900, margin:"0 auto", padding:"32px 24px" }}>
+          <button onClick={onBack} style={{ background:"none", border:"none", color:C.textSub, cursor:"pointer", fontSize:13, padding:0, marginBottom:20 }}>
+            &larr; Back
+          </button>
+
+          <div style={{ marginBottom:24 }}>
+            <h1 style={{ fontFamily:"Georgia,'Times New Roman',serif", fontSize:30, fontWeight:700, color:C.text, margin:"0 0 6px" }}>{movie.title}</h1>
+            <div style={{ fontSize:14, color:C.textSub }}>
+              Released {fmtDate(movie.releaseDate)}
+              {movie.gross > 0 && <span> &middot; <span style={{ color:C.greenLight, fontWeight:600 }}>{fmtGross(movie.gross)} domestic</span></span>}
+            </div>
+          </div>
+
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:16, marginBottom:28 }}>
+            <div style={{ background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, padding:20 }}>
+              <SectionTitle>Box Office</SectionTitle>
+              <div style={{ fontFamily:"Georgia,serif", fontSize:28, fontWeight:700, color:C.text, marginBottom:4 }}>{fmtGross(movie.gross)}</div>
+              <div style={{ fontSize:13, color:C.textSub, marginBottom:16 }}>{bo} points <span style={{ color:C.textDim }}>($1M = 1pt)</span></div>
+              <MilestoneBar gross={movie.gross} />
+              <div style={{ marginTop:12, fontSize:12, color: milB > 0 ? C.gold : C.textDim }}>Milestone bonus: {milB > 0 ? `+${milB} pts` : "None yet"}</div>
+            </div>
+
+            <div style={{ background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, padding:20 }}>
+              <SectionTitle>Metacritic</SectionTitle>
+              {movie.metacritic != null ? (
+                <>
+                  <div style={{ display:"flex", alignItems:"baseline", gap:10, marginBottom:6 }}>
+                    <span style={{ fontFamily:"Georgia,serif", fontSize:40, fontWeight:700, color:tier.color }}>{movie.metacritic}</span>
+                    <span style={{ fontSize:13, color:tier.color }}>{tier.label}</span>
+                  </div>
+                  <div style={{ fontSize:13, color: metaB > 0 ? C.greenLight : metaB < 0 ? C.red : C.textDim }}>
+                    Score bonus: {metaB > 0 ? `+${metaB} pts` : metaB === 0 ? "0 pts" : `${metaB} pts`}
+                  </div>
+                  <div style={{ fontSize:11, color:C.textDim, marginTop:6 }}>
+                    All scores lock for competition on <span style={{ color:C.textSub }}>{DATA.meta.metacriticLockDate}</span>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div style={{ color:C.textDim, fontSize:14, marginTop:8 }}>Score not yet entered</div>
+                  <div style={{ fontSize:11, color:C.textDim, marginTop:8 }}>
+                    Scores lock for competition on <span style={{ color:C.textSub }}>{DATA.meta.metacriticLockDate}</span>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+
+          <SectionTitle>Who Drafted This Film</SectionTitle>
+          <div style={{ background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, overflow:"hidden", marginBottom:12 }}>
+            <div style={{ display:"grid", gridTemplateColumns:"1fr 120px 80px 80px 80px", gap:"0 8px", padding:"8px 16px", borderBottom:`1px solid ${C.border}` }}>
+              {["Participant","Theater","Uniqueness","BO pts","Film Total"].map((h, i) => (
+                <div key={h} style={{ fontSize:10, color:C.textDim, textTransform:"uppercase", letterSpacing:"0.08em", textAlign: i > 0 ? "center" : "left" }}>{h}</div>
+              ))}
+            </div>
+            {pickers.map((picker, i) => {
+              const sp         = scored.find(s => s.id === picker.id);
+              const ms         = sp && sp.breakdown.find(b => b.movieId === movieId);
+              const hasTheater = picker.theaterBonuses.includes(movieId);
+              return (
+                <div key={picker.id} style={{
+                  display:"grid", gridTemplateColumns:"1fr 120px 80px 80px 80px", gap:"0 8px",
+                  padding:"12px 16px", borderBottom: i < pickers.length-1 ? `1px solid ${C.borderLight}` : "none",
+                }}>
+                  <div style={{ fontSize:14, fontWeight:600, color:C.text }}>{picker.name}</div>
+                  <div style={{ textAlign:"center", fontSize:12, color: hasTheater ? "#06B6D4" : C.textDim }}>{hasTheater ? "✓ Seen (+50)" : "—"}</div>
+                  <div style={{ textAlign:"center", fontSize:13, color: uTier.bonus > 0 ? "#A855F7" : C.textDim }}>{uTier.bonus > 0 ? `+${uTier.bonus}` : "—"}</div>
+                  <div style={{ textAlign:"center", fontSize:13, color:C.textSub }}>{ms ? ms.bo : "—"}</div>
+                  <div style={{ textAlign:"center", fontFamily:"Georgia,serif", fontSize:15, fontWeight:700, color:C.text }}>{ms ? ms.subtotal : "—"}</div>
+                </div>
+              );
+            })}
+          </div>
+          <div style={{ padding:"12px 16px", background:C.surface, borderRadius:8, border:`1px solid ${C.borderLight}`, fontSize:12, color:C.textSub }}>
+            <strong style={{ color:C.text }}>{uTier.label}</strong> &middot; Uniqueness bonus applies equally to all {pickers.length} picker{pickers.length !== 1 ? "s" : ""}.
+          </div>
+        </div>
+      );
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  TRENDS VIEW  (hover tooltip + line highlighting)
+    // ═══════════════════════════════════════════════════════════════
+    function TrendsView({ scored, snapshots }) {
+      const [hoveredPid,   setHoveredPid]   = useState(null);
+      const [tooltipState, setTooltipState] = useState(null);
+      // tooltipState = { containerX, containerY, score, weekLabel } | null
+      const containerRef = useRef(null);
+      const svgRef       = useRef(null);
+
+      const W   = 760, H = 320;
+      const pad = { top:20, right:24, bottom:36, left:56 };
+      const cW  = W - pad.left - pad.right;
+      const cH  = H - pad.top  - pad.bottom;
+
+      const allScores = snapshots.flatMap(s => Object.values(s.scores));
+      const maxScore  = Math.max(...allScores, 100);
+      const yTickMax  = Math.ceil(maxScore / 200) * 200;
+      const yTicks    = [];
+      for (let v = 0; v <= yTickMax; v += 200) yTicks.push(v);
+
+      const xOf = (i) => pad.left + (i / (snapshots.length - 1)) * cW;
+      const yOf = (v) => pad.top  + cH - (v / yTickMax) * cH;
+
+      // Convert screen mouse pos → nearest week index
+      const getNearestWeek = useCallback((clientX) => {
+        if (!svgRef.current) return 0;
+        const rect   = svgRef.current.getBoundingClientRect();
+        const scaleX = W / rect.width;
+        const vbX    = (clientX - rect.left) * scaleX - pad.left;
+        const step   = cW / (snapshots.length - 1);
+        return Math.max(0, Math.min(snapshots.length - 1, Math.round(vbX / step)));
+      }, [snapshots.length]);
+
+      const handleLineMouseEnter = (pid) => setHoveredPid(pid);
+
+      const handleLineMouseMove = useCallback((e, pid) => {
+        if (!containerRef.current || !svgRef.current) return;
+        const cRect  = containerRef.current.getBoundingClientRect();
+        const wkIdx  = getNearestWeek(e.clientX);
+        const score  = snapshots[wkIdx].scores[pid] || 0;
+        const label  = snapshots[wkIdx].label;
+
+        // Clamp tooltip so it doesn't overflow right edge
+        const rawX = e.clientX - cRect.left + 14;
+        const containerX = rawX + 160 > cRect.width ? rawX - 174 : rawX;
+        const containerY = e.clientY - cRect.top - 20;
+
+        setHoveredPid(pid);
+        setTooltipState({ containerX, containerY, score, weekLabel: label, weekIdx: wkIdx });
+      }, [snapshots, getNearestWeek]);
+
+      const handleChartMouseLeave = () => {
+        setHoveredPid(null);
+        setTooltipState(null);
+      };
+
+      // Snap indicator data
+      const snapWeekIdx = tooltipState ? tooltipState.weekIdx : null;
+
+      const week1Scores = snapshots[0].scores;
+      const week1Ranked = Object.entries(week1Scores).sort((a,b) => b[1]-a[1]).map(([id]) => id);
+
+      return (
+        <div style={{ maxWidth:1100, margin:"0 auto", padding:"32px 24px" }}>
+          <div style={{ marginBottom:28 }}>
+            <h1 style={{ fontFamily:"Georgia,'Times New Roman',serif", fontSize:28, fontWeight:700, color:C.text, margin:0 }}>Score Trends</h1>
+            <p style={{ color:C.textSub, margin:"6px 0 0", fontSize:14 }}>Weekly cumulative points &middot; {snapshots.length} weeks recorded &middot; Hover a line for details</p>
+          </div>
+
+          {/* Chart */}
+          <div style={{ background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, padding:20, marginBottom:24 }}>
+            <div ref={containerRef} style={{ position:"relative" }} onMouseLeave={handleChartMouseLeave}>
+              <svg ref={svgRef} viewBox={`0 0 ${W} ${H}`} style={{ width:"100%", height:"auto", display:"block", overflow:"visible", minWidth:480 }}>
+                {/* Y grid + labels */}
+                {yTicks.map(v => (
+                  <g key={v}>
+                    <line x1={pad.left} y1={yOf(v)} x2={pad.left + cW} y2={yOf(v)} stroke={C.border} strokeWidth="1" strokeDasharray="3,4" />
+                    <text x={pad.left - 8} y={yOf(v)+4} textAnchor="end" fill={C.textDim} fontSize="11">{v}</text>
+                  </g>
+                ))}
+
+                {/* X axis labels */}
+                {snapshots.map((s, i) => (
+                  <text key={i} x={xOf(i)} y={pad.top + cH + 22} textAnchor="middle" fill={C.textSub} fontSize="11">{s.label}</text>
+                ))}
+
+                {/* Snap vertical line */}
+                {snapWeekIdx !== null && (
+                  <line
+                    x1={xOf(snapWeekIdx)} y1={pad.top}
+                    x2={xOf(snapWeekIdx)} y2={pad.top + cH}
+                    stroke={C.border} strokeWidth="1" strokeDasharray="3,3"
+                  />
+                )}
+
+                {/* Lines (rendered back-to-front so hovered is on top) */}
+                {DATA.participants.map((p, pi) => {
+                  const color    = PLAYER_COLORS[pi % PLAYER_COLORS.length];
+                  const vals     = snapshots.map(s => s.scores[p.id] || 0);
+                  const d        = vals.map((v, i) => `${i===0?"M":"L"}${xOf(i).toFixed(1)},${yOf(v).toFixed(1)}`).join(" ");
+                  const isHov    = hoveredPid === p.id;
+                  const isDimmed = hoveredPid !== null && !isHov;
+                  const opacity  = isDimmed ? 0.1 : isHov ? 1 : 0.75;
+                  const sw       = isHov ? 2.5 : 1.8;
+
+                  return (
+                    <g key={p.id} style={{ cursor:"pointer" }}>
+                      {/* Visible line */}
+                      <path
+                        d={d} fill="none" stroke={color} strokeWidth={sw}
+                        strokeLinecap="round" strokeLinejoin="round"
+                        opacity={opacity}
+                        style={{ transition:"opacity 0.15s, stroke-width 0.1s", pointerEvents:"none" }}
+                      />
+                      {/* Snap dot on hovered line */}
+                      {isHov && snapWeekIdx !== null && (() => {
+                        const score = vals[snapWeekIdx];
+                        return <circle cx={xOf(snapWeekIdx)} cy={yOf(score)} r="5" fill={color} stroke={C.surface} strokeWidth="2" />;
+                      })()}
+                      {/* End dot */}
+                      <circle cx={xOf(vals.length-1)} cy={yOf(vals[vals.length-1])} r={isHov ? 5 : 3.5} fill={color} opacity={isDimmed ? 0.1 : 1} style={{ transition:"opacity 0.15s", pointerEvents:"none" }} />
+                      {/* Wide invisible overlay for hit detection */}
+                      <path
+                        d={d} fill="none" stroke="transparent" strokeWidth="16"
+                        strokeLinecap="round" strokeLinejoin="round"
+                        onMouseEnter={() => handleLineMouseEnter(p.id)}
+                        onMouseMove={(e) => handleLineMouseMove(e, p.id)}
+                      />
+                    </g>
+                  );
+                })}
+              </svg>
+
+              {/* Tooltip */}
+              {hoveredPid && tooltipState && (() => {
+                const pi    = DATA.participants.findIndex(x => x.id === hoveredPid);
+                const pName = DATA.participants[pi].name;
+                const color = PLAYER_COLORS[pi % PLAYER_COLORS.length];
+                return (
+                  <div style={{
+                    position:"absolute",
+                    left: tooltipState.containerX,
+                    top:  tooltipState.containerY,
+                    background: C.surfaceHigh,
+                    border:`1px solid ${C.border}`,
+                    borderRadius:6, padding:"9px 13px",
+                    pointerEvents:"none", zIndex:20,
+                    boxShadow:"0 4px 16px rgba(0,0,0,0.4)",
+                    minWidth:150,
+                  }}>
+                    <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:5 }}>
+                      <div style={{ width:10, height:10, borderRadius:"50%", background:color, flexShrink:0 }} />
+                      <span style={{ fontSize:13, fontWeight:700, color:C.text }}>{pName}</span>
+                    </div>
+                    <div style={{ fontSize:11, color:C.textSub, marginBottom:3 }}>Week ending {tooltipState.weekLabel}</div>
+                    <div style={{ fontFamily:"Georgia,serif", fontSize:20, fontWeight:700, color:C.text }}>{tooltipState.score} <span style={{ fontSize:12, fontWeight:400, color:C.textSub }}>pts</span></div>
+                  </div>
+                );
+              })()}
+            </div>
+          </div>
+
+          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:16 }}>
+            {/* Legend */}
+            <div style={{ background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, padding:16 }}>
+              <SectionTitle>Legend</SectionTitle>
+              <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"6px 16px" }}>
+                {DATA.participants.map((p, pi) => {
+                  const isHov = hoveredPid === p.id;
+                  const dim   = hoveredPid && !isHov;
+                  return (
+                    <div key={p.id} style={{ display:"flex", alignItems:"center", gap:8, opacity: dim ? 0.35 : 1, transition:"opacity 0.15s" }}>
+                      <div style={{ width:20, height:3, borderRadius:2, background:PLAYER_COLORS[pi%PLAYER_COLORS.length], flexShrink:0 }} />
+                      <span style={{ fontSize:12, color:C.textSub }}>{p.name}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Rankings movement */}
+            <div style={{ background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, padding:16 }}>
+              <SectionTitle>Movement vs. Week 1</SectionTitle>
+              <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
+                {scored.map((p, i) => {
+                  const curr   = i + 1;
+                  const w1     = week1Ranked.indexOf(p.id) + 1;
+                  const delta  = w1 - curr;
+                  const pi     = DATA.participants.findIndex(x => x.id === p.id);
+                  const color  = PLAYER_COLORS[pi % PLAYER_COLORS.length];
+                  const isHov  = hoveredPid === p.id;
+                  const dim    = hoveredPid && !isHov;
+                  return (
+                    <div key={p.id} style={{ display:"flex", alignItems:"center", gap:8, opacity: dim ? 0.35 : 1, transition:"opacity 0.15s" }}>
+                      <span style={{ width:20, fontSize:11, color:C.textDim, textAlign:"right" }}>#{curr}</span>
+                      <div style={{ width:3, height:12, borderRadius:2, background:color, flexShrink:0 }} />
+                      <span style={{ fontSize:12, color:C.text, flex:1 }}>{p.name}</span>
+                      <span style={{ fontFamily:"Georgia,serif", fontSize:13, fontWeight:700, color:C.text }}>{p.total}</span>
+                      <span style={{ fontSize:11, fontWeight:600, minWidth:30, textAlign:"right", color: delta > 0 ? C.greenLight : delta < 0 ? C.red : C.textDim }}>
+                        {delta > 0 ? `▲${delta}` : delta < 0 ? `▼${Math.abs(delta)}` : "—"}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  APP ROOT
+    // ═══════════════════════════════════════════════════════════════
+    function App() {
+      const [view,        setView]        = useState("leaderboard");
+      const [selectedPid, setSelectedPid] = useState(null);
+      const [selectedMid, setSelectedMid] = useState(null);
+      const [navActive,   setNavActive]   = useState("leaderboard");
+
+      const scored = useMemo(() =>
+        DATA.participants
+          .map(p => scoreParticipant(p.id, DATA))
+          .sort((a, b) => b.total - a.total),
+      []);
+
+      const navigate = (tab) => {
+        setNavActive(tab);
+        setView(tab);
+        setSelectedPid(null);
+        setSelectedMid(null);
+      };
+
+      const openTeam = (pid) => { setSelectedPid(pid); setView("team"); };
+      const openMovie = (mid) => { setSelectedMid(mid); setView("movie"); };
+
+      const goBack = () => {
+        if (view === "movie" && selectedPid) { setView("team"); setSelectedMid(null); }
+        else if (view === "team")            { setView("leaderboard"); setSelectedPid(null); }
+        else if (view === "movie")           { setView("movies"); setSelectedMid(null); }
+        else                                 { navigate("leaderboard"); }
+      };
+
+      return (
+        <div style={{ minHeight:"100vh", background:C.bg, color:C.text }}>
+          <Nav active={navActive} onNav={navigate} />
+
+          {view === "leaderboard" && (
+            <LeaderboardView scored={scored} snapshots={DATA.weeklySnapshots} onSelectParticipant={openTeam} />
+          )}
+          {view === "team" && selectedPid && (
+            <TeamView participantId={selectedPid} scored={scored} onBack={goBack}
+              onSelectMovie={(mid) => { setSelectedMid(mid); setView("movie"); }} />
+          )}
+          {view === "movies" && (
+            <MoviesView onSelectMovie={openMovie} />
+          )}
+          {view === "movie" && selectedMid && (
+            <MovieDetailView movieId={selectedMid} scored={scored} onBack={goBack} />
+          )}
+          {view === "trends" && (
+            <TrendsView scored={scored} snapshots={DATA.weeklySnapshots} />
+          )}
+
+          <footer style={{ borderTop:`1px solid ${C.borderLight}`, padding:"20px 24px", textAlign:"center", marginTop:40 }}>
+            <div style={{ fontSize:11, color:C.textDim }}>
+              {DATA.meta.name} &middot; {DATA.meta.season} &middot; Last updated {DATA.meta.lastUpdated}
+            </div>
+            <div style={{ fontSize:10, color:C.textDim, marginTop:4 }}>
+              Competition window {DATA.meta.start} &ndash; {DATA.meta.end} &middot; Metacritic scores lock {DATA.meta.metacriticLockDate}
+            </div>
+          </footer>
+        </div>
+      );
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    //  BOOTSTRAP  —  load data.json then mount React
+    // ═══════════════════════════════════════════════════════════════
+    fetch("./data.json")
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then(d => {
+        DATA = d;
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+      })
+      .catch(err => {
+        document.getElementById("root").innerHTML = `
+          <div style="display:flex;align-items:center;justify-content:center;min-height:100vh;flex-direction:column;gap:16px;font-family:system-ui;color:#EDE5D0;">
+            <div style="font-size:32px">⚠</div>
+            <div style="font-size:16px;font-weight:600;">Could not load dashboard data</div>
+            <div style="font-size:13px;color:#8090A8;max-width:400px;text-align:center;">
+              Make sure <code>data.json</code> is in the same folder and the page
+              is served over HTTP (not opened directly from a file).
+            </div>
+            <div style="font-size:11px;color:#4A6080;">${err.message}</div>
+          </div>`;
+      });
+  </script>
+</body>
+</html>

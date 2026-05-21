@@ -1,0 +1,34 @@
+# HOW TO FILL THIS IN:
+# - Replace the example rows below with your real participants
+# - For movie names, use the titles below (or the short IDs — both work)
+# - Each person needs exactly 8 movies
+# - Delete all lines starting with # when done
+#
+# MOVIE IDs (you can use these short codes OR the full title):
+#   mi8          = Mission: Impossible – The Final Reckoning  (May 23)
+#   lilo         = Lilo & Stitch                              (May 23)
+#   karate       = Karate Kid: Legends                        (May 30)
+#   httyd        = How to Train Your Dragon                   (Jun 13)
+#   materialists = Materialists                               (Jun 13)
+#   28years      = 28 Years Later                             (Jun 20)
+#   f1           = F1                                         (Jun 27)
+#   m3gan2       = M3GAN 2.0                                  (Jun 27)
+#   jurassic     = Jurassic World: Rebirth                    (Jul 2)
+#   superman     = Superman                                   (Jul 11)
+#   smurfs       = The Smurfs                                 (Jul 18)
+#   ff           = The Fantastic Four: First Steps            (Jul 25)
+#   nakedgun     = The Naked Gun                              (Aug 1)
+#   freakier     = Freakier Friday                            (Aug 7)
+participant_name,movie_1,movie_2,movie_3,movie_4,movie_5,movie_6,movie_7,movie_8
+Alex Rivera,mi8,lilo,httyd,superman,ff,jurassic,f1,freakier
+Jordan Kim,mi8,httyd,superman,ff,f1,m3gan2,nakedgun,28years
+Sam Patel,lilo,karate,httyd,superman,jurassic,ff,freakier,smurfs
+Morgan Chen,mi8,lilo,f1,superman,jurassic,ff,nakedgun,materialists
+Casey Williams,lilo,httyd,f1,superman,ff,jurassic,smurfs,nakedgun
+Taylor Brooks,mi8,httyd,28years,superman,jurassic,ff,materialists,m3gan2
+Jamie Foster,lilo,karate,httyd,f1,superman,ff,freakier,nakedgun
+Drew Martinez,mi8,lilo,httyd,superman,ff,f1,nakedgun,28years
+Riley Thompson,mi8,httyd,superman,ff,jurassic,materialists,freakier,smurfs
+Quinn Nguyen,lilo,httyd,superman,ff,f1,jurassic,28years,karate
+Blake Anderson,mi8,lilo,httyd,f1,superman,jurassic,m3gan2,smurfs
+Avery Johnson,httyd,superman,ff,jurassic,f1,lilo,freakier,materialists

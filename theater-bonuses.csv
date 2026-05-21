@@ -1,0 +1,9 @@
+# HOW TO USE THIS FILE:
+# Add a new row each time someone sees a competition movie in theaters.
+# participant_name must match exactly how you spelled it in picks.csv
+# movie_id must be one of the short codes (mi8, lilo, karate, etc.)
+# date_seen is optional — format YYYY-MM-DD if included
+#
+# Example: if Morgan Chen saw F1 on June 28, add:
+#   Morgan Chen,f1,2026-06-28
+participant_name,movie_id,date_seen
