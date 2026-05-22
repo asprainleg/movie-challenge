@@ -950,9 +950,27 @@
     function TrendsView({ scored, snapshots }) {
       const [hoveredPid,   setHoveredPid]   = useState(null);
       const [tooltipState, setTooltipState] = useState(null);
-      // tooltipState = { containerX, containerY, score, weekLabel } | null
       const containerRef = useRef(null);
       const svgRef       = useRef(null);
+
+      // No data yet — pipeline hasn't run or no snapshots recorded
+      if (snapshots.length === 0) {
+        return (
+          <div style={{ maxWidth:1100, margin:"0 auto", padding:"32px 24px" }}>
+            <div style={{ marginBottom:28 }}>
+              <h1 style={{ fontFamily:"Georgia,'Times New Roman',serif", fontSize:28, fontWeight:700, color:C.text, margin:0 }}>Score Trends</h1>
+              <p style={{ color:C.textSub, margin:"6px 0 0", fontSize:14 }}>Weekly cumulative points over the summer</p>
+            </div>
+            <div style={{ background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, padding:"60px 24px", textAlign:"center" }}>
+              <div style={{ fontSize:32, marginBottom:16 }}>📈</div>
+              <div style={{ fontSize:16, fontWeight:600, color:C.text, marginBottom:8 }}>No trend data yet</div>
+              <div style={{ fontSize:13, color:C.textSub, maxWidth:400, margin:"0 auto" }}>
+                Weekly snapshots will appear here once movies start earning box office. Check back after {fmtDate(DATA.movies.slice().sort((a,b) => a.releaseDate.localeCompare(b.releaseDate))[0].releaseDate)}.
+              </div>
+            </div>
+          </div>
+        );
+      }
 
       const W   = 760, H = 320;
       const pad = { top:20, right:24, bottom:36, left:56 };
