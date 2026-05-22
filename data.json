@@ -103,6 +103,18 @@
       "name": "Becky",
       "picks": ["mando","spiderman","supertroopers","toy5","pawpatrol","moana","furious","minions"],
       "theaterBonuses": []
+    },
+    {
+      "id": "peter",
+      "name": "Peter",
+      "picks": ["mando","toy5","moana","odyssey","spiderman","disc","motu","jackass"],
+      "theaterBonuses": []
+    },
+    {
+      "id": "adam",
+      "name": "Adam",
+      "picks": ["supertroopers","toy5","odyssey","moana","jackass","minions","spaweekend"],
+      "theaterBonuses": []
     }
   ],
   "weeklySnapshots": []
