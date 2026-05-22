@@ -8,120 +8,567 @@
     "metacriticLockDate": "September 8, 2026"
   },
   "movies": [
-    { "id": "boosters",      "title": "I Love Boosters",                              "releaseDate": "2026-05-22", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "i-love-boosters"                              },
-    { "id": "ladiesfirst",   "title": "Ladies First",                                 "releaseDate": "2026-05-22", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "ladies-first-2026"                            },
-    { "id": "passenger",     "title": "Passenger",                                    "releaseDate": "2026-05-22", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "passenger-2026"                               },
-    { "id": "mando",         "title": "Star Wars: The Mandalorian & Grogu",           "releaseDate": "2026-05-22", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "star-wars-the-mandalorian-and-grogu"          },
-    { "id": "back",          "title": "The Backrooms",                                "releaseDate": "2026-05-29", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-backrooms-2026"                           },
-    { "id": "breadwinner",   "title": "The Breadwinner",                              "releaseDate": "2026-05-29", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-breadwinner-2026"                         },
-    { "id": "pressure",      "title": "Pressure",                                     "releaseDate": "2026-05-29", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "pressure-2026"                                },
-    { "id": "tuner",         "title": "Tuner",                                        "releaseDate": "2026-05-29", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "tuner-2026"                                   },
-    { "id": "motu",          "title": "Masters of the Universe",                      "releaseDate": "2026-06-05", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "masters-of-the-universe-2026"                 },
-    { "id": "powerballad",   "title": "Power Ballad",                                 "releaseDate": "2026-06-05", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "power-ballad"                                 },
-    { "id": "scarymovie",    "title": "Scary Movie",                                  "releaseDate": "2026-06-05", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "scary-movie-2026"                             },
-    { "id": "disc",          "title": "Disclosure Day",                               "releaseDate": "2026-06-12", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "disclosure-day"                               },
-    { "id": "furious",       "title": "The Furious",                                  "releaseDate": "2026-06-12", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-furious-2026"                             },
-    { "id": "robinhood",     "title": "The Death of Robin Hood",                      "releaseDate": "2026-06-19", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-death-of-robin-hood"                      },
-    { "id": "leviticus",     "title": "Leviticus",                                    "releaseDate": "2026-06-19", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "leviticus-2026"                               },
-    { "id": "toy5",          "title": "Toy Story 5",                                  "releaseDate": "2026-06-19", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "toy-story-5"                                  },
-    { "id": "invite",        "title": "The Invite",                                   "releaseDate": "2026-06-26", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-invite-2026"                              },
-    { "id": "jackass",       "title": "Jackass: Best and Last",                       "releaseDate": "2026-06-26", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "jackass-best-and-last"                        },
-    { "id": "littlebrother", "title": "Little Brother",                               "releaseDate": "2026-06-26", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "little-brother-2026"                          },
-    { "id": "supergirl",     "title": "Supergirl",                                    "releaseDate": "2026-06-26", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "supergirl-2026"                               },
-    { "id": "minions",       "title": "Minions & Monsters",                           "releaseDate": "2026-07-01", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "minions-and-monsters"                         },
-    { "id": "youngwash",     "title": "Young Washington",                             "releaseDate": "2026-07-03", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "young-washington"                             },
-    { "id": "evildead",      "title": "Evil Dead Burn",                               "releaseDate": "2026-07-10", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "evil-dead-burn"                               },
-    { "id": "gaildaughtry",  "title": "Gail Daughtry and the Celebrity Sex Pass",     "releaseDate": "2026-07-10", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "gail-daughtry-and-the-celebrity-sex-pass"     },
-    { "id": "moana",         "title": "Moana",                                        "releaseDate": "2026-07-10", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "moana-2026"                                   },
-    { "id": "odyssey",       "title": "The Odyssey",                                  "releaseDate": "2026-07-17", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-odyssey-2026"                             },
-    { "id": "hours72",       "title": "72 Hours",                                     "releaseDate": "2026-07-24", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "72-hours-2026"                                },
-    { "id": "dink",          "title": "The Dink",                                     "releaseDate": "2026-07-24", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-dink"                                     },
-    { "id": "iwantyoursex",  "title": "I Want Your Sex",                              "releaseDate": "2026-07-31", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "i-want-your-sex"                              },
-    { "id": "spiderman",     "title": "Spider-Man: Brand New Day",                    "releaseDate": "2026-07-31", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "spider-man-brand-new-day"                     },
-    { "id": "icecream",      "title": "Ice Cream Man",                                "releaseDate": "2026-08-07", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "ice-cream-man-2026"                           },
-    { "id": "supertroopers", "title": "Super Troopers 3",                             "releaseDate": "2026-08-07", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "super-troopers-3"                             },
-    { "id": "campmiasma",    "title": "Teenage Sex and Death at Camp Miasma",         "releaseDate": "2026-08-07", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "teenage-sex-and-death-at-camp-miasma"         },
-    { "id": "endofstreet",   "title": "The End of Oak Street",                        "releaseDate": "2026-08-14", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-end-of-oak-street"                        },
-    { "id": "pawpatrol",     "title": "PAW Patrol: The Dino Movie",                   "releaseDate": "2026-08-14", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "paw-patrol-the-dino-movie"                    },
-    { "id": "insidious",     "title": "Insidious: Out of the Further",                "releaseDate": "2026-08-21", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "insidious-out-of-the-further"                 },
-    { "id": "spaweekend",    "title": "Spa Weekend",                                  "releaseDate": "2026-08-21", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "spa-weekend"                                  },
-    { "id": "coyote",        "title": "Coyote vs. Acme",                              "releaseDate": "2026-08-28", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "coyote-vs-acme"                               },
-    { "id": "dogstars",      "title": "The Dog Stars",                                "releaseDate": "2026-08-28", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "the-dog-stars"                                },
-    { "id": "findingemily",  "title": "Finding Emily",                                "releaseDate": "2026-08-28", "gross": 0, "metacritic": null, "metacriticLocked": false, "metacriticSlug": "finding-emily"                                }
+    {
+      "id": "boosters",
+      "title": "I Love Boosters",
+      "releaseDate": "2026-05-22",
+      "gross": 0,
+      "metacritic": 70,
+      "metacriticLocked": true,
+      "metacriticSlug": "i-love-boosters"
+    },
+    {
+      "id": "ladiesfirst",
+      "title": "Ladies First",
+      "releaseDate": "2026-05-22",
+      "gross": 0,
+      "metacritic": 39,
+      "metacriticLocked": true,
+      "metacriticSlug": "ladies-first-2026"
+    },
+    {
+      "id": "passenger",
+      "title": "Passenger",
+      "releaseDate": "2026-05-22",
+      "gross": 0,
+      "metacritic": null,
+      "metacriticLocked": false,
+      "metacriticSlug": "passenger-2026"
+    },
+    {
+      "id": "mando",
+      "title": "Star Wars: The Mandalorian & Grogu",
+      "releaseDate": "2026-05-22",
+      "gross": 0,
+      "metacritic": 53,
+      "metacriticLocked": true,
+      "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
+    },
+    {
+      "id": "back",
+      "title": "The Backrooms",
+      "releaseDate": "2026-05-29",
+      "gross": 0,
+      "metacritic": null,
+      "metacriticLocked": false,
+      "metacriticSlug": "the-backrooms-2026"
+    },
+    {
+      "id": "breadwinner",
+      "title": "The Breadwinner",
+      "releaseDate": "2026-05-29",
+      "gross": 0,
+      "metacritic": 99,
+      "metacriticLocked": true,
+      "metacriticSlug": "the-breadwinner-2026"
+    },
+    {
+      "id": "pressure",
+      "title": "Pressure",
+      "releaseDate": "2026-05-29",
+      "gross": 0,
+      "metacritic": null,
+      "metacriticLocked": false,
+      "metacriticSlug": "pressure-2026"
+    },
+    {
+      "id": "tuner",
+      "title": "Tuner",
+      "releaseDate": "2026-05-29",
+      "gross": 0,
+      "metacritic": null,
+      "metacriticLocked": false,
+      "metacriticSlug": "tuner-2026"
+    },
+    {
+      "id": "motu",
+      "title": "Masters of the Universe",
+      "releaseDate": "2026-06-05",
+      "gross": 0,
+      "metacritic": 98,
+      "metacriticLocked": true,
+      "metacriticSlug": "masters-of-the-universe-2026"
+    },
+    {
+      "id": "powerballad",
+      "title": "Power Ballad",
+      "releaseDate": "2026-06-05",
+      "gross": 0,
+      "metacritic": 100,
+      "metacriticLocked": true,
+      "metacriticSlug": "power-ballad"
+    },
+    {
+      "id": "scarymovie",
+      "title": "Scary Movie",
+      "releaseDate": "2026-06-05",
+      "gross": 0,
+      "metacritic": null,
+      "metacriticLocked": false,
+      "metacriticSlug": "scary-movie-2026"
+    },
+    {
+      "id": "disc",
+      "title": "Disclosure Day",
+      "releaseDate": "2026-06-12",
+      "gross": 0,
+      "metacritic": 100,
+      "metacriticLocked": true,
+      "metacriticSlug": "disclosure-day"
+    },
+    {
+      "id": "furious",
+      "title": "The Furious",
+      "releaseDate": "2026-06-12",
+      "gross": 0,
+      "metacritic": null,
+      "metacriticLocked": false,
+      "metacriticSlug": "the-furious-2026"
+    },
+    {
+      "id": "robinhood",
+      "title": "The Death of Robin Hood",
+      "releaseDate": "2026-06-19",
+      "gross": 0,
+      "metacritic": 98,
+      "metacriticLocked": true,
+      "metacriticSlug": "the-death-of-robin-hood"
+    },
+    {
+      "id": "leviticus",
+      "title": "Leviticus",
+      "releaseDate": "2026-06-19",
+      "gross": 0,
+      "metacritic": null,
+      "metacriticLocked": false,
+      "metacriticSlug": "leviticus-2026"
+    },
+    {
+      "id": "toy5",
+      "title": "Toy Story 5",
+      "releaseDate": "2026-06-19",
+      "gross": 0,
+      "metacritic": 99,
+      "metacriticLocked": true,
+      "metacriticSlug": "toy-story-5"
+    },
+    {
+      "id": "invite",
+      "title": "The Invite",
+      "releaseDate": "2026-06-26",
+      "gross": 0,
+      "metacritic": null,
+      "metacriticLocked": false,
+      "metacriticSlug": "the-invite-2026"
+    },
+    {
+      "id": "jackass",
+      "title": "Jackass: Best and Last",
+      "releaseDate": "2026-06-26",
+      "gross": 0,
+      "metacritic": 98,
+      "metacriticLocked": true,
+      "metacriticSlug": "jackass-best-and-last"
+    },
+    {
+      "id": "littlebrother",
+      "title": "Little Brother",
+      "releaseDate": "2026-06-26",
+      "gross": 0,
+      "metacritic": 99,
+      "metacriticLocked": true,
+      "metacriticSlug": "little-brother-2026"
+    },
+    {
+      "id": "supergirl",
+      "title": "Supergirl",
+      "releaseDate": "2026-06-26",
+      "gross": 0,
+      "metacritic": 98,
+      "metacriticLocked": true,
+      "metacriticSlug": "supergirl-2026"
+    },
+    {
+      "id": "minions",
+      "title": "Minions & Monsters",
+      "releaseDate": "2026-07-01",
+      "gross": 0,
+      "metacritic": 99,
+      "metacriticLocked": true,
+      "metacriticSlug": "minions-and-monsters"
+    },
+    {
+      "id": "youngwash",
+      "title": "Young Washington",
+      "releaseDate": "2026-07-03",
+      "gross": 0,
+      "metacritic": null,
+      "metacriticLocked": false,
+      "metacriticSlug": "young-washington"
+    },
+    {
+      "id": "evildead",
+      "title": "Evil Dead Burn",
+      "releaseDate": "2026-07-10",
+      "gross": 0,
+      "metacritic": 99,
+      "metacriticLocked": true,
+      "metacriticSlug": "evil-dead-burn"
+    },
+    {
+      "id": "gaildaughtry",
+      "title": "Gail Daughtry and the Celebrity Sex Pass",
+      "releaseDate": "2026-07-10",
+      "gross": 0,
+      "metacritic": 91,
+      "metacriticLocked": true,
+      "metacriticSlug": "gail-daughtry-and-the-celebrity-sex-pass"
+    },
+    {
+      "id": "moana",
+      "title": "Moana",
+      "releaseDate": "2026-07-10",
+      "gross": 0,
+      "metacritic": 98,
+      "metacriticLocked": true,
+      "metacriticSlug": "moana-2026"
+    },
+    {
+      "id": "odyssey",
+      "title": "The Odyssey",
+      "releaseDate": "2026-07-17",
+      "gross": 0,
+      "metacritic": 100,
+      "metacriticLocked": true,
+      "metacriticSlug": "the-odyssey-2026"
+    },
+    {
+      "id": "hours72",
+      "title": "72 Hours",
+      "releaseDate": "2026-07-24",
+      "gross": 0,
+      "metacritic": 99,
+      "metacriticLocked": true,
+      "metacriticSlug": "72-hours-2026"
+    },
+    {
+      "id": "dink",
+      "title": "The Dink",
+      "releaseDate": "2026-07-24",
+      "gross": 0,
+      "metacritic": 99,
+      "metacriticLocked": true,
+      "metacriticSlug": "the-dink"
+    },
+    {
+      "id": "iwantyoursex",
+      "title": "I Want Your Sex",
+      "releaseDate": "2026-07-31",
+      "gross": 0,
+      "metacritic": 80,
+      "metacriticLocked": true,
+      "metacriticSlug": "i-want-your-sex"
+    },
+    {
+      "id": "spiderman",
+      "title": "Spider-Man: Brand New Day",
+      "releaseDate": "2026-07-31",
+      "gross": 0,
+      "metacritic": 100,
+      "metacriticLocked": true,
+      "metacriticSlug": "spider-man-brand-new-day"
+    },
+    {
+      "id": "icecream",
+      "title": "Ice Cream Man",
+      "releaseDate": "2026-08-07",
+      "gross": 0,
+      "metacritic": null,
+      "metacriticLocked": false,
+      "metacriticSlug": "ice-cream-man-2026"
+    },
+    {
+      "id": "supertroopers",
+      "title": "Super Troopers 3",
+      "releaseDate": "2026-08-07",
+      "gross": 0,
+      "metacritic": 99,
+      "metacriticLocked": true,
+      "metacriticSlug": "super-troopers-3"
+    },
+    {
+      "id": "campmiasma",
+      "title": "Teenage Sex and Death at Camp Miasma",
+      "releaseDate": "2026-08-07",
+      "gross": 0,
+      "metacritic": 100,
+      "metacriticLocked": true,
+      "metacriticSlug": "teenage-sex-and-death-at-camp-miasma"
+    },
+    {
+      "id": "endofstreet",
+      "title": "The End of Oak Street",
+      "releaseDate": "2026-08-14",
+      "gross": 0,
+      "metacritic": 98,
+      "metacriticLocked": true,
+      "metacriticSlug": "the-end-of-oak-street"
+    },
+    {
+      "id": "pawpatrol",
+      "title": "PAW Patrol: The Dino Movie",
+      "releaseDate": "2026-08-14",
+      "gross": 0,
+      "metacritic": 99,
+      "metacriticLocked": true,
+      "metacriticSlug": "paw-patrol-the-dino-movie"
+    },
+    {
+      "id": "insidious",
+      "title": "Insidious: Out of the Further",
+      "releaseDate": "2026-08-21",
+      "gross": 0,
+      "metacritic": 97,
+      "metacriticLocked": true,
+      "metacriticSlug": "insidious-out-of-the-further"
+    },
+    {
+      "id": "spaweekend",
+      "title": "Spa Weekend",
+      "releaseDate": "2026-08-21",
+      "gross": 0,
+      "metacritic": null,
+      "metacriticLocked": false,
+      "metacriticSlug": "spa-weekend"
+    },
+    {
+      "id": "coyote",
+      "title": "Coyote vs. Acme",
+      "releaseDate": "2026-08-28",
+      "gross": 0,
+      "metacritic": 99,
+      "metacriticLocked": true,
+      "metacriticSlug": "coyote-vs-acme"
+    },
+    {
+      "id": "dogstars",
+      "title": "The Dog Stars",
+      "releaseDate": "2026-08-28",
+      "gross": 0,
+      "metacritic": 98,
+      "metacriticLocked": true,
+      "metacriticSlug": "the-dog-stars"
+    },
+    {
+      "id": "findingemily",
+      "title": "Finding Emily",
+      "releaseDate": "2026-08-28",
+      "gross": 0,
+      "metacritic": 80,
+      "metacriticLocked": true,
+      "metacriticSlug": "finding-emily"
+    }
   ],
   "participants": [
     {
       "id": "abie",
       "name": "Abie",
-      "picks": ["mando","back","disc","minions","moana","odyssey","spiderman","toy5"],
+      "picks": [
+        "mando",
+        "back",
+        "disc",
+        "minions",
+        "moana",
+        "odyssey",
+        "spiderman",
+        "toy5"
+      ],
       "theaterBonuses": []
     },
     {
       "id": "josh_d",
       "name": "Josh D",
-      "picks": ["back","pressure","disc","toy5","odyssey","spiderman","minions","mando"],
+      "picks": [
+        "back",
+        "pressure",
+        "disc",
+        "toy5",
+        "odyssey",
+        "spiderman",
+        "minions",
+        "mando"
+      ],
       "theaterBonuses": []
     },
     {
       "id": "taylor",
       "name": "Taylor",
-      "picks": ["minions","spiderman","mando","supergirl","dogstars","odyssey","toy5","moana"],
+      "picks": [
+        "minions",
+        "spiderman",
+        "mando",
+        "supergirl",
+        "dogstars",
+        "odyssey",
+        "toy5",
+        "moana"
+      ],
       "theaterBonuses": []
     },
     {
       "id": "tyler_b",
       "name": "Tyler B",
-      "picks": ["mando","minions","passenger","moana","toy5","scarymovie","odyssey","pawpatrol"],
+      "picks": [
+        "mando",
+        "minions",
+        "passenger",
+        "moana",
+        "toy5",
+        "scarymovie",
+        "odyssey",
+        "pawpatrol"
+      ],
       "theaterBonuses": []
     },
     {
       "id": "gonzalo",
       "name": "Gonzalo",
-      "picks": ["odyssey","spiderman","mando","toy5","supergirl","motu","minions","disc"],
+      "picks": [
+        "odyssey",
+        "spiderman",
+        "mando",
+        "toy5",
+        "supergirl",
+        "motu",
+        "minions",
+        "disc"
+      ],
       "theaterBonuses": []
     },
     {
       "id": "josh_b",
       "name": "Josh B",
-      "picks": ["mando","supergirl","disc","minions","moana","odyssey","spiderman","toy5"],
+      "picks": [
+        "mando",
+        "supergirl",
+        "disc",
+        "minions",
+        "moana",
+        "odyssey",
+        "spiderman",
+        "toy5"
+      ],
       "theaterBonuses": []
     },
     {
       "id": "srujith",
       "name": "Srujith",
-      "picks": ["spiderman","toy5","odyssey","minions","disc","supergirl","back","coyote"],
+      "picks": [
+        "spiderman",
+        "toy5",
+        "odyssey",
+        "minions",
+        "disc",
+        "supergirl",
+        "back",
+        "coyote"
+      ],
       "theaterBonuses": []
     },
     {
       "id": "alex",
       "name": "Alex",
-      "picks": ["mando","disc","toy5","minions","odyssey","spiderman","jackass","invite"],
+      "picks": [
+        "mando",
+        "disc",
+        "toy5",
+        "minions",
+        "odyssey",
+        "spiderman",
+        "jackass",
+        "invite"
+      ],
       "theaterBonuses": []
     },
     {
       "id": "becky",
       "name": "Becky",
-      "picks": ["mando","spiderman","supertroopers","toy5","pawpatrol","moana","furious","minions"],
+      "picks": [
+        "mando",
+        "spiderman",
+        "supertroopers",
+        "toy5",
+        "pawpatrol",
+        "moana",
+        "furious",
+        "minions"
+      ],
       "theaterBonuses": []
     },
     {
       "id": "peter",
       "name": "Peter",
-      "picks": ["mando","toy5","moana","odyssey","spiderman","disc","motu","jackass"],
+      "picks": [
+        "mando",
+        "toy5",
+        "moana",
+        "odyssey",
+        "spiderman",
+        "disc",
+        "motu",
+        "jackass"
+      ],
       "theaterBonuses": []
     },
     {
       "id": "adam",
       "name": "Adam",
-      "picks": ["supertroopers","toy5","odyssey","moana","jackass","minions","spaweekend"],
+      "picks": [
+        "supertroopers",
+        "toy5",
+        "odyssey",
+        "moana",
+        "jackass",
+        "minions",
+        "spaweekend"
+      ],
       "theaterBonuses": []
     },
     {
       "id": "tina",
       "name": "Tina",
-      "picks": ["mando","back","odyssey","spiderman","pawpatrol","insidious","disc","minions"],
+      "picks": [
+        "mando",
+        "back",
+        "odyssey",
+        "spiderman",
+        "pawpatrol",
+        "insidious",
+        "disc",
+        "minions"
+      ],
       "theaterBonuses": []
     }
   ],
-  "weeklySnapshots": []
+  "weeklySnapshots": [
+    {
+      "week": 1,
+      "label": "May 22",
+      "date": "2026-05-22",
+      "scores": {
+        "abie": 620,
+        "josh_d": 570,
+        "taylor": 770,
+        "tyler_b": 645,
+        "gonzalo": 745,
+        "josh_b": 720,
+        "srujith": 750,
+        "alex": 695,
+        "becky": 720,
+        "peter": 770,
+        "adam": 700,
+        "tina": 695
+      }
+    }
+  ]
 }
