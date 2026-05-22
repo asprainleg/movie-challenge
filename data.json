@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "May 21, 2026",
+    "lastUpdated": "May 22, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -414,17 +414,97 @@
         "moana"
       ],
       "theaterBonuses": []
+    },
+    {
+      "id": "tyler_b",
+      "name": "Tyler B",
+      "picks": [
+        "mando",
+        "minions",
+        "passenger",
+        "moana",
+        "toy5",
+        "scarymovie",
+        "odyssey",
+        "pawpatrol"
+      ],
+      "theaterBonuses": []
+    },
+    {
+      "id": "gonzalo",
+      "name": "Gonzalo",
+      "picks": [
+        "odyssey",
+        "spiderman",
+        "mando",
+        "toy5",
+        "supergirl",
+        "motu",
+        "minions",
+        "disc"
+      ],
+      "theaterBonuses": []
+    },
+    {
+      "id": "josh_b",
+      "name": "Josh B",
+      "picks": [
+        "mando",
+        "supergirl",
+        "disc",
+        "minions",
+        "moana",
+        "odyssey",
+        "spiderman",
+        "toy5"
+      ],
+      "theaterBonuses": []
+    },
+    {
+      "id": "srujith",
+      "name": "Srujith",
+      "picks": [
+        "spiderman",
+        "toy5",
+        "odyssey",
+        "minions",
+        "disc",
+        "supergirl",
+        "back",
+        "coyote"
+      ],
+      "theaterBonuses": []
+    },
+    {
+      "id": "alex",
+      "name": "Alex",
+      "picks": [
+        "mando",
+        "disc",
+        "toy5",
+        "minions",
+        "odyssey",
+        "spiderman",
+        "jackass",
+        "invite"
+      ],
+      "theaterBonuses": []
     }
   ],
   "weeklySnapshots": [
     {
       "week": 1,
-      "label": "May 21",
-      "date": "2026-05-21",
+      "label": "May 22",
+      "date": "2026-05-22",
       "scores": {
-        "abie": 900,
-        "josh_d": 825,
-        "taylor": 1050
+        "abie": 725,
+        "josh_d": 675,
+        "taylor": 850,
+        "tyler_b": 750,
+        "gonzalo": 850,
+        "josh_b": 800,
+        "srujith": 775,
+        "alex": 800
       }
     }
   ]
