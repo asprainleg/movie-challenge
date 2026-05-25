@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "May 22, 2026",
+    "lastUpdated": "May 25, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -555,6 +555,25 @@
       "week": 1,
       "label": "May 22",
       "date": "2026-05-22",
+      "scores": {
+        "abie": 620,
+        "josh_d": 570,
+        "taylor": 770,
+        "tyler_b": 645,
+        "gonzalo": 745,
+        "josh_b": 720,
+        "srujith": 750,
+        "alex": 695,
+        "becky": 720,
+        "peter": 770,
+        "adam": 700,
+        "tina": 695
+      }
+    },
+    {
+      "week": 2,
+      "label": "May 25",
+      "date": "2026-05-25",
       "scores": {
         "abie": 620,
         "josh_d": 570,
