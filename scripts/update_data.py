@@ -122,24 +122,39 @@ def fetch_box_office():
     soup    = BeautifulSoup(r.text, "html.parser")
     results = {}
 
-    # BOM table rows  ─ try multiple selectors for resilience
+    # BOM table structure (as of 2026):
+    #   [0] Rank  [1] Title  [2-4] Weekly stats  [5] Total Gross  [6] Theaters  ...
+    # Selector: the yearly chart table uses class "mojo-body-table"
     rows = (
-        soup.select("table.imdb-scroll-table tr")
+        soup.select("table.mojo-body-table tr")
+        or soup.select("table.a-bordered tr")
         or soup.select("table tr")
     )
 
+    print(f"  →  {len(rows)} rows found in BOM table")
+
     for row in rows:
         cells = row.find_all("td")
-        if len(cells) < 3:
+        if len(cells) < 6:
             continue
 
-        # Title is usually the second cell; gross is usually the third
         title_text = cells[1].get_text(strip=True).lower()
-        gross_text = cells[2].get_text(strip=True).replace("$", "").replace(",", "")
 
-        try:
-            gross = int(gross_text)
-        except ValueError:
+        # Total domestic gross is at index 5; scan forward if it's a dash
+        gross = 0
+        for idx in [5, 3, 2]:
+            if idx >= len(cells):
+                continue
+            raw = cells[idx].get_text(strip=True).replace("$", "").replace(",", "")
+            try:
+                val = int(raw)
+                if val > 0:
+                    gross = val
+                    break
+            except ValueError:
+                continue
+
+        if gross == 0:
             continue
 
         movie_id = _match_title(title_text)
@@ -171,7 +186,7 @@ def _match_title(title_lower):
             score = SequenceMatcher(None, clean, alias).ratio()
             if score > best:
                 best, best_id = score, movie_id
-    return best_id if best > 0.65 else None
+    return best_id if best > 0.82 else None
 
 
 # ─────────────────────────────────────────────────────────────────
