@@ -453,7 +453,7 @@
           <div style={{ marginBottom:28 }}>
             <h1 style={{ fontFamily:"Georgia,'Times New Roman',serif", fontSize:28, fontWeight:700, color:C.text, margin:0, letterSpacing:"-0.02em" }}>Standings</h1>
             <p style={{ color:C.textSub, margin:"6px 0 0", fontSize:14 }}>
-              {DATA.meta.season} &middot; Week {snapshots.length} &middot; Competition ends {fmtDate(DATA.meta.end)}
+              {DATA.meta.season} &middot; {snapshots.length > 0 ? `Week ${snapshots.length}` : "Pre-season"} &middot; Competition ends {fmtDate(DATA.meta.end)}
             </p>
           </div>
 
@@ -1029,7 +1029,7 @@
         <div style={{ maxWidth:1100, margin:"0 auto", padding:"32px 24px" }}>
           <div style={{ marginBottom:28 }}>
             <h1 style={{ fontFamily:"Georgia,'Times New Roman',serif", fontSize:28, fontWeight:700, color:C.text, margin:0 }}>Score Trends</h1>
-            <p style={{ color:C.textSub, margin:"6px 0 0", fontSize:14 }}>Weekly cumulative points &middot; {snapshots.length} weeks recorded &middot; Hover a line for details</p>
+            <p style={{ color:C.textSub, margin:"6px 0 0", fontSize:14 }}>Cumulative points by release week (Fri–Thu) &middot; {snapshots.length} {snapshots.length === 1 ? "week" : "weeks"} recorded &middot; Hover a line for details</p>
           </div>
 
           {/* Chart */}
@@ -1117,7 +1117,7 @@
                       <div style={{ width:10, height:10, borderRadius:"50%", background:color, flexShrink:0 }} />
                       <span style={{ fontSize:13, fontWeight:700, color:C.text }}>{pName}</span>
                     </div>
-                    <div style={{ fontSize:11, color:C.textSub, marginBottom:3 }}>Week ending {tooltipState.weekLabel}</div>
+                    <div style={{ fontSize:11, color:C.textSub, marginBottom:3 }}>Week of {tooltipState.weekLabel}</div>
                     <div style={{ fontFamily:"Georgia,serif", fontSize:20, fontWeight:700, color:C.text }}>{tooltipState.score} <span style={{ fontSize:12, fontWeight:400, color:C.textSub }}>pts</span></div>
                   </div>
                 );
