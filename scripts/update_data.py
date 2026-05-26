@@ -209,7 +209,15 @@ def fetch_metacritic_score(slug):
 
     soup = BeautifulSoup(r.text, "html.parser")
 
-    # Try several selectors — Metacritic occasionally redesigns their page
+    # JSON-LD is the most reliable — Metacritic embeds it in every page
+    match = re.search(r'"ratingValue"\s*:\s*"?(\d+)"?', r.text)
+    if match:
+        score = int(match.group(1))
+        if 0 < score <= 100:
+            return score
+
+    # CSS selector fallbacks — Metacritic occasionally redesigns their page
+    soup = BeautifulSoup(r.text, "html.parser")
     for selector in [
         "div[data-v-4cdca868] span",
         ".c-siteReviewScore span",
@@ -224,13 +232,6 @@ def fetch_metacritic_score(slug):
             txt = el.get_text(strip=True)
             if txt.isdigit() and 0 < int(txt) <= 100:
                 return int(txt)
-
-    # JSON-LD fallback
-    match = re.search(r'"ratingValue"\s*:\s*"?(\d+)"?', r.text)
-    if match:
-        score = int(match.group(1))
-        if 0 < score <= 100:
-            return score
 
     return None
 
