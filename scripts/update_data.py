@@ -477,7 +477,8 @@ def main():
     else:
         print("  —  No participants yet, skipping snapshot")
 
-    data["meta"]["lastUpdated"] = datetime.now().strftime("%B %-d, %Y")
+    now = datetime.now()
+    data["meta"]["lastUpdated"] = f"{now.strftime('%B')} {now.day}, {now.year}"
 
     with open(DATA_JSON, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
