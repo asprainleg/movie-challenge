@@ -947,9 +947,8 @@
     // ═══════════════════════════════════════════════════════════════
     //  TRENDS VIEW  (hover tooltip + line highlighting)
     // ═══════════════════════════════════════════════════════════════
-    function TrendsView({ scored, snapshots }) {
-      const [hoverFridayIdx, setHoverFridayIdx] = useState(null);
-      const [tooltipPos,     setTooltipPos]     = useState(null);
+    function TrendsView({ scored, snapshots, onSelectParticipant }) {
+      const [hoverDot,   setHoverDot]   = useState(null); // { pid, pi, score, label, isLive, fi, x, y }
       const containerRef = useRef(null);
       const svgRef       = useRef(null);
 
@@ -1015,8 +1014,8 @@
       }
 
       // ── Chart dimensions ───────────────────────────────────────────
-      const W   = 760, H = 320;
-      const pad = { top:20, right:24, bottom:40, left:56 };
+      const W   = 760, H = 340;
+      const pad = { top:20, right:24, bottom:58, left:56 };
       const cW  = W - pad.left - pad.right;
       const cH  = H - pad.top  - pad.bottom;
       const nW  = allFridays.length;
@@ -1031,38 +1030,15 @@
       for (let v = 0; v <= yTickMax; v += 200) yTicks.push(v);
       const yOf = (v) => pad.top + cH - (v / yTickMax) * cH;
 
-      // ── Hover: mouse x → nearest Friday index that has data ───────
-      const getHoverIdx = useCallback((clientX) => {
-        if (!svgRef.current || !dataFriIdxs.length) return null;
-        const rect   = svgRef.current.getBoundingClientRect();
-        const scaleX = W / rect.width;
-        const vbX    = (clientX - rect.left) * scaleX - pad.left;
-        const step   = cW / (nW - 1);
-        const raw    = Math.round(vbX / step);
-        const clamped = Math.max(0, Math.min(nW - 1, raw));
-        return dataFriIdxs.reduce((best, fi) =>
-          Math.abs(fi - clamped) < Math.abs(best - clamped) ? fi : best
-        , dataFriIdxs[0]);
-      }, [nW, cW, dataFriIdxs]);
-
-      const handleChartMouseMove = useCallback((e) => {
+      // ── Dot hover / click handlers ─────────────────────────────────
+      const handleDotEnter = useCallback((e, p, pi, score, label, isLive, fi) => {
         if (!containerRef.current) return;
-        const fi    = getHoverIdx(e.clientX);
-        if (fi === null) return;
         const cRect = containerRef.current.getBoundingClientRect();
-        setHoverFridayIdx(fi);
-        setTooltipPos({ x: e.clientX - cRect.left, y: e.clientY - cRect.top });
-      }, [getHoverIdx]);
-
-      const handleChartMouseLeave = () => { setHoverFridayIdx(null); setTooltipPos(null); };
-
-      // ── Tooltip data ───────────────────────────────────────────────
-      const hoverSnap = hoverFridayIdx !== null ? snapByWeek[allFridays[hoverFridayIdx]] : null;
-      const tooltipRows = hoverSnap
-        ? DATA.participants
-            .map((p, pi) => ({ p, pi, score: hoverSnap.scores[p.id] || 0 }))
-            .sort((a, b) => b.score - a.score)
-        : [];
+        setHoverDot({ pid: p.id, pi, score, label, isLive, fi,
+          x: e.clientX - cRect.left, y: e.clientY - cRect.top });
+      }, []);
+      const handleDotLeave  = useCallback(() => setHoverDot(null), []);
+      const handleDotClick  = useCallback((pid) => onSelectParticipant && onSelectParticipant(pid), [onSelectParticipant]);
 
       // ── Movement panel ─────────────────────────────────────────────
       const week1Scores = snapshots[0].scores;
@@ -1090,12 +1066,14 @@
                   </g>
                 ))}
 
-                {/* X axis — tick every week, label every other week */}
+                {/* X axis — tick every week, two-line label (Wk N / date) every other week */}
                 {allFridays.map((f, i) => {
                   const [,mm,dd] = f.split('-').map(Number);
-                  const isCurr   = f === currentWeekStart;
-                  const hasDot   = !!snapByWeek[f];
-                  const showLbl  = i % 2 === 0;
+                  const isCurr  = f === currentWeekStart;
+                  const showLbl = i % 2 === 0;
+                  const wkNum   = i + 1;
+                  const labelColor = isCurr ? C.textSub : C.textDim;
+                  const labelWeight = isCurr ? "600" : "400";
                   return (
                     <g key={f}>
                       <line
@@ -1104,15 +1082,16 @@
                         stroke={isCurr ? "#4A8AD4" : C.border}
                         strokeWidth={isCurr ? "1.5" : "1"}
                       />
-                      {showLbl && (
-                        <text
-                          x={xOf(i)} y={pad.top+cH+22}
-                          textAnchor="middle"
-                          fill={isCurr ? C.textSub : C.textDim}
-                          fontSize="10"
-                          fontWeight={isCurr ? "600" : "400"}
-                        >{mm}/{dd}</text>
-                      )}
+                      {showLbl && (<>
+                        <text x={xOf(i)} y={pad.top+cH+18} textAnchor="middle"
+                          fill={labelColor} fontSize="10" fontWeight={labelWeight}>
+                          Wk {wkNum}
+                        </text>
+                        <text x={xOf(i)} y={pad.top+cH+31} textAnchor="middle"
+                          fill={isCurr ? C.textDim : "#3A5070"} fontSize="9">
+                          {mm}/{dd}
+                        </text>
+                      </>)}
                     </g>
                   );
                 })}
@@ -1125,86 +1104,102 @@
                 />
 
                 {/* Hover vertical indicator */}
-                {hoverFridayIdx !== null && (
+                {hoverDot && (
                   <line
-                    x1={xOf(hoverFridayIdx)} y1={pad.top}
-                    x2={xOf(hoverFridayIdx)} y2={pad.top+cH}
-                    stroke={C.textSub} strokeWidth="1" strokeDasharray="3,3" opacity="0.6"
+                    x1={xOf(hoverDot.fi)} y1={pad.top}
+                    x2={xOf(hoverDot.fi)} y2={pad.top+cH}
+                    stroke={C.textSub} strokeWidth="1" strokeDasharray="3,3" opacity="0.5"
                   />
                 )}
 
                 {/* Lines + dots per participant */}
                 {DATA.participants.map((p, pi) => {
                   const color = PLAYER_COLORS[pi % PLAYER_COLORS.length];
-                  const pts   = dataFriIdxs.map(fi => ({
-                    fi,
-                    score:  snapByWeek[allFridays[fi]]?.scores[p.id] || 0,
-                    locked: allFridays[fi] < currentWeekStart,
-                  }));
+                  const pts   = dataFriIdxs.map(fi => {
+                    const snap = snapByWeek[allFridays[fi]];
+                    return {
+                      fi,
+                      score:  snap?.scores[p.id] || 0,
+                      label:  snap?.label || "",
+                      locked: allFridays[fi] < currentWeekStart,
+                      isLive: allFridays[fi] === currentWeekStart,
+                    };
+                  });
 
                   const pathD = pts.length > 1
                     ? pts.map((pt, i) => `${i===0?"M":"L"}${xOf(pt.fi).toFixed(1)},${yOf(pt.score).toFixed(1)}`).join(" ")
                     : null;
 
+                  const isHovParticipant = hoverDot?.pid === p.id;
+
                   return (
-                    <g key={p.id} style={{ pointerEvents:"none" }}>
+                    <g key={p.id}>
+                      {/* Line */}
                       {pathD && (
                         <path d={pathD} fill="none" stroke={color} strokeWidth="1.8"
-                          strokeLinecap="round" strokeLinejoin="round" opacity="0.75" />
+                          strokeLinecap="round" strokeLinejoin="round"
+                          opacity={hoverDot && !isHovParticipant ? 0.25 : 0.75}
+                          style={{ pointerEvents:"none", transition:"opacity 0.12s" }} />
                       )}
+                      {/* Dots — visible + hit area per point */}
                       {pts.map(pt => {
-                        const isHovDot = hoverFridayIdx === pt.fi;
+                        const isThisDot = isHovParticipant && hoverDot?.label === pt.label;
+                        const r = isThisDot ? 6 : pt.locked ? 3.5 : 5;
                         return (
-                          <circle
-                            key={pt.fi}
-                            cx={xOf(pt.fi)} cy={yOf(pt.score)}
-                            r={isHovDot ? 5.5 : pt.locked ? 3.5 : 5}
-                            fill={pt.locked ? color : "transparent"}
-                            stroke={color}
-                            strokeWidth={pt.locked ? 0 : 2}
-                          />
+                          <g key={pt.fi} style={{ cursor:"pointer" }}>
+                            {/* Visible dot */}
+                            <circle
+                              cx={xOf(pt.fi)} cy={yOf(pt.score)} r={r}
+                              fill={pt.locked ? color : "transparent"}
+                              stroke={color}
+                              strokeWidth={pt.locked ? 0 : 2}
+                              opacity={hoverDot && !isHovParticipant ? 0.25 : 1}
+                              style={{ pointerEvents:"none", transition:"opacity 0.12s, r 0.1s" }}
+                            />
+                            {/* Invisible hit area (12px radius for easy targeting) */}
+                            <circle
+                              cx={xOf(pt.fi)} cy={yOf(pt.score)} r="12"
+                              fill="transparent"
+                              onMouseEnter={(e) => handleDotEnter(e, p, pi, pt.score, pt.label, pt.isLive, pt.fi)}
+                              onMouseLeave={handleDotLeave}
+                              onClick={() => handleDotClick(p.id)}
+                            />
+                          </g>
                         );
                       })}
                     </g>
                   );
                 })}
-
-                {/* Invisible mouse-capture overlay (must be last = on top) */}
-                <rect
-                  x={pad.left} y={pad.top} width={cW} height={cH}
-                  fill="transparent" style={{ cursor:"crosshair" }}
-                  onMouseMove={handleChartMouseMove}
-                />
               </svg>
 
-              {/* Tooltip — all participants ranked for hovered week */}
-              {hoverSnap && tooltipPos && (() => {
-                const ttW  = 185;
-                const ctrW = containerRef.current?.offsetWidth || 600;
-                const rawX = tooltipPos.x + 16;
-                const x    = rawX + ttW > ctrW ? rawX - ttW - 32 : rawX;
-                const isLive = allFridays[hoverFridayIdx] === currentWeekStart;
+              {/* Tooltip — hovered participant + score */}
+              {hoverDot && (() => {
+                const { pid, pi, score, label, isLive, x: tx, y: ty } = hoverDot;
+                const pName = DATA.participants.find(p => p.id === pid)?.name || pid;
+                const color = PLAYER_COLORS[pi % PLAYER_COLORS.length];
+                const ttW   = 170;
+                const ctrW  = containerRef.current?.offsetWidth || 600;
+                const rawX  = tx + 14;
+                const x     = rawX + ttW > ctrW ? rawX - ttW - 28 : rawX;
                 return (
                   <div style={{
-                    position:"absolute", left:x, top: tooltipPos.y - 10,
+                    position:"absolute", left:x, top: ty - 44,
                     background:C.surfaceHigh, border:`1px solid ${C.border}`,
-                    borderRadius:6, padding:"10px 13px",
+                    borderRadius:6, padding:"9px 13px",
                     pointerEvents:"none", zIndex:20,
                     boxShadow:"0 4px 16px rgba(0,0,0,0.4)",
                     minWidth:ttW,
                   }}>
-                    <div style={{ display:"flex", alignItems:"center", gap:6, marginBottom:8 }}>
-                      <span style={{ fontSize:12, fontWeight:700, color:C.text }}>Week of {hoverSnap.label}</span>
-                      {isLive && <span style={{ fontSize:10, color:"#4A8AD4", fontWeight:600, background:"rgba(74,138,212,0.15)", padding:"1px 6px", borderRadius:10 }}>live</span>}
+                    <div style={{ display:"flex", alignItems:"center", gap:7, marginBottom:5 }}>
+                      <div style={{ width:10, height:10, borderRadius:"50%", background:color, flexShrink:0 }} />
+                      <span style={{ fontSize:13, fontWeight:700, color:C.text }}>{pName}</span>
+                      {isLive && <span style={{ fontSize:10, color:"#4A8AD4", fontWeight:600, background:"rgba(74,138,212,0.15)", padding:"1px 6px", borderRadius:10, marginLeft:"auto" }}>live</span>}
                     </div>
-                    {tooltipRows.map(({ p, pi, score }, rank) => (
-                      <div key={p.id} style={{ display:"flex", alignItems:"center", gap:6, marginBottom:3 }}>
-                        <span style={{ fontSize:10, color:C.textDim, width:16, textAlign:"right" }}>#{rank+1}</span>
-                        <div style={{ width:8, height:8, borderRadius:"50%", background:PLAYER_COLORS[pi%PLAYER_COLORS.length], flexShrink:0 }} />
-                        <span style={{ fontSize:12, color:C.text, flex:1 }}>{p.name}</span>
-                        <span style={{ fontSize:12, fontWeight:700, color:C.text }}>{score}</span>
-                      </div>
-                    ))}
+                    <div style={{ fontSize:11, color:C.textSub, marginBottom:4 }}>Week of {label}</div>
+                    <div style={{ fontFamily:"Georgia,serif", fontSize:20, fontWeight:700, color:C.text }}>
+                      {score} <span style={{ fontSize:12, fontWeight:400, color:C.textSub }}>pts</span>
+                    </div>
+                    <div style={{ fontSize:10, color:C.textDim, marginTop:4 }}>Click to view team →</div>
                   </div>
                 );
               })()}
@@ -1325,7 +1320,7 @@
             <MovieDetailView movieId={selectedMid} scored={scored} onBack={goBack} />
           )}
           {view === "trends" && (
-            <TrendsView scored={scored} snapshots={DATA.weeklySnapshots} />
+            <TrendsView scored={scored} snapshots={DATA.weeklySnapshots} onSelectParticipant={openTeam} />
           )}
 
           <footer style={{ borderTop:`1px solid ${C.borderLight}`, padding:"20px 24px", textAlign:"center", marginTop:40 }}>
