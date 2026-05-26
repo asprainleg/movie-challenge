@@ -14,7 +14,7 @@ import json
 import re
 import csv
 import os
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 from difflib import SequenceMatcher
 
 import requests
@@ -332,14 +332,21 @@ def _uniqueness_bonus(movie_id, participants):
     return 50 if c == 1 else 25 if c <= 3 else 0
 
 def _score_participant(p, movies, all_participants):
+    """
+    Mirror the JS scoreMovie() logic exactly.
+    Metacritic is only counted after a film's release date (matches effectiveMeta in JS).
+    """
     total = 0
+    today_str = date.today().isoformat()   # "YYYY-MM-DD"
     movie_map = {m["id"]: m for m in movies}
     for mid in p["picks"]:
         m = movie_map.get(mid)
         if not m: continue
         total += _bo_points(m["gross"])
         total += _milestone_bonus(m["gross"])
-        total += _metacritic_bonus(m.get("metacritic"))
+        # Gate metacritic by release date (mirrors JS effectiveMeta)
+        meta_score = m.get("metacritic") if m.get("releaseDate", "9999") <= today_str else None
+        total += _metacritic_bonus(meta_score)
         total += _uniqueness_bonus(mid, all_participants)
         if mid in p.get("theaterBonuses", []):
             total += 50
@@ -347,41 +354,57 @@ def _score_participant(p, movies, all_participants):
 
 
 # ─────────────────────────────────────────────────────────────────
-#  WEEKLY SNAPSHOT
+#  WEEKLY SNAPSHOT  (Friday-anchored competition weeks)
 # ─────────────────────────────────────────────────────────────────
+def _friday_week_start(d):
+    """
+    Return the most recent Friday on or before date d.
+    Competition weeks run Friday–Thursday to align with release dates.
+    BOM weekend data doesn't land until Sunday/Monday, so the pipeline
+    overwrites the same week's snapshot each daily run — by Mon/Tue it's accurate.
+    weekday(): Mon=0 Tue=1 Wed=2 Thu=3 Fri=4 Sat=5 Sun=6
+    """
+    days_since_friday = (d.weekday() - 4) % 7
+    return d - timedelta(days=days_since_friday)
+
+
 def update_snapshot(data):
     """
-    Upsert the current week's snapshot.
-    One snapshot per calendar week (Mon–Sun); updates in place if same week,
-    appends if new week.
+    Upsert the snapshot for the current competition week (Friday-anchored).
+    One snapshot per Friday-start week; updated every daily pipeline run.
+    The week label is the Friday date (e.g. "May 22", "Jun 5").
     """
-    today     = date.today()
-    week_num  = today.isocalendar()[1]
-    year      = today.year
-    label     = today.strftime("%b ") + str(today.day)   # e.g. "Jun 2"
-    scores    = {
+    today      = date.today()
+    week_fri   = _friday_week_start(today)          # the Friday that opened this week
+    week_key   = week_fri.isoformat()               # "2026-05-22" — stable ID for this week
+    label      = week_fri.strftime("%-m/%-d")       # "5/22", "5/29" — concise chart label
+    scores     = {
         p["id"]: _score_participant(p, data["movies"], data["participants"])
         for p in data["participants"]
     }
 
     snapshots = data.setdefault("weeklySnapshots", [])
+
+    # Update in place if we already have a snapshot for this Friday-week
     for i, snap in enumerate(snapshots):
-        try:
-            snap_date = datetime.strptime(snap.get("date", "2000-01-01"), "%Y-%m-%d").date()
-        except ValueError:
-            continue
-        if snap_date.isocalendar()[1] == week_num and snap_date.year == year:
-            snapshots[i].update({"scores": scores, "label": label, "date": today.isoformat()})
-            print(f"  ✓  Updated existing week {week_num} snapshot ({label})")
+        if snap.get("weekStart") == week_key:
+            snapshots[i].update({
+                "scores":    scores,
+                "label":     label,
+                "lastUpdated": today.isoformat(),
+            })
+            print(f"  ✓  Updated week of {label} snapshot (last updated {today})")
             return
 
+    # New week — append
     snapshots.append({
-        "week":   len(snapshots) + 1,
-        "label":  label,
-        "date":   today.isoformat(),
-        "scores": scores,
+        "week":        len(snapshots) + 1,
+        "weekStart":   week_key,          # Friday date — stable key
+        "label":       label,             # display label for chart axis
+        "lastUpdated": today.isoformat(),
+        "scores":      scores,
     })
-    print(f"  ✓  Added new snapshot: week {len(snapshots)} ({label})")
+    print(f"  ✓  Added snapshot for week of {label} (#{len(snapshots)})")
 
 
 # ─────────────────────────────────────────────────────────────────
@@ -406,14 +429,31 @@ def main():
 
     # ── 2. Metacritic ───────────────────────────────────────────
     print("\n[2/4] Fetching Metacritic scores...")
+    today_str      = date.today().isoformat()
+    lock_date_str  = data["meta"].get("metacriticLockDate", "September 8, 2026")
+    # Parse the lock date — stored as human-readable in meta
+    try:
+        lock_date = datetime.strptime(lock_date_str, "%B %d, %Y").date()
+    except ValueError:
+        lock_date = date(2026, 9, 8)
+    scores_locked_globally = date.today() >= lock_date
+
     for movie in data["movies"]:
+        # Skip movies that haven't released yet
+        if movie.get("releaseDate", "9999") > today_str:
+            print(f"  —  {movie['title'][:40]:40s}  not released yet")
+            continue
+        # If the global lock date has passed AND we already have a score, freeze it
         if movie.get("metacriticLocked"):
+            print(f"  🔒  {movie['title'][:40]:40s}  {movie.get('metacritic', '—')}  (locked)")
             continue
         score = fetch_metacritic_score(movie.get("metacriticSlug"))
         if score is not None:
             print(f"  ✓  {movie['title'][:40]:40s}  {score}")
-            movie["metacritic"]       = score
-            movie["metacriticLocked"] = True
+            movie["metacritic"] = score
+            # Lock permanently only on/after the official lock date
+            if scores_locked_globally:
+                movie["metacriticLocked"] = True
         else:
             print(f"  —  {movie['title'][:40]:40s}  not available yet")
 
