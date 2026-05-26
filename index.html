@@ -1055,7 +1055,7 @@
 
           {/* Chart */}
           <div style={{ background:C.surface, border:`1px solid ${C.borderLight}`, borderRadius:8, padding:20, marginBottom:24 }}>
-            <div ref={containerRef} style={{ position:"relative" }} onMouseLeave={handleChartMouseLeave}>
+            <div ref={containerRef} style={{ position:"relative" }} onMouseLeave={() => setHoverDot(null)}>
               <svg ref={svgRef} viewBox={`0 0 ${W} ${H}`} style={{ width:"100%", height:"auto", display:"block", overflow:"visible", minWidth:480 }}>
 
                 {/* Y grid + labels */}
