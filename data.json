@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "May 26, 2026",
+    "lastUpdated": "May 27, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -12,7 +12,7 @@
       "id": "boosters",
       "title": "I Love Boosters",
       "releaseDate": "2026-05-22",
-      "gross": 4565400,
+      "gross": 4700023,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "i-love-boosters"
@@ -22,7 +22,7 @@
       "title": "Ladies First",
       "releaseDate": "2026-05-22",
       "gross": 0,
-      "metacritic": 41,
+      "metacritic": 39,
       "metacriticLocked": false,
       "metacriticSlug": "ladies-first-2026"
     },
@@ -30,7 +30,7 @@
       "id": "passenger",
       "title": "Passenger",
       "releaseDate": "2026-05-22",
-      "gross": 10500000,
+      "gross": 10378695,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "passenger"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 100000000,
+      "gross": 98091641,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -555,20 +555,20 @@
       "week": 1,
       "weekStart": "2026-05-22",
       "label": "5/22",
-      "lastUpdated": "2026-05-26",
+      "lastUpdated": "2026-05-27",
       "scores": {
-        "abie": 170,
-        "josh_d": 220,
-        "taylor": 220,
-        "tyler_b": 325,
-        "gonzalo": 195,
-        "josh_b": 170,
+        "abie": 143,
+        "josh_d": 193,
+        "taylor": 193,
+        "tyler_b": 298,
+        "gonzalo": 168,
+        "josh_b": 143,
         "srujith": 50,
-        "alex": 245,
-        "becky": 270,
-        "peter": 220,
+        "alex": 218,
+        "becky": 243,
+        "peter": 193,
         "adam": 100,
-        "tina": 245
+        "tina": 218
       }
     }
   ]
