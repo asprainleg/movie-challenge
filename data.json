@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "May 27, 2026",
+    "lastUpdated": "May 28, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -12,7 +12,7 @@
       "id": "boosters",
       "title": "I Love Boosters",
       "releaseDate": "2026-05-22",
-      "gross": 4700023,
+      "gross": 5250125,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "i-love-boosters"
@@ -30,7 +30,7 @@
       "id": "passenger",
       "title": "Passenger",
       "releaseDate": "2026-05-22",
-      "gross": 10378695,
+      "gross": 11426922,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "passenger"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 98091641,
+      "gross": 104629111,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -488,7 +488,9 @@
         "jackass",
         "invite"
       ],
-      "theaterBonuses": []
+      "theaterBonuses": [
+        "mando"
+      ]
     },
     {
       "id": "becky",
@@ -555,20 +557,20 @@
       "week": 1,
       "weekStart": "2026-05-22",
       "label": "5/22",
-      "lastUpdated": "2026-05-27",
+      "lastUpdated": "2026-05-28",
       "scores": {
-        "abie": 143,
-        "josh_d": 193,
-        "taylor": 193,
-        "tyler_b": 298,
-        "gonzalo": 168,
-        "josh_b": 143,
+        "abie": 174,
+        "josh_d": 224,
+        "taylor": 224,
+        "tyler_b": 330,
+        "gonzalo": 199,
+        "josh_b": 174,
         "srujith": 50,
-        "alex": 218,
-        "becky": 243,
-        "peter": 193,
+        "alex": 299,
+        "becky": 274,
+        "peter": 224,
         "adam": 100,
-        "tina": 218
+        "tina": 249
       }
     }
   ]
