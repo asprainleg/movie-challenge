@@ -1,10 +1,11 @@
 name: Daily Box Office Update
 
 on:
-  # Runs Monday–Friday at noon Eastern Time (16:00 UTC during EDT / 17:00 UTC during EST)
-  # Adjust the hour if the clocks change — EDT is UTC-4, EST is UTC-5
+  # Runs every day at 11:54 AM Central Time (16:54 UTC during CDT / 17:54 UTC during CST)
+  # Off-the-hour to avoid GitHub Actions queue congestion at :00
+  # Running weekends too captures opening-day and Saturday box office before Monday's confirmed totals
   schedule:
-    - cron: "0 16 * * 1-5"
+    - cron: "54 16 * * *"
 
   # Adds a "Run workflow" button in the GitHub Actions tab for manual triggers
   workflow_dispatch:
