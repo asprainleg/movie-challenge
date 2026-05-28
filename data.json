@@ -12,7 +12,7 @@
       "id": "boosters",
       "title": "I Love Boosters",
       "releaseDate": "2026-05-22",
-      "gross": 5250125,
+      "gross": 5679204,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "i-love-boosters"
@@ -30,7 +30,7 @@
       "id": "passenger",
       "title": "Passenger",
       "releaseDate": "2026-05-22",
-      "gross": 11426922,
+      "gross": 12186790,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "passenger"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 104629111,
+      "gross": 108823848,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -559,18 +559,18 @@
       "label": "5/22",
       "lastUpdated": "2026-05-28",
       "scores": {
-        "abie": 174,
-        "josh_d": 224,
-        "taylor": 224,
-        "tyler_b": 330,
-        "gonzalo": 199,
-        "josh_b": 174,
+        "abie": 178,
+        "josh_d": 228,
+        "taylor": 228,
+        "tyler_b": 335,
+        "gonzalo": 203,
+        "josh_b": 178,
         "srujith": 50,
-        "alex": 299,
-        "becky": 274,
-        "peter": 224,
+        "alex": 303,
+        "becky": 278,
+        "peter": 228,
         "adam": 100,
-        "tina": 249
+        "tina": 253
       }
     }
   ]
