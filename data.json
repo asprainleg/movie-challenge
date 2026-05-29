@@ -49,7 +49,7 @@
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
     },
@@ -67,7 +67,7 @@
       "title": "Pressure",
       "releaseDate": "2026-05-29",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "pressure"
     },
@@ -579,18 +579,18 @@
       "label": "5/29",
       "lastUpdated": "2026-05-29",
       "scores": {
-        "abie": 178,
-        "josh_d": 228,
+        "abie": 218,
+        "josh_d": 293,
         "taylor": 228,
         "tyler_b": 335,
         "gonzalo": 203,
         "josh_b": 178,
-        "srujith": 50,
+        "srujith": 90,
         "alex": 303,
         "becky": 278,
         "peter": 228,
         "adam": 100,
-        "tina": 253
+        "tina": 293
       }
     }
   ]
