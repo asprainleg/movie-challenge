@@ -5,7 +5,7 @@ on:
   # Off-the-hour to avoid GitHub Actions queue congestion at :00
   # Running weekends too captures opening-day and Saturday box office before Monday's confirmed totals
   schedule:
-    - cron: "54 16 * * *"
+    - cron: "54 10 * * *"
 
   # Adds a "Run workflow" button in the GitHub Actions tab for manual triggers
   workflow_dispatch:
