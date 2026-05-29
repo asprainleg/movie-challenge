@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "May 28, 2026",
+    "lastUpdated": "May 29, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -58,7 +58,7 @@
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
     },
@@ -558,6 +558,26 @@
       "weekStart": "2026-05-22",
       "label": "5/22",
       "lastUpdated": "2026-05-28",
+      "scores": {
+        "abie": 178,
+        "josh_d": 228,
+        "taylor": 228,
+        "tyler_b": 335,
+        "gonzalo": 203,
+        "josh_b": 178,
+        "srujith": 50,
+        "alex": 303,
+        "becky": 278,
+        "peter": 228,
+        "adam": 100,
+        "tina": 253
+      }
+    },
+    {
+      "week": 2,
+      "weekStart": "2026-05-29",
+      "label": "5/29",
+      "lastUpdated": "2026-05-29",
       "scores": {
         "abie": 178,
         "josh_d": 228,
