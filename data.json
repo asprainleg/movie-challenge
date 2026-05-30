@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "May 29, 2026",
+    "lastUpdated": "May 30, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -12,7 +12,7 @@
       "id": "boosters",
       "title": "I Love Boosters",
       "releaseDate": "2026-05-22",
-      "gross": 5679204,
+      "gross": 5975268,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "i-love-boosters"
@@ -30,7 +30,7 @@
       "id": "passenger",
       "title": "Passenger",
       "releaseDate": "2026-05-22",
-      "gross": 12186790,
+      "gross": 12669276,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "passenger"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 108823848,
+      "gross": 112368604,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -58,7 +58,7 @@
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
       "gross": 0,
-      "metacritic": 38,
+      "metacritic": 36,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
     },
@@ -577,20 +577,20 @@
       "week": 2,
       "weekStart": "2026-05-29",
       "label": "5/29",
-      "lastUpdated": "2026-05-29",
+      "lastUpdated": "2026-05-30",
       "scores": {
-        "abie": 218,
-        "josh_d": 293,
-        "taylor": 228,
-        "tyler_b": 335,
-        "gonzalo": 203,
-        "josh_b": 178,
+        "abie": 222,
+        "josh_d": 297,
+        "taylor": 232,
+        "tyler_b": 339,
+        "gonzalo": 207,
+        "josh_b": 182,
         "srujith": 90,
-        "alex": 303,
-        "becky": 278,
-        "peter": 228,
+        "alex": 307,
+        "becky": 282,
+        "peter": 232,
         "adam": 100,
-        "tina": 293
+        "tina": 297
       }
     }
   ]
