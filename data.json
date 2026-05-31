@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "May 30, 2026",
+    "lastUpdated": "May 31, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -30,7 +30,7 @@
       "id": "passenger",
       "title": "Passenger",
       "releaseDate": "2026-05-22",
-      "gross": 12669276,
+      "gross": 13514276,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "passenger"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 112368604,
+      "gross": 118868604,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 0,
+      "gross": 38412634,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -57,7 +57,7 @@
       "id": "breadwinner",
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
-      "gross": 0,
+      "gross": 2750000,
       "metacritic": 36,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
@@ -66,7 +66,7 @@
       "id": "pressure",
       "title": "Pressure",
       "releaseDate": "2026-05-29",
-      "gross": 0,
+      "gross": 2500000,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "pressure"
@@ -75,7 +75,7 @@
       "id": "tuner",
       "title": "Tuner",
       "releaseDate": "2026-05-29",
-      "gross": 0,
+      "gross": 1085417,
       "metacritic": null,
       "metacriticLocked": false,
       "metacriticSlug": "tuner-2026"
@@ -577,20 +577,20 @@
       "week": 2,
       "weekStart": "2026-05-29",
       "label": "5/29",
-      "lastUpdated": "2026-05-30",
+      "lastUpdated": "2026-05-31",
       "scores": {
-        "abie": 222,
-        "josh_d": 297,
-        "taylor": 232,
-        "tyler_b": 339,
-        "gonzalo": 207,
-        "josh_b": 182,
-        "srujith": 90,
-        "alex": 307,
-        "becky": 282,
-        "peter": 232,
+        "abie": 266,
+        "josh_d": 343,
+        "taylor": 238,
+        "tyler_b": 346,
+        "gonzalo": 213,
+        "josh_b": 188,
+        "srujith": 128,
+        "alex": 313,
+        "becky": 288,
+        "peter": 238,
         "adam": 100,
-        "tina": 297
+        "tina": 341
       }
     }
   ]
