@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "May 31, 2026",
+    "lastUpdated": "June 1, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -12,7 +12,7 @@
       "id": "boosters",
       "title": "I Love Boosters",
       "releaseDate": "2026-05-22",
-      "gross": 5975268,
+      "gross": 7285268,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "i-love-boosters"
@@ -30,7 +30,7 @@
       "id": "passenger",
       "title": "Passenger",
       "releaseDate": "2026-05-22",
-      "gross": 13514276,
+      "gross": 15269276,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "passenger"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 118868604,
+      "gross": 137368604,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 38412634,
+      "gross": 81456295,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -57,8 +57,8 @@
       "id": "breadwinner",
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
-      "gross": 2750000,
-      "metacritic": 36,
+      "gross": 7500000,
+      "metacritic": 32,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
     },
@@ -66,7 +66,7 @@
       "id": "pressure",
       "title": "Pressure",
       "releaseDate": "2026-05-29",
-      "gross": 2500000,
+      "gross": 5750000,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "pressure"
@@ -75,7 +75,7 @@
       "id": "tuner",
       "title": "Tuner",
       "releaseDate": "2026-05-29",
-      "gross": 1085417,
+      "gross": 1849417,
       "metacritic": null,
       "metacriticLocked": false,
       "metacriticSlug": "tuner-2026"
@@ -577,20 +577,20 @@
       "week": 2,
       "weekStart": "2026-05-29",
       "label": "5/29",
-      "lastUpdated": "2026-05-31",
+      "lastUpdated": "2026-06-01",
       "scores": {
-        "abie": 266,
-        "josh_d": 343,
-        "taylor": 238,
-        "tyler_b": 346,
-        "gonzalo": 213,
-        "josh_b": 188,
-        "srujith": 128,
-        "alex": 313,
-        "becky": 288,
-        "peter": 238,
+        "abie": 353,
+        "josh_d": 433,
+        "taylor": 257,
+        "tyler_b": 367,
+        "gonzalo": 232,
+        "josh_b": 207,
+        "srujith": 196,
+        "alex": 332,
+        "becky": 307,
+        "peter": 257,
         "adam": 100,
-        "tina": 341
+        "tina": 428
       }
     }
   ]
