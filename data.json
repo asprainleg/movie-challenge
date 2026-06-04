@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "June 3, 2026",
+    "lastUpdated": "June 4, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -30,7 +30,7 @@
       "id": "passenger",
       "title": "Passenger",
       "releaseDate": "2026-05-22",
-      "gross": 15771499,
+      "gross": 16286519,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "passenger"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 139056859,
+      "gross": 142248523,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 89072024,
+      "gross": 97848566,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -57,7 +57,7 @@
       "id": "breadwinner",
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
-      "gross": 8013380,
+      "gross": 9234865,
       "metacritic": 32,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
@@ -66,7 +66,7 @@
       "id": "pressure",
       "title": "Pressure",
       "releaseDate": "2026-05-29",
-      "gross": 6357815,
+      "gross": 7194970,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "pressure"
@@ -75,7 +75,7 @@
       "id": "tuner",
       "title": "Tuner",
       "releaseDate": "2026-05-29",
-      "gross": 1875749,
+      "gross": 2222671,
       "metacritic": null,
       "metacriticLocked": false,
       "metacriticSlug": "tuner-2026"
@@ -577,20 +577,20 @@
       "week": 2,
       "weekStart": "2026-05-29",
       "label": "5/29",
-      "lastUpdated": "2026-06-03",
+      "lastUpdated": "2026-06-04",
       "scores": {
-        "abie": 363,
-        "josh_d": 444,
-        "taylor": 259,
-        "tyler_b": 369,
-        "gonzalo": 234,
-        "josh_b": 209,
-        "srujith": 204,
-        "alex": 334,
-        "becky": 309,
-        "peter": 259,
+        "abie": 374,
+        "josh_d": 456,
+        "taylor": 262,
+        "tyler_b": 373,
+        "gonzalo": 237,
+        "josh_b": 212,
+        "srujith": 212,
+        "alex": 337,
+        "becky": 312,
+        "peter": 262,
         "adam": 100,
-        "tina": 438
+        "tina": 449
       }
     }
   ]
