@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "June 6, 2026",
+    "lastUpdated": "June 7, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -30,7 +30,7 @@
       "id": "passenger",
       "title": "Passenger",
       "releaseDate": "2026-05-22",
-      "gross": 16800696,
+      "gross": 16980696,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "passenger"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 145822349,
+      "gross": 148322349,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 109114925,
+      "gross": 117089514,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -57,7 +57,7 @@
       "id": "breadwinner",
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
-      "gross": 10438057,
+      "gross": 11438057,
       "metacritic": 33,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
@@ -66,7 +66,7 @@
       "id": "pressure",
       "title": "Pressure",
       "releaseDate": "2026-05-29",
-      "gross": 8152540,
+      "gross": 8922540,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "pressure"
@@ -84,8 +84,8 @@
       "id": "motu",
       "title": "Masters of the Universe",
       "releaseDate": "2026-06-05",
-      "gross": 0,
-      "metacritic": 51,
+      "gross": 11754000,
+      "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "masters-of-the-universe-2026"
     },
@@ -103,7 +103,7 @@
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
       "gross": 0,
-      "metacritic": 37,
+      "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
     },
@@ -597,20 +597,20 @@
       "week": 3,
       "weekStart": "2026-06-05",
       "label": "6/5",
-      "lastUpdated": "2026-06-06",
+      "lastUpdated": "2026-06-07",
       "scores": {
-        "abie": 414,
-        "josh_d": 497,
-        "taylor": 265,
-        "tyler_b": 376,
-        "gonzalo": 260,
-        "josh_b": 215,
-        "srujith": 249,
-        "alex": 340,
-        "becky": 315,
-        "peter": 285,
+        "abie": 425,
+        "josh_d": 508,
+        "taylor": 268,
+        "tyler_b": 379,
+        "gonzalo": 274,
+        "josh_b": 218,
+        "srujith": 257,
+        "alex": 343,
+        "becky": 318,
+        "peter": 299,
         "adam": 100,
-        "tina": 489
+        "tina": 500
       }
     }
   ]
