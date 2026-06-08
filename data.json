@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "June 7, 2026",
+    "lastUpdated": "June 8, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -12,7 +12,7 @@
       "id": "boosters",
       "title": "I Love Boosters",
       "releaseDate": "2026-05-22",
-      "gross": 8155128,
+      "gross": 8657728,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "i-love-boosters"
@@ -30,7 +30,7 @@
       "id": "passenger",
       "title": "Passenger",
       "releaseDate": "2026-05-22",
-      "gross": 16980696,
+      "gross": 17430696,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "passenger"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 148322349,
+      "gross": 155822349,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 117089514,
+      "gross": 135057858,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -57,7 +57,7 @@
       "id": "breadwinner",
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
-      "gross": 11438057,
+      "gross": 13838057,
       "metacritic": 33,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
@@ -66,7 +66,7 @@
       "id": "pressure",
       "title": "Pressure",
       "releaseDate": "2026-05-29",
-      "gross": 8922540,
+      "gross": 11152540,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "pressure"
@@ -84,7 +84,7 @@
       "id": "motu",
       "title": "Masters of the Universe",
       "releaseDate": "2026-06-05",
-      "gross": 11754000,
+      "gross": 29308000,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "masters-of-the-universe-2026"
@@ -93,7 +93,7 @@
       "id": "powerballad",
       "title": "Power Ballad",
       "releaseDate": "2026-06-05",
-      "gross": 226126,
+      "gross": 1541126,
       "metacritic": 67,
       "metacriticLocked": false,
       "metacriticSlug": "power-ballad"
@@ -102,7 +102,7 @@
       "id": "scarymovie",
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
-      "gross": 0,
+      "gross": 55000000,
       "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
@@ -597,20 +597,20 @@
       "week": 3,
       "weekStart": "2026-06-05",
       "label": "6/5",
-      "lastUpdated": "2026-06-07",
+      "lastUpdated": "2026-06-08",
       "scores": {
-        "abie": 425,
-        "josh_d": 508,
-        "taylor": 268,
-        "tyler_b": 379,
-        "gonzalo": 274,
-        "josh_b": 218,
-        "srujith": 257,
-        "alex": 343,
-        "becky": 318,
-        "peter": 299,
+        "abie": 475,
+        "josh_d": 561,
+        "taylor": 300,
+        "tyler_b": 492,
+        "gonzalo": 324,
+        "josh_b": 250,
+        "srujith": 275,
+        "alex": 375,
+        "becky": 350,
+        "peter": 349,
         "adam": 100,
-        "tina": 500
+        "tina": 550
       }
     }
   ]
