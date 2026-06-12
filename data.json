@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "June 11, 2026",
+    "lastUpdated": "June 12, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -30,7 +30,7 @@
       "id": "passenger",
       "title": "Passenger",
       "releaseDate": "2026-05-22",
-      "gross": 17614244,
+      "gross": 17691589,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "passenger"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 158382333,
+      "gross": 159471900,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -57,7 +57,7 @@
       "id": "breadwinner",
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
-      "gross": 15115364,
+      "gross": 15615691,
       "metacritic": 33,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
@@ -66,7 +66,7 @@
       "id": "pressure",
       "title": "Pressure",
       "releaseDate": "2026-05-29",
-      "gross": 12242475,
+      "gross": 12654145,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "pressure"
@@ -75,7 +75,7 @@
       "id": "tuner",
       "title": "Tuner",
       "releaseDate": "2026-05-29",
-      "gross": 3329731,
+      "gross": 3427154,
       "metacritic": null,
       "metacriticLocked": false,
       "metacriticSlug": "tuner-2026"
@@ -84,7 +84,7 @@
       "id": "motu",
       "title": "Masters of the Universe",
       "releaseDate": "2026-06-05",
-      "gross": 34699997,
+      "gross": 36613511,
       "metacritic": 51,
       "metacriticLocked": false,
       "metacriticSlug": "masters-of-the-universe-2026"
@@ -93,7 +93,7 @@
       "id": "powerballad",
       "title": "Power Ballad",
       "releaseDate": "2026-06-05",
-      "gross": 1892314,
+      "gross": 2039961,
       "metacritic": 67,
       "metacriticLocked": false,
       "metacriticSlug": "power-ballad"
@@ -102,7 +102,7 @@
       "id": "scarymovie",
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
-      "gross": 64016971,
+      "gross": 67319634,
       "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
@@ -112,7 +112,7 @@
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
     },
@@ -121,7 +121,7 @@
       "title": "The Furious",
       "releaseDate": "2026-06-12",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 87,
       "metacriticLocked": false,
       "metacriticSlug": "the-furious"
     },
@@ -611,6 +611,26 @@
         "peter": 357,
         "adam": 100,
         "tina": 561
+      }
+    },
+    {
+      "week": 4,
+      "weekStart": "2026-06-12",
+      "label": "6/12",
+      "lastUpdated": "2026-06-12",
+      "scores": {
+        "abie": 527,
+        "josh_d": 614,
+        "taylor": 304,
+        "tyler_b": 508,
+        "gonzalo": 375,
+        "josh_b": 294,
+        "srujith": 323,
+        "alex": 419,
+        "becky": 404,
+        "peter": 400,
+        "adam": 100,
+        "tina": 602
       }
     }
   ]
