@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "June 14, 2026",
+    "lastUpdated": "June 15, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -12,7 +12,7 @@
       "id": "boosters",
       "title": "I Love Boosters",
       "releaseDate": "2026-05-22",
-      "gross": 8995063,
+      "gross": 9200063,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "i-love-boosters"
@@ -30,7 +30,7 @@
       "id": "passenger",
       "title": "Passenger",
       "releaseDate": "2026-05-22",
-      "gross": 17814020,
+      "gross": 17961020,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "passenger"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 161672355,
+      "gross": 165072355,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 152378300,
+      "gross": 160034251,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -57,7 +57,7 @@
       "id": "breadwinner",
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
-      "gross": 16450217,
+      "gross": 17530217,
       "metacritic": 33,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
@@ -66,7 +66,7 @@
       "id": "pressure",
       "title": "Pressure",
       "releaseDate": "2026-05-29",
-      "gross": 12924505,
+      "gross": 14024505,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "pressure"
@@ -84,7 +84,7 @@
       "id": "motu",
       "title": "Masters of the Universe",
       "releaseDate": "2026-06-05",
-      "gross": 40486097,
+      "gross": 46730097,
       "metacritic": 51,
       "metacriticLocked": false,
       "metacriticSlug": "masters-of-the-universe-2026"
@@ -93,7 +93,7 @@
       "id": "powerballad",
       "title": "Power Ballad",
       "releaseDate": "2026-06-05",
-      "gross": 2121821,
+      "gross": 2381821,
       "metacritic": 67,
       "metacriticLocked": false,
       "metacriticSlug": "power-ballad"
@@ -102,7 +102,7 @@
       "id": "scarymovie",
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
-      "gross": 74890642,
+      "gross": 84590642,
       "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 19000000,
+      "gross": 44000000,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -120,7 +120,7 @@
       "id": "furious",
       "title": "The Furious",
       "releaseDate": "2026-06-12",
-      "gross": 1400000,
+      "gross": 2750000,
       "metacritic": 85,
       "metacriticLocked": false,
       "metacriticSlug": "the-furious"
@@ -428,7 +428,9 @@
         "odyssey",
         "pawpatrol"
       ],
-      "theaterBonuses": []
+      "theaterBonuses": [
+        "scarymovie"
+      ]
     },
     {
       "id": "gonzalo",
@@ -617,20 +619,20 @@
       "week": 4,
       "weekStart": "2026-06-12",
       "label": "6/12",
-      "lastUpdated": "2026-06-14",
+      "lastUpdated": "2026-06-15",
       "scores": {
-        "abie": 582,
-        "josh_d": 669,
-        "taylor": 306,
-        "tyler_b": 517,
-        "gonzalo": 400,
-        "josh_b": 315,
-        "srujith": 376,
-        "alex": 440,
-        "becky": 407,
-        "peter": 425,
+        "abie": 619,
+        "josh_d": 708,
+        "taylor": 310,
+        "tyler_b": 581,
+        "gonzalo": 435,
+        "josh_b": 344,
+        "srujith": 409,
+        "alex": 469,
+        "becky": 412,
+        "peter": 460,
         "adam": 100,
-        "tina": 657
+        "tina": 694
       }
     }
   ]
