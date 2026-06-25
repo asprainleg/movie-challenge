@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "June 24, 2026",
+    "lastUpdated": "June 25, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 172457036,
+      "gross": 172976332,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -57,7 +57,7 @@
       "id": "breadwinner",
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
-      "gross": 19374387,
+      "gross": 19475238,
       "metacritic": 33,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
@@ -66,7 +66,7 @@
       "id": "pressure",
       "title": "Pressure",
       "releaseDate": "2026-05-29",
-      "gross": 15192210,
+      "gross": 15252785,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "pressure"
@@ -84,7 +84,7 @@
       "id": "motu",
       "title": "Masters of the Universe",
       "releaseDate": "2026-06-05",
-      "gross": 58095001,
+      "gross": 58858815,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "masters-of-the-universe-2026"
@@ -93,7 +93,7 @@
       "id": "powerballad",
       "title": "Power Ballad",
       "releaseDate": "2026-06-05",
-      "gross": 2607023,
+      "gross": 2609124,
       "metacritic": 67,
       "metacriticLocked": false,
       "metacriticSlug": "power-ballad"
@@ -102,7 +102,7 @@
       "id": "scarymovie",
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
-      "gross": 98119753,
+      "gross": 99155344,
       "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 80891810,
+      "gross": 83343040,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -120,7 +120,7 @@
       "id": "furious",
       "title": "The Furious",
       "releaseDate": "2026-06-12",
-      "gross": 5402166,
+      "gross": 5600015,
       "metacritic": 85,
       "metacriticLocked": false,
       "metacriticSlug": "the-furious"
@@ -138,7 +138,7 @@
       "id": "leviticus",
       "title": "Leviticus",
       "releaseDate": "2026-06-19",
-      "gross": 3089196,
+      "gross": 3692107,
       "metacritic": null,
       "metacriticLocked": false,
       "metacriticSlug": "leviticus-2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 176979273,
+      "gross": 200671894,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -639,20 +639,20 @@
       "week": 5,
       "weekStart": "2026-06-19",
       "label": "6/19",
-      "lastUpdated": "2026-06-24",
+      "lastUpdated": "2026-06-25",
       "scores": {
-        "abie": 993,
-        "josh_d": 1083,
-        "taylor": 608,
-        "tyler_b": 894,
-        "gonzalo": 831,
-        "josh_b": 703,
-        "srujith": 776,
-        "alex": 828,
-        "becky": 713,
-        "peter": 856,
-        "adam": 391,
-        "tina": 777
+        "abie": 1045,
+        "josh_d": 1135,
+        "taylor": 657,
+        "tyler_b": 944,
+        "gonzalo": 883,
+        "josh_b": 755,
+        "srujith": 828,
+        "alex": 880,
+        "becky": 762,
+        "peter": 908,
+        "adam": 440,
+        "tina": 780
       }
     }
   ]
