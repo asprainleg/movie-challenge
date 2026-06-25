@@ -383,7 +383,9 @@
         "spiderman",
         "toy5"
       ],
-      "theaterBonuses": []
+      "theaterBonuses": [
+        "back"
+      ]
     },
     {
       "id": "josh_d",
@@ -491,7 +493,8 @@
         "invite"
       ],
       "theaterBonuses": [
-        "mando"
+        "mando",
+        "disc"
       ]
     },
     {
@@ -641,14 +644,14 @@
       "label": "6/19",
       "lastUpdated": "2026-06-25",
       "scores": {
-        "abie": 1045,
+        "abie": 1095,
         "josh_d": 1135,
         "taylor": 657,
         "tyler_b": 944,
         "gonzalo": 883,
         "josh_b": 755,
         "srujith": 828,
-        "alex": 880,
+        "alex": 930,
         "becky": 762,
         "peter": 908,
         "adam": 440,
