@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "June 25, 2026",
+    "lastUpdated": "June 26, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 172976332,
+      "gross": 173364088,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -57,7 +57,7 @@
       "id": "breadwinner",
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
-      "gross": 19475238,
+      "gross": 19546301,
       "metacritic": 33,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
@@ -66,7 +66,7 @@
       "id": "pressure",
       "title": "Pressure",
       "releaseDate": "2026-05-29",
-      "gross": 15252785,
+      "gross": 15300125,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "pressure"
@@ -84,7 +84,7 @@
       "id": "motu",
       "title": "Masters of the Universe",
       "releaseDate": "2026-06-05",
-      "gross": 58858815,
+      "gross": 59360031,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "masters-of-the-universe-2026"
@@ -93,7 +93,7 @@
       "id": "powerballad",
       "title": "Power Ballad",
       "releaseDate": "2026-06-05",
-      "gross": 2609124,
+      "gross": 2610834,
       "metacritic": 67,
       "metacriticLocked": false,
       "metacriticSlug": "power-ballad"
@@ -102,7 +102,7 @@
       "id": "scarymovie",
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
-      "gross": 99155344,
+      "gross": 99899766,
       "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 83343040,
+      "gross": 84922945,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -120,7 +120,7 @@
       "id": "furious",
       "title": "The Furious",
       "releaseDate": "2026-06-12",
-      "gross": 5600015,
+      "gross": 5725286,
       "metacritic": 85,
       "metacriticLocked": false,
       "metacriticSlug": "the-furious"
@@ -138,7 +138,7 @@
       "id": "leviticus",
       "title": "Leviticus",
       "releaseDate": "2026-06-19",
-      "gross": 3692107,
+      "gross": 4138261,
       "metacritic": null,
       "metacriticLocked": false,
       "metacriticSlug": "leviticus-2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 200671894,
+      "gross": 214656204,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -157,7 +157,7 @@
       "title": "The Invite",
       "releaseDate": "2026-06-26",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 78,
       "metacriticLocked": false,
       "metacriticSlug": "the-invite"
     },
@@ -166,7 +166,7 @@
       "title": "Jackass: Best and Last",
       "releaseDate": "2026-06-26",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 62,
       "metacriticLocked": false,
       "metacriticSlug": "jackass-best-and-last"
     },
@@ -175,7 +175,7 @@
       "title": "Little Brother",
       "releaseDate": "2026-06-26",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 48,
       "metacriticLocked": false,
       "metacriticSlug": "little-brother-2026"
     },
@@ -184,7 +184,7 @@
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
     },
@@ -656,6 +656,26 @@
         "peter": 908,
         "adam": 440,
         "tina": 780
+      }
+    },
+    {
+      "week": 6,
+      "weekStart": "2026-06-26",
+      "label": "6/26",
+      "lastUpdated": "2026-06-26",
+      "scores": {
+        "abie": 1111,
+        "josh_d": 1151,
+        "taylor": 692,
+        "tyler_b": 959,
+        "gonzalo": 920,
+        "josh_b": 791,
+        "srujith": 863,
+        "alex": 1011,
+        "becky": 777,
+        "peter": 950,
+        "adam": 479,
+        "tina": 782
       }
     }
   ]
