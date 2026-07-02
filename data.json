@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "July 1, 2026",
+    "lastUpdated": "July 2, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 175620712,
+      "gross": 175904742,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -57,7 +57,7 @@
       "id": "breadwinner",
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
-      "gross": 20131177,
+      "gross": 20189225,
       "metacritic": 33,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
@@ -66,7 +66,7 @@
       "id": "pressure",
       "title": "Pressure",
       "releaseDate": "2026-05-29",
-      "gross": 15502350,
+      "gross": 15530070,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "pressure"
@@ -84,7 +84,7 @@
       "id": "motu",
       "title": "Masters of the Universe",
       "releaseDate": "2026-06-05",
-      "gross": 62292304,
+      "gross": 62702953,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "masters-of-the-universe-2026"
@@ -102,7 +102,7 @@
       "id": "scarymovie",
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
-      "gross": 103981590,
+      "gross": 104466201,
       "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 95501065,
+      "gross": 96929590,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -120,7 +120,7 @@
       "id": "furious",
       "title": "The Furious",
       "releaseDate": "2026-06-12",
-      "gross": 6143061,
+      "gross": 6207084,
       "metacritic": 85,
       "metacriticLocked": false,
       "metacriticSlug": "the-furious"
@@ -138,7 +138,7 @@
       "id": "leviticus",
       "title": "Leviticus",
       "releaseDate": "2026-06-19",
-      "gross": 5663010,
+      "gross": 5941519,
       "metacritic": null,
       "metacriticLocked": false,
       "metacriticSlug": "leviticus-2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 306258508,
+      "gross": 318866110,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -165,7 +165,7 @@
       "id": "jackass",
       "title": "Jackass: Best and Last",
       "releaseDate": "2026-06-26",
-      "gross": 9334109,
+      "gross": 10335260,
       "metacritic": 63,
       "metacriticLocked": false,
       "metacriticSlug": "jackass-best-and-last"
@@ -175,7 +175,7 @@
       "title": "Little Brother",
       "releaseDate": "2026-06-26",
       "gross": 0,
-      "metacritic": 51,
+      "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "little-brother-2026"
     },
@@ -183,7 +183,7 @@
       "id": "supergirl",
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
-      "gross": 40011882,
+      "gross": 44436634,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
@@ -193,7 +193,7 @@
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
       "gross": 0,
-      "metacritic": 68,
+      "metacritic": 67,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
     },
@@ -663,20 +663,20 @@
       "week": 6,
       "weekStart": "2026-06-26",
       "label": "6/26",
-      "lastUpdated": "2026-07-01",
+      "lastUpdated": "2026-07-02",
       "scores": {
-        "abie": 1250,
-        "josh_d": 1290,
-        "taylor": 841,
-        "tyler_b": 1107,
-        "gonzalo": 1083,
-        "josh_b": 951,
-        "srujith": 1030,
-        "alex": 1210,
-        "becky": 897,
-        "peter": 1067,
-        "adam": 605,
-        "tina": 829
+        "abie": 1263,
+        "josh_d": 1303,
+        "taylor": 857,
+        "tyler_b": 1120,
+        "gonzalo": 1100,
+        "josh_b": 968,
+        "srujith": 1047,
+        "alex": 1224,
+        "becky": 909,
+        "peter": 1081,
+        "adam": 618,
+        "tina": 830
       }
     }
   ]
