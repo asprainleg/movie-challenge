@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "July 3, 2026",
+    "lastUpdated": "July 4, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -12,7 +12,7 @@
       "id": "boosters",
       "title": "I Love Boosters",
       "releaseDate": "2026-05-22",
-      "gross": 9581972,
+      "gross": 9620840,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "i-love-boosters"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 176043104,
+      "gross": 176230344,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 184185939,
+      "gross": 187171741,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -57,7 +57,7 @@
       "id": "breadwinner",
       "title": "The Breadwinner",
       "releaseDate": "2026-05-29",
-      "gross": 20211911,
+      "gross": 20247080,
       "metacritic": 33,
       "metacriticLocked": false,
       "metacriticSlug": "the-breadwinner-2026"
@@ -66,7 +66,7 @@
       "id": "pressure",
       "title": "Pressure",
       "releaseDate": "2026-05-29",
-      "gross": 15546995,
+      "gross": 15569855,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "pressure"
@@ -75,7 +75,7 @@
       "id": "tuner",
       "title": "Tuner",
       "releaseDate": "2026-05-29",
-      "gross": 4175573,
+      "gross": 4227745,
       "metacritic": null,
       "metacriticLocked": false,
       "metacriticSlug": "tuner-2026"
@@ -84,7 +84,7 @@
       "id": "motu",
       "title": "Masters of the Universe",
       "releaseDate": "2026-06-05",
-      "gross": 62917326,
+      "gross": 63152003,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "masters-of-the-universe-2026"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 98008560,
+      "gross": 99311885,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -120,7 +120,7 @@
       "id": "furious",
       "title": "The Furious",
       "releaseDate": "2026-06-12",
-      "gross": 6236098,
+      "gross": 6270098,
       "metacritic": 85,
       "metacriticLocked": false,
       "metacriticSlug": "the-furious"
@@ -129,7 +129,7 @@
       "id": "robinhood",
       "title": "The Death of Robin Hood",
       "releaseDate": "2026-06-19",
-      "gross": 4779429,
+      "gross": 5137828,
       "metacritic": 60,
       "metacriticLocked": false,
       "metacriticSlug": "the-death-of-robin-hood"
@@ -138,7 +138,7 @@
       "id": "leviticus",
       "title": "Leviticus",
       "releaseDate": "2026-06-19",
-      "gross": 6091914,
+      "gross": 6231781,
       "metacritic": null,
       "metacriticLocked": false,
       "metacriticSlug": "leviticus-2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 326742954,
+      "gross": 335348690,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -156,8 +156,8 @@
       "id": "invite",
       "title": "The Invite",
       "releaseDate": "2026-06-26",
-      "gross": 379104,
-      "metacritic": 81,
+      "gross": 568792,
+      "metacritic": 82,
       "metacriticLocked": false,
       "metacriticSlug": "the-invite"
     },
@@ -192,8 +192,8 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 14231110,
-      "metacritic": 67,
+      "gross": 25041395,
+      "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
     },
@@ -202,7 +202,7 @@
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
       "gross": 0,
-      "metacritic": 52,
+      "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
     },
@@ -683,20 +683,20 @@
       "week": 7,
       "weekStart": "2026-07-03",
       "label": "7/3",
-      "lastUpdated": "2026-07-03",
+      "lastUpdated": "2026-07-04",
       "scores": {
-        "abie": 1288,
-        "josh_d": 1328,
-        "taylor": 882,
-        "tyler_b": 1143,
-        "gonzalo": 1127,
-        "josh_b": 995,
-        "srujith": 1073,
-        "alex": 1250,
-        "becky": 932,
-        "peter": 1093,
-        "adam": 641,
-        "tina": 847
+        "abie": 1312,
+        "josh_d": 1352,
+        "taylor": 902,
+        "tyler_b": 1163,
+        "gonzalo": 1149,
+        "josh_b": 1016,
+        "srujith": 1097,
+        "alex": 1271,
+        "becky": 952,
+        "peter": 1104,
+        "adam": 661,
+        "tina": 862
       }
     }
   ]
