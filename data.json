@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "July 4, 2026",
+    "lastUpdated": "July 5, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 176230344,
+      "gross": 176480344,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 187171741,
+      "gross": 188660271,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -102,7 +102,7 @@
       "id": "scarymovie",
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
-      "gross": 104772451,
+      "gross": 105247451,
       "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 99311885,
+      "gross": 101551885,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -129,7 +129,7 @@
       "id": "robinhood",
       "title": "The Death of Robin Hood",
       "releaseDate": "2026-06-19",
-      "gross": 5137828,
+      "gross": 5157693,
       "metacritic": 60,
       "metacriticLocked": false,
       "metacriticSlug": "the-death-of-robin-hood"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 335348690,
+      "gross": 349048690,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -156,7 +156,7 @@
       "id": "invite",
       "title": "The Invite",
       "releaseDate": "2026-06-26",
-      "gross": 568792,
+      "gross": 883446,
       "metacritic": 82,
       "metacriticLocked": false,
       "metacriticSlug": "the-invite"
@@ -165,7 +165,7 @@
       "id": "jackass",
       "title": "Jackass: Best and Last",
       "releaseDate": "2026-06-26",
-      "gross": 11070480,
+      "gross": 12270480,
       "metacritic": 63,
       "metacriticLocked": false,
       "metacriticSlug": "jackass-best-and-last"
@@ -183,7 +183,7 @@
       "id": "supergirl",
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
-      "gross": 46570096,
+      "gross": 52500000,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 25041395,
+      "gross": 16445041395,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 0,
+      "gross": 7597688,
       "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -683,20 +683,20 @@
       "week": 7,
       "weekStart": "2026-07-03",
       "label": "7/3",
-      "lastUpdated": "2026-07-04",
+      "lastUpdated": "2026-07-05",
       "scores": {
-        "abie": 1312,
-        "josh_d": 1352,
-        "taylor": 902,
-        "tyler_b": 1163,
-        "gonzalo": 1149,
-        "josh_b": 1016,
-        "srujith": 1097,
-        "alex": 1271,
-        "becky": 952,
-        "peter": 1104,
-        "adam": 661,
-        "tina": 862
+        "abie": 17874,
+        "josh_d": 17914,
+        "taylor": 17467,
+        "tyler_b": 17698,
+        "gonzalo": 17741,
+        "josh_b": 17608,
+        "srujith": 17690,
+        "alex": 17833,
+        "becky": 17486,
+        "peter": 1146,
+        "adam": 17196,
+        "tina": 17410
       }
     }
   ]
