@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "July 9, 2026",
+    "lastUpdated": "July 10, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 176965390,
+      "gross": 177051504,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -84,7 +84,7 @@
       "id": "motu",
       "title": "Masters of the Universe",
       "releaseDate": "2026-06-05",
-      "gross": 64091436,
+      "gross": 64190056,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "masters-of-the-universe-2026"
@@ -102,7 +102,7 @@
       "id": "scarymovie",
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
-      "gross": 106740728,
+      "gross": 106962890,
       "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 106737275,
+      "gross": 107515185,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -120,7 +120,7 @@
       "id": "furious",
       "title": "The Furious",
       "releaseDate": "2026-06-12",
-      "gross": 6414334,
+      "gross": 6436152,
       "metacritic": 85,
       "metacriticLocked": false,
       "metacriticSlug": "the-furious"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 376883879,
+      "gross": 381360990,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -165,7 +165,7 @@
       "id": "jackass",
       "title": "Jackass: Best and Last",
       "releaseDate": "2026-06-26",
-      "gross": 15777545,
+      "gross": 16268541,
       "metacritic": 63,
       "metacriticLocked": false,
       "metacriticSlug": "jackass-best-and-last"
@@ -183,7 +183,7 @@
       "id": "supergirl",
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
-      "gross": 60387231,
+      "gross": 61575103,
       "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 77171815,
+      "gross": 83031270,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 23549842,
+      "gross": 25241781,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -211,7 +211,7 @@
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 58,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
     },
@@ -220,7 +220,7 @@
       "title": "Gail Daughtry and the Celebrity Sex Pass",
       "releaseDate": "2026-07-10",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "gail-daughtry-and-the-celebrity-sex-pass"
     },
@@ -229,7 +229,7 @@
       "title": "Moana",
       "releaseDate": "2026-07-10",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
     },
@@ -697,6 +697,26 @@
         "peter": 1182,
         "adam": 798,
         "tina": 989
+      }
+    },
+    {
+      "week": 8,
+      "weekStart": "2026-07-10",
+      "label": "7/10",
+      "lastUpdated": "2026-07-10",
+      "scores": {
+        "abie": 1503,
+        "josh_d": 1533,
+        "taylor": 1107,
+        "tyler_b": 1320,
+        "gonzalo": 1378,
+        "josh_b": 1254,
+        "srujith": 1327,
+        "alex": 1455,
+        "becky": 1107,
+        "peter": 1200,
+        "adam": 820,
+        "tina": 997
       }
     }
   ]
