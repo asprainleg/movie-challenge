@@ -211,7 +211,7 @@
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
       "gross": 13701012,
-      "metacritic": 55,
+      "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
     },
@@ -495,7 +495,9 @@
       "theaterBonuses": [
         "mando",
         "disc",
-        "jackass"
+        "jackass",
+        "minions",
+        "invite"
       ]
     },
     {
@@ -712,7 +714,7 @@
         "gonzalo": 1460,
         "josh_b": 1379,
         "srujith": 1413,
-        "alex": 1539,
+        "alex": 1639,
         "becky": 1223,
         "peter": 1271,
         "adam": 937,
