@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "July 17, 2026",
+    "lastUpdated": "July 18, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -12,7 +12,7 @@
       "id": "boosters",
       "title": "I Love Boosters",
       "releaseDate": "2026-05-22",
-      "gross": 9706740,
+      "gross": 9728425,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "i-love-boosters"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 177396253,
+      "gross": 177414904,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 194197303,
+      "gross": 195248636,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -75,7 +75,7 @@
       "id": "tuner",
       "title": "Tuner",
       "releaseDate": "2026-05-29",
-      "gross": 4488714,
+      "gross": 4511186,
       "metacritic": null,
       "metacriticLocked": false,
       "metacriticSlug": "tuner-2026"
@@ -84,7 +84,7 @@
       "id": "motu",
       "title": "Masters of the Universe",
       "releaseDate": "2026-06-05",
-      "gross": 64615055,
+      "gross": 64639107,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "masters-of-the-universe-2026"
@@ -102,7 +102,7 @@
       "id": "scarymovie",
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
-      "gross": 107694755,
+      "gross": 107736956,
       "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 112925320,
+      "gross": 113253560,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -120,7 +120,7 @@
       "id": "furious",
       "title": "The Furious",
       "releaseDate": "2026-06-12",
-      "gross": 6499073,
+      "gross": 6502610,
       "metacritic": 85,
       "metacriticLocked": false,
       "metacriticSlug": "the-furious"
@@ -129,7 +129,7 @@
       "id": "robinhood",
       "title": "The Death of Robin Hood",
       "releaseDate": "2026-06-19",
-      "gross": 5256056,
+      "gross": 5267972,
       "metacritic": 60,
       "metacriticLocked": false,
       "metacriticSlug": "the-death-of-robin-hood"
@@ -138,7 +138,7 @@
       "id": "leviticus",
       "title": "Leviticus",
       "releaseDate": "2026-06-19",
-      "gross": 7040761,
+      "gross": 7146158,
       "metacritic": null,
       "metacriticLocked": false,
       "metacriticSlug": "leviticus-2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 413321921,
+      "gross": 416118566,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -156,7 +156,7 @@
       "id": "invite",
       "title": "The Invite",
       "releaseDate": "2026-06-26",
-      "gross": 7384506,
+      "gross": 11111981,
       "metacritic": 82,
       "metacriticLocked": false,
       "metacriticSlug": "the-invite"
@@ -165,7 +165,7 @@
       "id": "jackass",
       "title": "Jackass: Best and Last",
       "releaseDate": "2026-06-26",
-      "gross": 17700678,
+      "gross": 17779585,
       "metacritic": 63,
       "metacriticLocked": false,
       "metacriticSlug": "jackass-best-and-last"
@@ -183,7 +183,7 @@
       "id": "supergirl",
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
-      "gross": 68041162,
+      "gross": 68432228,
       "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 119545820,
+      "gross": 122784465,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 36541621,
+      "gross": 37339749,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -210,7 +210,7 @@
       "id": "evildead",
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
-      "gross": 18152415,
+      "gross": 19150512,
       "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
@@ -219,7 +219,7 @@
       "id": "gaildaughtry",
       "title": "Gail Daughtry and the Celebrity Sex Pass",
       "releaseDate": "2026-07-10",
-      "gross": 898962,
+      "gross": 1213603,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "gail-daughtry-and-the-celebrity-sex-pass"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 59240463,
+      "gross": 63081410,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -727,20 +727,20 @@
       "week": 9,
       "weekStart": "2026-07-17",
       "label": "7/17",
-      "lastUpdated": "2026-07-17",
+      "lastUpdated": "2026-07-18",
       "scores": {
-        "abie": 1739,
-        "josh_d": 1685,
-        "taylor": 1341,
-        "tyler_b": 1548,
-        "gonzalo": 1533,
-        "josh_b": 1543,
-        "srujith": 1486,
-        "alex": 1710,
-        "becky": 1284,
-        "peter": 1372,
-        "adam": 1048,
-        "tina": 1117
+        "abie": 1751,
+        "josh_d": 1693,
+        "taylor": 1351,
+        "tyler_b": 1558,
+        "gonzalo": 1540,
+        "josh_b": 1554,
+        "srujith": 1494,
+        "alex": 1721,
+        "becky": 1294,
+        "peter": 1380,
+        "adam": 1058,
+        "tina": 1122
       }
     }
   ]
