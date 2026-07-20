@@ -499,7 +499,8 @@
         "disc",
         "jackass",
         "minions",
-        "invite"
+        "invite",
+        "odyssey"
       ]
     },
     {
@@ -559,7 +560,9 @@
         "disc",
         "minions"
       ],
-      "theaterBonuses": []
+      "theaterBonuses": [
+        "odyssey"
+      ]
     }
   ],
   "weeklySnapshots": [
@@ -736,11 +739,11 @@
         "gonzalo": 1745,
         "josh_b": 1778,
         "srujith": 1699,
-        "alex": 1930,
+        "alex": 1980,
         "becky": 1342,
         "peter": 1589,
         "adam": 1281,
-        "tina": 1312
+        "tina": 1362
       }
     }
   ]
