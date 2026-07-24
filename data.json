@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "July 23, 2026",
+    "lastUpdated": "July 24, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 177570597,
+      "gross": 177581405,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -84,7 +84,7 @@
       "id": "motu",
       "title": "Masters of the Universe",
       "releaseDate": "2026-06-05",
-      "gross": 64768765,
+      "gross": 64778693,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "masters-of-the-universe-2026"
@@ -102,7 +102,7 @@
       "id": "scarymovie",
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
-      "gross": 108044772,
+      "gross": 108072854,
       "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 115031290,
+      "gross": 115212710,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 434642978,
+      "gross": 436720018,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -165,7 +165,7 @@
       "id": "jackass",
       "title": "Jackass: Best and Last",
       "releaseDate": "2026-06-26",
-      "gross": 18082045,
+      "gross": 18114225,
       "metacritic": 63,
       "metacriticLocked": false,
       "metacriticSlug": "jackass-best-and-last"
@@ -183,7 +183,7 @@
       "id": "supergirl",
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
-      "gross": 70456634,
+      "gross": 70684870,
       "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 141583130,
+      "gross": 143860945,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 41977728,
+      "gross": 42411869,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -210,7 +210,7 @@
       "id": "evildead",
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
-      "gross": 25378017,
+      "gross": 26023203,
       "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 87269607,
+      "gross": 89793206,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,8 +237,8 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 163678510,
-      "metacritic": 89,
+      "gross": 181746315,
+      "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
     },
@@ -247,7 +247,7 @@
       "title": "72 Hours",
       "releaseDate": "2026-07-24",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 48,
       "metacriticLocked": false,
       "metacriticSlug": "72-hours-2026"
     },
@@ -256,7 +256,7 @@
       "title": "The Dink",
       "releaseDate": "2026-07-24",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 57,
       "metacriticLocked": false,
       "metacriticSlug": "the-dink"
     },
@@ -384,7 +384,8 @@
         "toy5"
       ],
       "theaterBonuses": [
-        "back"
+        "back",
+        "odyssey"
       ]
     },
     {
@@ -744,6 +745,26 @@
         "peter": 1663,
         "adam": 1358,
         "tina": 1431
+      }
+    },
+    {
+      "week": 10,
+      "weekStart": "2026-07-24",
+      "label": "7/24",
+      "lastUpdated": "2026-07-24",
+      "scores": {
+        "abie": 2126,
+        "josh_d": 1992,
+        "taylor": 1676,
+        "tyler_b": 1882,
+        "gonzalo": 1841,
+        "josh_b": 1881,
+        "srujith": 1795,
+        "alex": 2075,
+        "becky": 1361,
+        "peter": 1685,
+        "adam": 1382,
+        "tina": 1451
       }
     }
   ]
