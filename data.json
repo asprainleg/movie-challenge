@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "July 25, 2026",
+    "lastUpdated": "July 26, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 177594995,
+      "gross": 177617995,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 196437367,
+      "gross": 196528447,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -102,7 +102,7 @@
       "id": "scarymovie",
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
-      "gross": 108103542,
+      "gross": 108132542,
       "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 115345295,
+      "gross": 115525295,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -129,7 +129,7 @@
       "id": "robinhood",
       "title": "The Death of Robin Hood",
       "releaseDate": "2026-06-19",
-      "gross": 5294746,
+      "gross": 5298588,
       "metacritic": 60,
       "metacriticLocked": false,
       "metacriticSlug": "the-death-of-robin-hood"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 438555658,
+      "gross": 441455658,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -156,7 +156,7 @@
       "id": "invite",
       "title": "The Invite",
       "releaseDate": "2026-06-26",
-      "gross": 17178884,
+      "gross": 17946916,
       "metacritic": 82,
       "metacriticLocked": false,
       "metacriticSlug": "the-invite"
@@ -165,7 +165,7 @@
       "id": "jackass",
       "title": "Jackass: Best and Last",
       "releaseDate": "2026-06-26",
-      "gross": 18140345,
+      "gross": 18167345,
       "metacritic": 63,
       "metacriticLocked": false,
       "metacriticSlug": "jackass-best-and-last"
@@ -183,7 +183,7 @@
       "id": "supergirl",
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
-      "gross": 70845054,
+      "gross": 71025054,
       "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 145788350,
+      "gross": 148638350,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 42770644,
+      "gross": 43537870,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -210,7 +210,7 @@
       "id": "evildead",
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
-      "gross": 26574454,
+      "gross": 27374454,
       "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 91969653,
+      "gross": 95069653,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 199371800,
+      "gross": 225311800,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -751,20 +751,20 @@
       "week": 10,
       "weekStart": "2026-07-24",
       "label": "7/24",
-      "lastUpdated": "2026-07-25",
+      "lastUpdated": "2026-07-26",
       "scores": {
-        "abie": 2151,
-        "josh_d": 2015,
-        "taylor": 1700,
-        "tyler_b": 1906,
-        "gonzalo": 1863,
-        "josh_b": 1905,
-        "srujith": 1818,
-        "alex": 2099,
-        "becky": 1367,
-        "peter": 1707,
-        "adam": 1406,
-        "tina": 1472
+        "abie": 2212,
+        "josh_d": 2072,
+        "taylor": 1762,
+        "tyler_b": 1967,
+        "gonzalo": 1921,
+        "josh_b": 1967,
+        "srujith": 1876,
+        "alex": 2156,
+        "becky": 1377,
+        "peter": 1765,
+        "adam": 1467,
+        "tina": 1526
       }
     }
   ]
