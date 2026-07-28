@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "July 27, 2026",
+    "lastUpdated": "July 28, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 177667995,
+      "gross": 177664014,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -84,7 +84,7 @@
       "id": "motu",
       "title": "Masters of the Universe",
       "releaseDate": "2026-06-05",
-      "gross": 64789243,
+      "gross": 64816437,
       "metacritic": 52,
       "metacriticLocked": false,
       "metacriticSlug": "masters-of-the-universe-2026"
@@ -102,7 +102,7 @@
       "id": "scarymovie",
       "title": "Scary Movie",
       "releaseDate": "2026-06-05",
-      "gross": 108229542,
+      "gross": 108229179,
       "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "scary-movie-6"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 115995295,
+      "gross": 116009890,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 448555658,
+      "gross": 448716909,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -165,7 +165,7 @@
       "id": "jackass",
       "title": "Jackass: Best and Last",
       "releaseDate": "2026-06-26",
-      "gross": 18227345,
+      "gross": 18228607,
       "metacritic": 63,
       "metacriticLocked": false,
       "metacriticSlug": "jackass-best-and-last"
@@ -183,7 +183,7 @@
       "id": "supergirl",
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
-      "gross": 71475054,
+      "gross": 71626570,
       "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 155388350,
+      "gross": 155542875,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 44962544,
+      "gross": 44875964,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -210,7 +210,7 @@
       "id": "evildead",
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
-      "gross": 29184454,
+      "gross": 29376642,
       "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
@@ -219,7 +219,7 @@
       "id": "gaildaughtry",
       "title": "Gail Daughtry and the Celebrity Sex Pass",
       "releaseDate": "2026-07-10",
-      "gross": 1417693,
+      "gross": 1417320,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "gail-daughtry-and-the-celebrity-sex-pass"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 102469653,
+      "gross": 102609900,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 286371800,
+      "gross": 289394310,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -752,20 +752,20 @@
       "week": 10,
       "weekStart": "2026-07-24",
       "label": "7/24",
-      "lastUpdated": "2026-07-27",
+      "lastUpdated": "2026-07-28",
       "scores": {
-        "abie": 2344,
-        "josh_d": 2172,
-        "taylor": 1894,
-        "tyler_b": 2099,
-        "gonzalo": 2021,
-        "josh_b": 2149,
-        "srujith": 1976,
-        "alex": 2258,
+        "abie": 2348,
+        "josh_d": 2176,
+        "taylor": 1897,
+        "tyler_b": 2102,
+        "gonzalo": 2025,
+        "josh_b": 2153,
+        "srujith": 1980,
+        "alex": 2262,
         "becky": 1448,
-        "peter": 1865,
-        "adam": 1599,
-        "tina": 1619
+        "peter": 1869,
+        "adam": 1602,
+        "tina": 1623
       }
     }
   ]
