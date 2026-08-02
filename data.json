@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "August 1, 2026",
+    "lastUpdated": "August 2, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 177703846,
+      "gross": 177708846,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 196952609,
+      "gross": 197054619,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 116388260,
+      "gross": 116444260,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -129,7 +129,7 @@
       "id": "robinhood",
       "title": "The Death of Robin Hood",
       "releaseDate": "2026-06-19",
-      "gross": 5316856,
+      "gross": 5319730,
       "metacritic": 60,
       "metacriticLocked": false,
       "metacriticSlug": "the-death-of-robin-hood"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 455396126,
+      "gross": 457196126,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -156,7 +156,7 @@
       "id": "invite",
       "title": "The Invite",
       "releaseDate": "2026-06-26",
-      "gross": 21531929,
+      "gross": 21887537,
       "metacritic": 82,
       "metacriticLocked": false,
       "metacriticSlug": "the-invite"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 162555365,
+      "gross": 164215365,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 45939790,
+      "gross": 46068500,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -210,7 +210,7 @@
       "id": "evildead",
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
-      "gross": 30765645,
+      "gross": 30915645,
       "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 109483124,
+      "gross": 111083124,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 344525415,
+      "gross": 359025415,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 0,
+      "gross": 168000000,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -772,20 +772,20 @@
       "week": 11,
       "weekStart": "2026-07-31",
       "label": "7/31",
-      "lastUpdated": "2026-08-01",
+      "lastUpdated": "2026-08-02",
       "scores": {
-        "abie": 2449,
-        "josh_d": 2270,
-        "taylor": 1998,
-        "tyler_b": 2178,
-        "gonzalo": 2119,
-        "josh_b": 2254,
-        "srujith": 2074,
-        "alex": 2358,
-        "becky": 1494,
-        "peter": 1963,
-        "adam": 1678,
-        "tina": 1710
+        "abie": 2714,
+        "josh_d": 2533,
+        "taylor": 2262,
+        "tyler_b": 2199,
+        "gonzalo": 2381,
+        "josh_b": 2518,
+        "srujith": 2337,
+        "alex": 2620,
+        "becky": 1743,
+        "peter": 2225,
+        "adam": 1699,
+        "tina": 1971
       }
     }
   ]
