@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "August 3, 2026",
+    "lastUpdated": "August 4, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 177722846,
+      "gross": 177721336,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 116568260,
+      "gross": 116564605,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 461696126,
+      "gross": 462164629,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -183,7 +183,7 @@
       "id": "supergirl",
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
-      "gross": 71986393,
+      "gross": 72082102,
       "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 168355365,
+      "gross": 168564635,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 46417517,
+      "gross": 46445353,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -210,7 +210,7 @@
       "id": "evildead",
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
-      "gross": 30915645,
+      "gross": 31516406,
       "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
@@ -219,7 +219,7 @@
       "id": "gaildaughtry",
       "title": "Gail Daughtry and the Celebrity Sex Pass",
       "releaseDate": "2026-07-10",
-      "gross": 1432171,
+      "gross": 1432039,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "gail-daughtry-and-the-celebrity-sex-pass"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 114783124,
+      "gross": 115093029,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 395525415,
+      "gross": 395573235,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 355000000,
+      "gross": 360091572,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -772,20 +772,20 @@
       "week": 11,
       "weekStart": "2026-07-31",
       "label": "7/31",
-      "lastUpdated": "2026-08-03",
+      "lastUpdated": "2026-08-04",
       "scores": {
-        "abie": 2973,
-        "josh_d": 2789,
-        "taylor": 2521,
-        "tyler_b": 2246,
-        "gonzalo": 2637,
-        "josh_b": 2777,
-        "srujith": 2593,
-        "alex": 2877,
-        "becky": 1966,
-        "peter": 2480,
-        "adam": 1746,
-        "tina": 2223
+        "abie": 2980,
+        "josh_d": 2795,
+        "taylor": 2529,
+        "tyler_b": 2248,
+        "gonzalo": 2644,
+        "josh_b": 2785,
+        "srujith": 2600,
+        "alex": 2883,
+        "becky": 1973,
+        "peter": 2487,
+        "adam": 1748,
+        "tina": 2228
       }
     }
   ]
