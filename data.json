@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "August 6, 2026",
+    "lastUpdated": "August 7, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -39,7 +39,7 @@
       "id": "mando",
       "title": "Star Wars: The Mandalorian & Grogu",
       "releaseDate": "2026-05-22",
-      "gross": 177728617,
+      "gross": 177729243,
       "metacritic": 53,
       "metacriticLocked": false,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
@@ -111,7 +111,7 @@
       "id": "disc",
       "title": "Disclosure Day",
       "releaseDate": "2026-06-12",
-      "gross": 116606645,
+      "gross": 116624005,
       "metacritic": 74,
       "metacriticLocked": false,
       "metacriticSlug": "disclosure-day"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 464645777,
+      "gross": 465677770,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -183,7 +183,7 @@
       "id": "supergirl",
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
-      "gross": 72101095,
+      "gross": 72111933,
       "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 170992275,
+      "gross": 172030130,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 46582777,
+      "gross": 46649767,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -210,7 +210,7 @@
       "id": "evildead",
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
-      "gross": 31694866,
+      "gross": 31775031,
       "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 117183434,
+      "gross": 118025590,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 414095155,
+      "gross": 422488670,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 449169617,
+      "gross": 481876434,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -292,7 +292,7 @@
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 38,
       "metacriticLocked": false,
       "metacriticSlug": "super-troopers-3"
     },
@@ -301,7 +301,7 @@
       "title": "Teenage Sex and Death at Camp Miasma",
       "releaseDate": "2026-08-07",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 87,
       "metacriticLocked": false,
       "metacriticSlug": "teenage-sex-and-death-at-camp-miasma"
     },
@@ -788,6 +788,26 @@
         "peter": 2599,
         "adam": 1773,
         "tina": 2338
+      }
+    },
+    {
+      "week": 12,
+      "weekStart": "2026-08-07",
+      "label": "8/7",
+      "lastUpdated": "2026-08-07",
+      "scores": {
+        "abie": 3138,
+        "josh_d": 2950,
+        "taylor": 2687,
+        "tyler_b": 2285,
+        "gonzalo": 2799,
+        "josh_b": 2993,
+        "srujith": 2755,
+        "alex": 3088,
+        "becky": 2104,
+        "peter": 2641,
+        "adam": 1785,
+        "tina": 2380
       }
     }
   ]
