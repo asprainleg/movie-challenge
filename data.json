@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "August 10, 2026",
+    "lastUpdated": "August 11, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 470381614,
+      "gross": 470699012,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -183,7 +183,7 @@
       "id": "supergirl",
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
-      "gross": 72118944,
+      "gross": 72253294,
       "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 176352045,
+      "gross": 176357285,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 46857379,
+      "gross": 46861201,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -210,7 +210,7 @@
       "id": "evildead",
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
-      "gross": 31817868,
+      "gross": 31963614,
       "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
@@ -219,7 +219,7 @@
       "id": "gaildaughtry",
       "title": "Gail Daughtry and the Celebrity Sex Pass",
       "releaseDate": "2026-07-10",
-      "gross": 1438654,
+      "gross": 1437690,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "gail-daughtry-and-the-celebrity-sex-pass"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 121441267,
+      "gross": 121626167,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 461172890,
+      "gross": 461385045,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -264,7 +264,7 @@
       "id": "iwantyoursex",
       "title": "I Want Your Sex",
       "releaseDate": "2026-07-31",
-      "gross": 1268122,
+      "gross": 1272472,
       "metacritic": 68,
       "metacriticLocked": false,
       "metacriticSlug": "i-want-your-sex"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 655088528,
+      "gross": 654342914,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -291,7 +291,7 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 4000000,
+      "gross": 4002283,
       "metacritic": 37,
       "metacriticLocked": false,
       "metacriticSlug": "super-troopers-3"
@@ -794,20 +794,20 @@
       "week": 12,
       "weekStart": "2026-08-07",
       "label": "8/7",
-      "lastUpdated": "2026-08-10",
+      "lastUpdated": "2026-08-11",
       "scores": {
-        "abie": 3363,
-        "josh_d": 3172,
-        "taylor": 2912,
+        "abie": 3362,
+        "josh_d": 3171,
+        "taylor": 2911,
         "tyler_b": 2336,
-        "gonzalo": 3021,
-        "josh_b": 3218,
-        "srujith": 2977,
-        "alex": 3312,
-        "becky": 2294,
-        "peter": 2862,
+        "gonzalo": 3020,
+        "josh_b": 3217,
+        "srujith": 2976,
+        "alex": 3311,
+        "becky": 2293,
+        "peter": 2861,
         "adam": 1840,
-        "tina": 2597
+        "tina": 2596
       }
     }
   ]
