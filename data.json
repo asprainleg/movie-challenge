@@ -565,7 +565,8 @@
         "minions"
       ],
       "theaterBonuses": [
-        "odyssey"
+        "odyssey",
+        "spiderman"
       ]
     }
   ],
@@ -827,7 +828,7 @@
         "becky": 2350,
         "peter": 2931,
         "adam": 1863,
-        "tina": 2664
+        "tina": 2714
       }
     }
   ]
