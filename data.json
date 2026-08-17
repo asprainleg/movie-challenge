@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "August 16, 2026",
+    "lastUpdated": "August 17, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 197492133,
+      "gross": 197516045,
       "metacritic": 76,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -129,7 +129,7 @@
       "id": "robinhood",
       "title": "The Death of Robin Hood",
       "releaseDate": "2026-06-19",
-      "gross": 5345009,
+      "gross": 5351616,
       "metacritic": 60,
       "metacriticLocked": false,
       "metacriticSlug": "the-death-of-robin-hood"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 473768651,
+      "gross": 475468651,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -156,7 +156,7 @@
       "id": "invite",
       "title": "The Invite",
       "releaseDate": "2026-06-26",
-      "gross": 24693771,
+      "gross": 25052022,
       "metacritic": 82,
       "metacriticLocked": false,
       "metacriticSlug": "the-invite"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 179029445,
+      "gross": 180129445,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 46962459,
+      "gross": 46989670,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -219,7 +219,7 @@
       "id": "gaildaughtry",
       "title": "Gail Daughtry and the Celebrity Sex Pass",
       "releaseDate": "2026-07-10",
-      "gross": 1438844,
+      "gross": 1441364,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "gail-daughtry-and-the-celebrity-sex-pass"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 123619359,
+      "gross": 124519359,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 487980370,
+      "gross": 504680370,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 734831670,
+      "gross": 785831670,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -291,7 +291,7 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 5677258,
+      "gross": 6677258,
       "metacritic": 37,
       "metacriticLocked": false,
       "metacriticSlug": "super-troopers-3"
@@ -300,7 +300,7 @@
       "id": "campmiasma",
       "title": "Teenage Sex and Death at Camp Miasma",
       "releaseDate": "2026-08-07",
-      "gross": 0,
+      "gross": 1156806,
       "metacritic": 89,
       "metacriticLocked": false,
       "metacriticSlug": "teenage-sex-and-death-at-camp-miasma"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 8050000,
+      "gross": 21000000,
       "metacritic": 68,
       "metacriticLocked": false,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 7350000,
+      "gross": 20500000,
       "metacritic": 47,
       "metacriticLocked": false,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -815,20 +815,20 @@
       "week": 13,
       "weekStart": "2026-08-14",
       "label": "8/14",
-      "lastUpdated": "2026-08-16",
+      "lastUpdated": "2026-08-17",
       "scores": {
-        "abie": 3476,
-        "josh_d": 3283,
-        "taylor": 3025,
-        "tyler_b": 2387,
-        "gonzalo": 3132,
-        "josh_b": 3331,
-        "srujith": 3088,
-        "alex": 3423,
-        "becky": 2399,
-        "peter": 2972,
-        "adam": 1875,
-        "tina": 2772
+        "abie": 3548,
+        "josh_d": 3354,
+        "taylor": 3097,
+        "tyler_b": 2421,
+        "gonzalo": 3203,
+        "josh_b": 3403,
+        "srujith": 3159,
+        "alex": 3495,
+        "becky": 2468,
+        "peter": 3043,
+        "adam": 1897,
+        "tina": 2854
       }
     }
   ]
