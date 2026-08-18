@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "August 17, 2026",
+    "lastUpdated": "August 18, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 475468651,
+      "gross": 475595965,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -183,7 +183,7 @@
       "id": "supergirl",
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
-      "gross": 72275637,
+      "gross": 72342131,
       "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 180129445,
+      "gross": 180231045,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 46989670,
+      "gross": 46992065,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -210,7 +210,7 @@
       "id": "evildead",
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
-      "gross": 32046385,
+      "gross": 32175417,
       "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
@@ -219,7 +219,7 @@
       "id": "gaildaughtry",
       "title": "Gail Daughtry and the Celebrity Sex Pass",
       "releaseDate": "2026-07-10",
-      "gross": 1441364,
+      "gross": 1440727,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "gail-daughtry-and-the-celebrity-sex-pass"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 124519359,
+      "gross": 124573456,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 504680370,
+      "gross": 505087255,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -264,7 +264,7 @@
       "id": "iwantyoursex",
       "title": "I Want Your Sex",
       "releaseDate": "2026-07-31",
-      "gross": 1404321,
+      "gross": 1437545,
       "metacritic": 68,
       "metacriticLocked": false,
       "metacriticSlug": "i-want-your-sex"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 785831670,
+      "gross": 786543660,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -282,7 +282,7 @@
       "id": "icecream",
       "title": "Ice Cream Man",
       "releaseDate": "2026-08-07",
-      "gross": 1000000,
+      "gross": 2821000,
       "metacritic": null,
       "metacriticLocked": false,
       "metacriticSlug": "ice-cream-man-2026"
@@ -291,7 +291,7 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 6677258,
+      "gross": 6614640,
       "metacritic": 37,
       "metacriticLocked": false,
       "metacriticSlug": "super-troopers-3"
@@ -300,7 +300,7 @@
       "id": "campmiasma",
       "title": "Teenage Sex and Death at Camp Miasma",
       "releaseDate": "2026-08-07",
-      "gross": 1156806,
+      "gross": 1268045,
       "metacritic": 89,
       "metacriticLocked": false,
       "metacriticSlug": "teenage-sex-and-death-at-camp-miasma"
@@ -309,8 +309,8 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 21000000,
-      "metacritic": 68,
+      "gross": 21010488,
+      "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "the-end-of-oak-street"
     },
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 20500000,
+      "gross": 20254688,
       "metacritic": 47,
       "metacriticLocked": false,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -815,20 +815,20 @@
       "week": 13,
       "weekStart": "2026-08-14",
       "label": "8/14",
-      "lastUpdated": "2026-08-17",
+      "lastUpdated": "2026-08-18",
       "scores": {
-        "abie": 3548,
-        "josh_d": 3354,
-        "taylor": 3097,
-        "tyler_b": 2421,
-        "gonzalo": 3203,
-        "josh_b": 3403,
-        "srujith": 3159,
-        "alex": 3495,
-        "becky": 2468,
-        "peter": 3043,
-        "adam": 1897,
-        "tina": 2854
+        "abie": 3550,
+        "josh_d": 3356,
+        "taylor": 3099,
+        "tyler_b": 2422,
+        "gonzalo": 3205,
+        "josh_b": 3405,
+        "srujith": 3161,
+        "alex": 3497,
+        "becky": 2469,
+        "peter": 3045,
+        "adam": 1898,
+        "tina": 2856
       }
     }
   ]
