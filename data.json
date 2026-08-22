@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "August 21, 2026",
+    "lastUpdated": "August 22, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -48,7 +48,7 @@
       "id": "back",
       "title": "The Backrooms",
       "releaseDate": "2026-05-29",
-      "gross": 197516045,
+      "gross": 197523513,
       "metacritic": 76,
       "metacriticLocked": false,
       "metacriticSlug": "backrooms"
@@ -129,7 +129,7 @@
       "id": "robinhood",
       "title": "The Death of Robin Hood",
       "releaseDate": "2026-06-19",
-      "gross": 5351616,
+      "gross": 5355164,
       "metacritic": 60,
       "metacriticLocked": false,
       "metacriticSlug": "the-death-of-robin-hood"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 476631834,
+      "gross": 476857842,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -156,7 +156,7 @@
       "id": "invite",
       "title": "The Invite",
       "releaseDate": "2026-06-26",
-      "gross": 25052022,
+      "gross": 25269799,
       "metacritic": 82,
       "metacriticLocked": false,
       "metacriticSlug": "the-invite"
@@ -183,7 +183,7 @@
       "id": "supergirl",
       "title": "Supergirl",
       "releaseDate": "2026-06-26",
-      "gross": 72360945,
+      "gross": 72366532,
       "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "supergirl-2026"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 181102855,
+      "gross": 181294705,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 47008387,
+      "gross": 47016585,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "young-washington"
@@ -210,7 +210,7 @@
       "id": "evildead",
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
-      "gross": 32200166,
+      "gross": 32205002,
       "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 125115435,
+      "gross": 125226179,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 516284795,
+      "gross": 519560550,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -264,7 +264,7 @@
       "id": "iwantyoursex",
       "title": "I Want Your Sex",
       "releaseDate": "2026-07-31",
-      "gross": 1437545,
+      "gross": 1461195,
       "metacritic": 68,
       "metacriticLocked": false,
       "metacriticSlug": "i-want-your-sex"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 810432089,
+      "gross": 815901026,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -291,7 +291,7 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 7061428,
+      "gross": 7138564,
       "metacritic": 37,
       "metacriticLocked": false,
       "metacriticSlug": "super-troopers-3"
@@ -300,7 +300,7 @@
       "id": "campmiasma",
       "title": "Teenage Sex and Death at Camp Miasma",
       "releaseDate": "2026-08-07",
-      "gross": 1268045,
+      "gross": 1743222,
       "metacritic": 89,
       "metacriticLocked": false,
       "metacriticSlug": "teenage-sex-and-death-at-camp-miasma"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 27675831,
+      "gross": 28966152,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 25242806,
+      "gross": 26308555,
       "metacritic": 47,
       "metacriticLocked": false,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -328,7 +328,7 @@
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
       "gross": 0,
-      "metacritic": 48,
+      "metacritic": 46,
       "metacriticLocked": false,
       "metacriticSlug": "insidious-out-of-the-further"
     },
@@ -337,7 +337,7 @@
       "title": "Spa Weekend",
       "releaseDate": "2026-08-21",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 34,
       "metacriticLocked": false,
       "metacriticSlug": "spa-weekend"
     },
@@ -835,20 +835,20 @@
       "week": 14,
       "weekStart": "2026-08-21",
       "label": "8/21",
-      "lastUpdated": "2026-08-21",
+      "lastUpdated": "2026-08-22",
       "scores": {
-        "abie": 3588,
-        "josh_d": 3393,
-        "taylor": 3137,
-        "tyler_b": 2441,
-        "gonzalo": 3242,
-        "josh_b": 3443,
-        "srujith": 3198,
-        "alex": 3534,
-        "becky": 2502,
-        "peter": 3082,
-        "adam": 1913,
-        "tina": 2907
+        "abie": 3596,
+        "josh_d": 3401,
+        "taylor": 3145,
+        "tyler_b": 2445,
+        "gonzalo": 3250,
+        "josh_b": 3451,
+        "srujith": 3206,
+        "alex": 3542,
+        "becky": 2508,
+        "peter": 3090,
+        "adam": 1916,
+        "tina": 2916
       }
     }
   ]
