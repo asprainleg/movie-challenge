@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "August 22, 2026",
+    "lastUpdated": "August 23, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 476857842,
+      "gross": 477087842,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -156,7 +156,7 @@
       "id": "invite",
       "title": "The Invite",
       "releaseDate": "2026-06-26",
-      "gross": 25269799,
+      "gross": 25322939,
       "metacritic": 82,
       "metacriticLocked": false,
       "metacriticSlug": "the-invite"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 181294705,
+      "gross": 181464705,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 125226179,
+      "gross": 125336179,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 519560550,
+      "gross": 524580550,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 815901026,
+      "gross": 825701026,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -291,7 +291,7 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 7138564,
+      "gross": 7188564,
       "metacritic": 37,
       "metacriticLocked": false,
       "metacriticSlug": "super-troopers-3"
@@ -300,7 +300,7 @@
       "id": "campmiasma",
       "title": "Teenage Sex and Death at Camp Miasma",
       "releaseDate": "2026-08-07",
-      "gross": 1743222,
+      "gross": 2293222,
       "metacritic": 89,
       "metacriticLocked": false,
       "metacriticSlug": "teenage-sex-and-death-at-camp-miasma"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 28966152,
+      "gross": 31386152,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 26308555,
+      "gross": 28408555,
       "metacritic": 47,
       "metacriticLocked": false,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -327,7 +327,7 @@
       "id": "insidious",
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
-      "gross": 0,
+      "gross": 10600000,
       "metacritic": 46,
       "metacriticLocked": false,
       "metacriticSlug": "insidious-out-of-the-further"
@@ -336,7 +336,7 @@
       "id": "spaweekend",
       "title": "Spa Weekend",
       "releaseDate": "2026-08-21",
-      "gross": 0,
+      "gross": 1125000,
       "metacritic": 34,
       "metacriticLocked": false,
       "metacriticSlug": "spa-weekend"
@@ -835,20 +835,20 @@
       "week": 14,
       "weekStart": "2026-08-21",
       "label": "8/21",
-      "lastUpdated": "2026-08-22",
+      "lastUpdated": "2026-08-23",
       "scores": {
-        "abie": 3596,
-        "josh_d": 3401,
-        "taylor": 3145,
-        "tyler_b": 2445,
-        "gonzalo": 3250,
-        "josh_b": 3451,
-        "srujith": 3206,
-        "alex": 3542,
-        "becky": 2508,
-        "peter": 3090,
-        "adam": 1916,
-        "tina": 2916
+        "abie": 3612,
+        "josh_d": 3417,
+        "taylor": 3161,
+        "tyler_b": 2453,
+        "gonzalo": 3266,
+        "josh_b": 3467,
+        "srujith": 3222,
+        "alex": 3558,
+        "becky": 2521,
+        "peter": 3106,
+        "adam": 1923,
+        "tina": 2943
       }
     }
   ]
