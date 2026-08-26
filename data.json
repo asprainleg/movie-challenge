@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "August 25, 2026",
+    "lastUpdated": "August 26, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 477927473,
+      "gross": 478042939,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 182048960,
+      "gross": 182153825,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -210,7 +210,7 @@
       "id": "evildead",
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
-      "gross": 32233057,
+      "gross": 32233474,
       "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 125709595,
+      "gross": 125752576,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 539269630,
+      "gross": 541881415,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 854901181,
+      "gross": 858400177,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -291,7 +291,7 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 7307363,
+      "gross": 7322542,
       "metacritic": 37,
       "metacriticLocked": false,
       "metacriticSlug": "super-troopers-3"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 37717407,
+      "gross": 38485565,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 35480242,
+      "gross": 36163981,
       "metacritic": 47,
       "metacriticLocked": false,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -327,7 +327,7 @@
       "id": "insidious",
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
-      "gross": 25106020,
+      "gross": 27207464,
       "metacritic": 47,
       "metacriticLocked": false,
       "metacriticSlug": "insidious-out-of-the-further"
@@ -336,7 +336,7 @@
       "id": "spaweekend",
       "title": "Spa Weekend",
       "releaseDate": "2026-08-21",
-      "gross": 3075694,
+      "gross": 3368717,
       "metacritic": 33,
       "metacriticLocked": false,
       "metacriticSlug": "spa-weekend"
@@ -835,20 +835,20 @@
       "week": 14,
       "weekStart": "2026-08-21",
       "label": "8/21",
-      "lastUpdated": "2026-08-25",
+      "lastUpdated": "2026-08-26",
       "scores": {
-        "abie": 3657,
-        "josh_d": 3462,
-        "taylor": 3206,
-        "tyler_b": 2476,
-        "gonzalo": 3311,
-        "josh_b": 3512,
-        "srujith": 3267,
-        "alex": 3603,
-        "becky": 2558,
-        "peter": 3150,
-        "adam": 1941,
-        "tina": 3010
+        "abie": 3664,
+        "josh_d": 3469,
+        "taylor": 3213,
+        "tyler_b": 2480,
+        "gonzalo": 3318,
+        "josh_b": 3519,
+        "srujith": 3274,
+        "alex": 3610,
+        "becky": 2564,
+        "peter": 3157,
+        "adam": 1944,
+        "tina": 3019
       }
     }
   ]
