@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "August 27, 2026",
+    "lastUpdated": "August 28, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 478198926,
+      "gross": 478303825,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 182275920,
+      "gross": 182362915,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -210,7 +210,7 @@
       "id": "evildead",
       "title": "Evil Dead Burn",
       "releaseDate": "2026-07-10",
-      "gross": 32233938,
+      "gross": 32235476,
       "metacritic": 54,
       "metacriticLocked": false,
       "metacriticSlug": "evil-dead-burn"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 125812757,
+      "gross": 125852989,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 544911855,
+      "gross": 547220500,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -265,7 +265,7 @@
       "title": "I Want Your Sex",
       "releaseDate": "2026-07-31",
       "gross": 1464301,
-      "metacritic": 68,
+      "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "i-want-your-sex"
     },
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 863346542,
+      "gross": 866494421,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -291,7 +291,7 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 7339783,
+      "gross": 7353457,
       "metacritic": 37,
       "metacriticLocked": false,
       "metacriticSlug": "super-troopers-3"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 39703017,
+      "gross": 40468203,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 37199592,
+      "gross": 37824962,
       "metacritic": 47,
       "metacriticLocked": false,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -327,7 +327,7 @@
       "id": "insidious",
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
-      "gross": 30157230,
+      "gross": 31978801,
       "metacritic": 47,
       "metacriticLocked": false,
       "metacriticSlug": "insidious-out-of-the-further"
@@ -336,7 +336,7 @@
       "id": "spaweekend",
       "title": "Spa Weekend",
       "releaseDate": "2026-08-21",
-      "gross": 3896006,
+      "gross": 4234396,
       "metacritic": 33,
       "metacriticLocked": false,
       "metacriticSlug": "spa-weekend"
@@ -346,7 +346,7 @@
       "title": "Coyote vs. Acme",
       "releaseDate": "2026-08-28",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "coyote-vs-acme"
     },
@@ -355,7 +355,7 @@
       "title": "The Dog Stars",
       "releaseDate": "2026-08-28",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 50,
       "metacriticLocked": false,
       "metacriticSlug": "the-dog-stars"
     },
@@ -364,7 +364,7 @@
       "title": "Finding Emily",
       "releaseDate": "2026-08-28",
       "gross": 0,
-      "metacritic": null,
+      "metacritic": 65,
       "metacriticLocked": false,
       "metacriticSlug": "finding-emily"
     }
@@ -849,6 +849,26 @@
         "peter": 3165,
         "adam": 1947,
         "tina": 3031
+      }
+    },
+    {
+      "week": 15,
+      "weekStart": "2026-08-28",
+      "label": "8/28",
+      "lastUpdated": "2026-08-28",
+      "scores": {
+        "abie": 3678,
+        "josh_d": 3483,
+        "taylor": 3247,
+        "tyler_b": 2487,
+        "gonzalo": 3332,
+        "josh_b": 3533,
+        "srujith": 3328,
+        "alex": 3624,
+        "becky": 2573,
+        "peter": 3171,
+        "adam": 1951,
+        "tina": 3038
       }
     }
   ]
