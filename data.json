@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "August 30, 2026",
+    "lastUpdated": "August 31, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 478468859,
+      "gross": 478805859,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -156,7 +156,7 @@
       "id": "invite",
       "title": "The Invite",
       "releaseDate": "2026-06-26",
-      "gross": 25624081,
+      "gross": 25697761,
       "metacritic": 82,
       "metacriticLocked": false,
       "metacriticSlug": "the-invite"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 182520010,
+      "gross": 182778010,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 125931370,
+      "gross": 126061370,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 553261605,
+      "gross": 563821605,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 874814928,
+      "gross": 891507928,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -291,7 +291,7 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 7372794,
+      "gross": 7401794,
       "metacritic": 37,
       "metacriticLocked": false,
       "metacriticSlug": "super-troopers-3"
@@ -300,7 +300,7 @@
       "id": "campmiasma",
       "title": "Teenage Sex and Death at Camp Miasma",
       "releaseDate": "2026-08-07",
-      "gross": 3648191,
+      "gross": 4356054,
       "metacritic": 89,
       "metacriticLocked": false,
       "metacriticSlug": "teenage-sex-and-death-at-camp-miasma"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 42330124,
+      "gross": 46030124,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 39566049,
+      "gross": 43311049,
       "metacritic": 47,
       "metacriticLocked": false,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -327,7 +327,7 @@
       "id": "insidious",
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
-      "gross": 36490107,
+      "gross": 43630107,
       "metacritic": 47,
       "metacriticLocked": false,
       "metacriticSlug": "insidious-out-of-the-further"
@@ -336,7 +336,7 @@
       "id": "spaweekend",
       "title": "Spa Weekend",
       "releaseDate": "2026-08-21",
-      "gross": 4460695,
+      "gross": 5644795,
       "metacritic": 33,
       "metacriticLocked": false,
       "metacriticSlug": "spa-weekend"
@@ -345,7 +345,7 @@
       "id": "coyote",
       "title": "Coyote vs. Acme",
       "releaseDate": "2026-08-28",
-      "gross": 5300000,
+      "gross": 15468754,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "coyote-vs-acme"
@@ -354,7 +354,7 @@
       "id": "dogstars",
       "title": "The Dog Stars",
       "releaseDate": "2026-08-28",
-      "gross": 3000000,
+      "gross": 8000000,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "the-dog-stars"
@@ -855,20 +855,20 @@
       "week": 15,
       "weekStart": "2026-08-28",
       "label": "8/28",
-      "lastUpdated": "2026-08-30",
+      "lastUpdated": "2026-08-31",
       "scores": {
-        "abie": 3692,
-        "josh_d": 3497,
-        "taylor": 3254,
-        "tyler_b": 2495,
-        "gonzalo": 3346,
-        "josh_b": 3547,
-        "srujith": 3347,
-        "alex": 3638,
-        "becky": 2583,
-        "peter": 3185,
-        "adam": 1957,
-        "tina": 3059
+        "abie": 3720,
+        "josh_d": 3524,
+        "taylor": 3287,
+        "tyler_b": 2510,
+        "gonzalo": 3373,
+        "josh_b": 3575,
+        "srujith": 3384,
+        "alex": 3665,
+        "becky": 2605,
+        "peter": 3213,
+        "adam": 1969,
+        "tina": 3097
       }
     }
   ]
