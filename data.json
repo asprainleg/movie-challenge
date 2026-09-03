@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "September 2, 2026",
+    "lastUpdated": "September 3, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -130,7 +130,7 @@
       "title": "The Death of Robin Hood",
       "releaseDate": "2026-06-19",
       "gross": 5355164,
-      "metacritic": 60,
+      "metacritic": 61,
       "metacriticLocked": false,
       "metacriticSlug": "the-death-of-robin-hood"
     },
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 478864240,
+      "gross": 478922726,
       "metacritic": 73,
       "metacriticLocked": false,
       "metacriticSlug": "toy-story-5"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 182809735,
+      "gross": 182849445,
       "metacritic": 70,
       "metacriticLocked": false,
       "metacriticSlug": "minions-and-monsters"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 126077778,
+      "gross": 126095598,
       "metacritic": 42,
       "metacriticLocked": false,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 565796445,
+      "gross": 568063940,
       "metacritic": 88,
       "metacriticLocked": false,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 893742220,
+      "gross": 896395379,
       "metacritic": 66,
       "metacriticLocked": false,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -291,7 +291,7 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 7397313,
+      "gross": 7399278,
       "metacritic": 37,
       "metacriticLocked": false,
       "metacriticSlug": "super-troopers-3"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 46380151,
+      "gross": 47014512,
       "metacritic": 69,
       "metacriticLocked": false,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 43872596,
+      "gross": 44474550,
       "metacritic": 47,
       "metacriticLocked": false,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -327,7 +327,7 @@
       "id": "insidious",
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
-      "gross": 44646339,
+      "gross": 45926552,
       "metacritic": 47,
       "metacriticLocked": false,
       "metacriticSlug": "insidious-out-of-the-further"
@@ -336,7 +336,7 @@
       "id": "spaweekend",
       "title": "Spa Weekend",
       "releaseDate": "2026-08-21",
-      "gross": 5774991,
+      "gross": 5996725,
       "metacritic": 33,
       "metacriticLocked": false,
       "metacriticSlug": "spa-weekend"
@@ -345,7 +345,7 @@
       "id": "coyote",
       "title": "Coyote vs. Acme",
       "releaseDate": "2026-08-28",
-      "gross": 17426408,
+      "gross": 19645442,
       "metacritic": 77,
       "metacriticLocked": false,
       "metacriticSlug": "coyote-vs-acme"
@@ -354,7 +354,7 @@
       "id": "dogstars",
       "title": "The Dog Stars",
       "releaseDate": "2026-08-28",
-      "gross": 8329009,
+      "gross": 9337929,
       "metacritic": 49,
       "metacriticLocked": false,
       "metacriticSlug": "the-dog-stars"
@@ -363,7 +363,7 @@
       "id": "findingemily",
       "title": "Finding Emily",
       "releaseDate": "2026-08-28",
-      "gross": 799100,
+      "gross": 944355,
       "metacritic": 60,
       "metacriticLocked": false,
       "metacriticSlug": "finding-emily"
@@ -855,20 +855,20 @@
       "week": 15,
       "weekStart": "2026-08-28",
       "label": "8/28",
-      "lastUpdated": "2026-09-02",
+      "lastUpdated": "2026-09-03",
       "scores": {
-        "abie": 3724,
-        "josh_d": 3528,
-        "taylor": 3291,
-        "tyler_b": 2512,
-        "gonzalo": 3377,
-        "josh_b": 3579,
-        "srujith": 3390,
-        "alex": 3669,
-        "becky": 2607,
-        "peter": 3217,
-        "adam": 1971,
-        "tina": 3102
+        "abie": 3730,
+        "josh_d": 3534,
+        "taylor": 3298,
+        "tyler_b": 2516,
+        "gonzalo": 3383,
+        "josh_b": 3585,
+        "srujith": 3398,
+        "alex": 3675,
+        "becky": 2611,
+        "peter": 3223,
+        "adam": 1974,
+        "tina": 3110
       }
     }
   ]
