@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "September 7, 2026",
+    "lastUpdated": "September 8, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -14,7 +14,7 @@
       "releaseDate": "2026-05-22",
       "gross": 9743067,
       "metacritic": 71,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "i-love-boosters"
     },
     {
@@ -23,7 +23,7 @@
       "releaseDate": "2026-05-22",
       "gross": 0,
       "metacritic": 38,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "ladies-first-2026"
     },
     {
@@ -32,7 +32,7 @@
       "releaseDate": "2026-05-22",
       "gross": 18041122,
       "metacritic": 52,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "passenger"
     },
     {
@@ -41,7 +41,7 @@
       "releaseDate": "2026-05-22",
       "gross": 177730060,
       "metacritic": 53,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "star-wars-the-mandalorian-and-grogu"
     },
     {
@@ -50,7 +50,7 @@
       "releaseDate": "2026-05-29",
       "gross": 197523513,
       "metacritic": 76,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "backrooms"
     },
     {
@@ -59,7 +59,7 @@
       "releaseDate": "2026-05-29",
       "gross": 20247080,
       "metacritic": 33,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "the-breadwinner-2026"
     },
     {
@@ -68,7 +68,7 @@
       "releaseDate": "2026-05-29",
       "gross": 15569855,
       "metacritic": 69,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "pressure"
     },
     {
@@ -86,7 +86,7 @@
       "releaseDate": "2026-06-05",
       "gross": 64830245,
       "metacritic": 52,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "masters-of-the-universe-2026"
     },
     {
@@ -95,7 +95,7 @@
       "releaseDate": "2026-06-05",
       "gross": 2612490,
       "metacritic": 67,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "power-ballad"
     },
     {
@@ -104,7 +104,7 @@
       "releaseDate": "2026-06-05",
       "gross": 108277762,
       "metacritic": 38,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "scary-movie-6"
     },
     {
@@ -113,7 +113,7 @@
       "releaseDate": "2026-06-12",
       "gross": 116636645,
       "metacritic": 74,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "disclosure-day"
     },
     {
@@ -122,7 +122,7 @@
       "releaseDate": "2026-06-12",
       "gross": 6502610,
       "metacritic": 85,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "the-furious"
     },
     {
@@ -131,7 +131,7 @@
       "releaseDate": "2026-06-19",
       "gross": 5355164,
       "metacritic": 60,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "the-death-of-robin-hood"
     },
     {
@@ -147,9 +147,9 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 479910985,
+      "gross": 479966985,
       "metacritic": 73,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "toy-story-5"
     },
     {
@@ -158,7 +158,7 @@
       "releaseDate": "2026-06-26",
       "gross": 25905536,
       "metacritic": 82,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "the-invite"
     },
     {
@@ -167,7 +167,7 @@
       "releaseDate": "2026-06-26",
       "gross": 18273185,
       "metacritic": 63,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "jackass-best-and-last"
     },
     {
@@ -176,7 +176,7 @@
       "releaseDate": "2026-06-26",
       "gross": 0,
       "metacritic": 52,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "little-brother-2026"
     },
     {
@@ -185,16 +185,16 @@
       "releaseDate": "2026-06-26",
       "gross": 72366532,
       "metacritic": 50,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "supergirl-2026"
     },
     {
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 183162515,
+      "gross": 183163515,
       "metacritic": 70,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "minions-and-monsters"
     },
     {
@@ -203,7 +203,7 @@
       "releaseDate": "2026-07-03",
       "gross": 47066488,
       "metacritic": 49,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "young-washington"
     },
     {
@@ -212,7 +212,7 @@
       "releaseDate": "2026-07-10",
       "gross": 32237058,
       "metacritic": 54,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "evil-dead-burn"
     },
     {
@@ -221,25 +221,25 @@
       "releaseDate": "2026-07-10",
       "gross": 1444318,
       "metacritic": 66,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "gail-daughtry-and-the-celebrity-sex-pass"
     },
     {
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 126206148,
+      "gross": 126203148,
       "metacritic": 42,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "moana-2026"
     },
     {
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 588976965,
+      "gross": 589076965,
       "metacritic": 88,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "the-odyssey-2026"
     },
     {
@@ -248,7 +248,7 @@
       "releaseDate": "2026-07-24",
       "gross": 0,
       "metacritic": 41,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "72-hours-2026"
     },
     {
@@ -257,7 +257,7 @@
       "releaseDate": "2026-07-24",
       "gross": 0,
       "metacritic": 57,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "the-dink"
     },
     {
@@ -266,16 +266,16 @@
       "releaseDate": "2026-07-31",
       "gross": 1478808,
       "metacritic": 67,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "i-want-your-sex"
     },
     {
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 923062495,
+      "gross": 923262495,
       "metacritic": 66,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "spider-man-brand-new-day"
     },
     {
@@ -291,81 +291,81 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 7435725,
+      "gross": 7433725,
       "metacritic": 37,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "super-troopers-3"
     },
     {
       "id": "campmiasma",
       "title": "Teenage Sex and Death at Camp Miasma",
       "releaseDate": "2026-08-07",
-      "gross": 6215713,
+      "gross": 6137685,
       "metacritic": 89,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "teenage-sex-and-death-at-camp-miasma"
     },
     {
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 51380511,
+      "gross": 51730511,
       "metacritic": 69,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "the-end-of-oak-street"
     },
     {
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 49626933,
+      "gross": 49627000,
       "metacritic": 47,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "paw-patrol-the-dino-movie"
     },
     {
       "id": "insidious",
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
-      "gross": 55704759,
+      "gross": 55689759,
       "metacritic": 47,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "insidious-out-of-the-further"
     },
     {
       "id": "spaweekend",
       "title": "Spa Weekend",
       "releaseDate": "2026-08-21",
-      "gross": 6712972,
+      "gross": 6722972,
       "metacritic": 33,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "spa-weekend"
     },
     {
       "id": "coyote",
       "title": "Coyote vs. Acme",
       "releaseDate": "2026-08-28",
-      "gross": 37027602,
+      "gross": 38375357,
       "metacritic": 77,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "coyote-vs-acme"
     },
     {
       "id": "dogstars",
       "title": "The Dog Stars",
       "releaseDate": "2026-08-28",
-      "gross": 13737035,
+      "gross": 13837035,
       "metacritic": 49,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "the-dog-stars"
     },
     {
       "id": "findingemily",
       "title": "Finding Emily",
       "releaseDate": "2026-08-28",
-      "gross": 1431835,
+      "gross": 1435835,
       "metacritic": 60,
-      "metacriticLocked": false,
+      "metacriticLocked": true,
       "metacriticSlug": "finding-emily"
     }
   ],
@@ -875,20 +875,20 @@
       "week": 16,
       "weekStart": "2026-09-04",
       "label": "9/4",
-      "lastUpdated": "2026-09-07",
+      "lastUpdated": "2026-09-08",
       "scores": {
-        "abie": 3779,
-        "josh_d": 3583,
-        "taylor": 3351,
-        "tyler_b": 2543,
-        "gonzalo": 3432,
-        "josh_b": 3634,
-        "srujith": 3465,
-        "alex": 3724,
+        "abie": 3780,
+        "josh_d": 3584,
+        "taylor": 3352,
+        "tyler_b": 2544,
+        "gonzalo": 3433,
+        "josh_b": 3635,
+        "srujith": 3467,
+        "alex": 3725,
         "becky": 2645,
-        "peter": 3271,
-        "adam": 1997,
-        "tina": 3198
+        "peter": 3272,
+        "adam": 1998,
+        "tina": 3199
       }
     }
   ]
