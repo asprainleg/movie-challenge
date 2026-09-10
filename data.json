@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "September 9, 2026",
+    "lastUpdated": "September 10, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 480019594,
+      "gross": 480062392,
       "metacritic": 73,
       "metacriticLocked": true,
       "metacriticSlug": "toy-story-5"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 183154015,
+      "gross": 183161980,
       "metacritic": 70,
       "metacriticLocked": true,
       "metacriticSlug": "minions-and-monsters"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 126207609,
+      "gross": 126211312,
       "metacritic": 42,
       "metacriticLocked": true,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 588986925,
+      "gross": 590589315,
       "metacritic": 88,
       "metacriticLocked": true,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 923466178,
+      "gross": 924968551,
       "metacritic": 66,
       "metacriticLocked": true,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -291,7 +291,7 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 7434584,
+      "gross": 7434995,
       "metacritic": 37,
       "metacriticLocked": true,
       "metacriticSlug": "super-troopers-3"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 51717893,
+      "gross": 52018064,
       "metacritic": 69,
       "metacriticLocked": true,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 49789610,
+      "gross": 50013090,
       "metacritic": 47,
       "metacriticLocked": true,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -327,7 +327,7 @@
       "id": "insidious",
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
-      "gross": 55596459,
+      "gross": 56277026,
       "metacritic": 47,
       "metacriticLocked": true,
       "metacriticSlug": "insidious-out-of-the-further"
@@ -345,7 +345,7 @@
       "id": "coyote",
       "title": "Coyote vs. Acme",
       "releaseDate": "2026-08-28",
-      "gross": 38604848,
+      "gross": 39925749,
       "metacritic": 77,
       "metacriticLocked": true,
       "metacriticSlug": "coyote-vs-acme"
@@ -354,7 +354,7 @@
       "id": "dogstars",
       "title": "The Dog Stars",
       "releaseDate": "2026-08-28",
-      "gross": 13832650,
+      "gross": 14198286,
       "metacritic": 49,
       "metacriticLocked": true,
       "metacriticSlug": "the-dog-stars"
@@ -363,7 +363,7 @@
       "id": "findingemily",
       "title": "Finding Emily",
       "releaseDate": "2026-08-28",
-      "gross": 1454960,
+      "gross": 1498170,
       "metacritic": 60,
       "metacriticLocked": true,
       "metacriticSlug": "finding-emily"
@@ -875,20 +875,20 @@
       "week": 16,
       "weekStart": "2026-09-04",
       "label": "9/4",
-      "lastUpdated": "2026-09-09",
+      "lastUpdated": "2026-09-10",
       "scores": {
-        "abie": 3780,
-        "josh_d": 3584,
-        "taylor": 3352,
-        "tyler_b": 2544,
-        "gonzalo": 3433,
-        "josh_b": 3635,
-        "srujith": 3467,
-        "alex": 3725,
-        "becky": 2646,
-        "peter": 3272,
-        "adam": 1998,
-        "tina": 3198
+        "abie": 3783,
+        "josh_d": 3587,
+        "taylor": 3356,
+        "tyler_b": 2572,
+        "gonzalo": 3436,
+        "josh_b": 3638,
+        "srujith": 3471,
+        "alex": 3728,
+        "becky": 2673,
+        "peter": 3275,
+        "adam": 2000,
+        "tina": 3228
       }
     }
   ]
