@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "September 10, 2026",
+    "lastUpdated": "September 11, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 480062392,
+      "gross": 480087298,
       "metacritic": 73,
       "metacriticLocked": true,
       "metacriticSlug": "toy-story-5"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 183161980,
+      "gross": 183165935,
       "metacritic": 70,
       "metacriticLocked": true,
       "metacriticSlug": "minions-and-monsters"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 126211312,
+      "gross": 126213342,
       "metacritic": 42,
       "metacriticLocked": true,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 590589315,
+      "gross": 591851560,
       "metacritic": 88,
       "metacriticLocked": true,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 924968551,
+      "gross": 925970296,
       "metacritic": 66,
       "metacriticLocked": true,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -291,7 +291,7 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 7434995,
+      "gross": 7435326,
       "metacritic": 37,
       "metacriticLocked": true,
       "metacriticSlug": "super-troopers-3"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 52018064,
+      "gross": 52203737,
       "metacritic": 69,
       "metacriticLocked": true,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 50013090,
+      "gross": 50161951,
       "metacritic": 47,
       "metacriticLocked": true,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -327,7 +327,7 @@
       "id": "insidious",
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
-      "gross": 56277026,
+      "gross": 56760940,
       "metacritic": 47,
       "metacriticLocked": true,
       "metacriticSlug": "insidious-out-of-the-further"
@@ -345,7 +345,7 @@
       "id": "coyote",
       "title": "Coyote vs. Acme",
       "releaseDate": "2026-08-28",
-      "gross": 39925749,
+      "gross": 40823491,
       "metacritic": 77,
       "metacriticLocked": true,
       "metacriticSlug": "coyote-vs-acme"
@@ -354,7 +354,7 @@
       "id": "dogstars",
       "title": "The Dog Stars",
       "releaseDate": "2026-08-28",
-      "gross": 14198286,
+      "gross": 14423107,
       "metacritic": 49,
       "metacriticLocked": true,
       "metacriticSlug": "the-dog-stars"
@@ -363,7 +363,7 @@
       "id": "findingemily",
       "title": "Finding Emily",
       "releaseDate": "2026-08-28",
-      "gross": 1498170,
+      "gross": 1528460,
       "metacritic": 60,
       "metacriticLocked": true,
       "metacriticSlug": "finding-emily"
@@ -889,6 +889,26 @@
         "peter": 3275,
         "adam": 2000,
         "tina": 3228
+      }
+    },
+    {
+      "week": 17,
+      "weekStart": "2026-09-11",
+      "label": "9/11",
+      "lastUpdated": "2026-09-11",
+      "scores": {
+        "abie": 3785,
+        "josh_d": 3589,
+        "taylor": 3358,
+        "tyler_b": 2573,
+        "gonzalo": 3438,
+        "josh_b": 3640,
+        "srujith": 3474,
+        "alex": 3730,
+        "becky": 2674,
+        "peter": 3277,
+        "adam": 2001,
+        "tina": 3230
       }
     }
   ]
