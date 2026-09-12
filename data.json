@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "September 11, 2026",
+    "lastUpdated": "September 12, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 480087298,
+      "gross": 480100989,
       "metacritic": 73,
       "metacriticLocked": true,
       "metacriticSlug": "toy-story-5"
@@ -156,7 +156,7 @@
       "id": "invite",
       "title": "The Invite",
       "releaseDate": "2026-06-26",
-      "gross": 25905536,
+      "gross": 25939377,
       "metacritic": 82,
       "metacriticLocked": true,
       "metacriticSlug": "the-invite"
@@ -192,7 +192,7 @@
       "id": "minions",
       "title": "Minions & Monsters",
       "releaseDate": "2026-07-01",
-      "gross": 183165935,
+      "gross": 183171260,
       "metacritic": 70,
       "metacriticLocked": true,
       "metacriticSlug": "minions-and-monsters"
@@ -201,7 +201,7 @@
       "id": "youngwash",
       "title": "Young Washington",
       "releaseDate": "2026-07-03",
-      "gross": 47066488,
+      "gross": 47070129,
       "metacritic": 49,
       "metacriticLocked": true,
       "metacriticSlug": "young-washington"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 126213342,
+      "gross": 126214270,
       "metacritic": 42,
       "metacriticLocked": true,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 591851560,
+      "gross": 593107275,
       "metacritic": 88,
       "metacriticLocked": true,
       "metacriticSlug": "the-odyssey-2026"
@@ -264,7 +264,7 @@
       "id": "iwantyoursex",
       "title": "I Want Your Sex",
       "releaseDate": "2026-07-31",
-      "gross": 1484065,
+      "gross": 1484433,
       "metacritic": 67,
       "metacriticLocked": true,
       "metacriticSlug": "i-want-your-sex"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 925970296,
+      "gross": 926770888,
       "metacritic": 66,
       "metacriticLocked": true,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -291,7 +291,7 @@
       "id": "supertroopers",
       "title": "Super Troopers 3",
       "releaseDate": "2026-08-07",
-      "gross": 7435326,
+      "gross": 7435972,
       "metacritic": 37,
       "metacriticLocked": true,
       "metacriticSlug": "super-troopers-3"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 52203737,
+      "gross": 52308662,
       "metacritic": 69,
       "metacriticLocked": true,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 50161951,
+      "gross": 50249871,
       "metacritic": 47,
       "metacriticLocked": true,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -327,7 +327,7 @@
       "id": "insidious",
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
-      "gross": 56760940,
+      "gross": 57179771,
       "metacritic": 47,
       "metacriticLocked": true,
       "metacriticSlug": "insidious-out-of-the-further"
@@ -336,7 +336,7 @@
       "id": "spaweekend",
       "title": "Spa Weekend",
       "releaseDate": "2026-08-21",
-      "gross": 6733740,
+      "gross": 6854215,
       "metacritic": 33,
       "metacriticLocked": true,
       "metacriticSlug": "spa-weekend"
@@ -345,7 +345,7 @@
       "id": "coyote",
       "title": "Coyote vs. Acme",
       "releaseDate": "2026-08-28",
-      "gross": 40823491,
+      "gross": 41524918,
       "metacritic": 77,
       "metacriticLocked": true,
       "metacriticSlug": "coyote-vs-acme"
@@ -354,7 +354,7 @@
       "id": "dogstars",
       "title": "The Dog Stars",
       "releaseDate": "2026-08-28",
-      "gross": 14423107,
+      "gross": 14527959,
       "metacritic": 49,
       "metacriticLocked": true,
       "metacriticSlug": "the-dog-stars"
@@ -363,7 +363,7 @@
       "id": "findingemily",
       "title": "Finding Emily",
       "releaseDate": "2026-08-28",
-      "gross": 1528460,
+      "gross": 1541870,
       "metacritic": 60,
       "metacriticLocked": true,
       "metacriticSlug": "finding-emily"
@@ -895,20 +895,20 @@
       "week": 17,
       "weekStart": "2026-09-11",
       "label": "9/11",
-      "lastUpdated": "2026-09-11",
+      "lastUpdated": "2026-09-12",
       "scores": {
-        "abie": 3785,
-        "josh_d": 3589,
-        "taylor": 3358,
-        "tyler_b": 2573,
-        "gonzalo": 3438,
-        "josh_b": 3640,
-        "srujith": 3474,
-        "alex": 3730,
-        "becky": 2674,
-        "peter": 3277,
-        "adam": 2001,
-        "tina": 3230
+        "abie": 3788,
+        "josh_d": 3592,
+        "taylor": 3361,
+        "tyler_b": 2575,
+        "gonzalo": 3441,
+        "josh_b": 3643,
+        "srujith": 3478,
+        "alex": 3733,
+        "becky": 2675,
+        "peter": 3280,
+        "adam": 2003,
+        "tina": 3234
       }
     }
   ]
