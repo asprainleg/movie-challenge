@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "September 14, 2026",
+    "lastUpdated": "September 15, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 480204989,
+      "gross": 480192589,
       "metacritic": 73,
       "metacriticLocked": true,
       "metacriticSlug": "toy-story-5"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 126229270,
+      "gross": 126227887,
       "metacritic": 42,
       "metacriticLocked": true,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 600507275,
+      "gross": 600700025,
       "metacritic": 88,
       "metacriticLocked": true,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 935170888,
+      "gross": 935181631,
       "metacritic": 66,
       "metacriticLocked": true,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -300,7 +300,7 @@
       "id": "campmiasma",
       "title": "Teenage Sex and Death at Camp Miasma",
       "releaseDate": "2026-08-07",
-      "gross": 6229957,
+      "gross": 6549771,
       "metacritic": 89,
       "metacriticLocked": true,
       "metacriticSlug": "teenage-sex-and-death-at-camp-miasma"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 53433662,
+      "gross": 53381105,
       "metacritic": 69,
       "metacriticLocked": true,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 51399871,
+      "gross": 51503529,
       "metacritic": 47,
       "metacriticLocked": true,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -327,7 +327,7 @@
       "id": "insidious",
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
-      "gross": 60529771,
+      "gross": 60583358,
       "metacritic": 47,
       "metacriticLocked": true,
       "metacriticSlug": "insidious-out-of-the-further"
@@ -336,7 +336,7 @@
       "id": "spaweekend",
       "title": "Spa Weekend",
       "releaseDate": "2026-08-21",
-      "gross": 6854215,
+      "gross": 6968556,
       "metacritic": 33,
       "metacriticLocked": true,
       "metacriticSlug": "spa-weekend"
@@ -345,7 +345,7 @@
       "id": "coyote",
       "title": "Coyote vs. Acme",
       "releaseDate": "2026-08-28",
-      "gross": 47764302,
+      "gross": 47681570,
       "metacritic": 77,
       "metacriticLocked": true,
       "metacriticSlug": "coyote-vs-acme"
@@ -354,7 +354,7 @@
       "id": "dogstars",
       "title": "The Dog Stars",
       "releaseDate": "2026-08-28",
-      "gross": 14816959,
+      "gross": 14785507,
       "metacritic": 49,
       "metacriticLocked": true,
       "metacriticSlug": "the-dog-stars"
@@ -895,7 +895,7 @@
       "week": 17,
       "weekStart": "2026-09-11",
       "label": "9/11",
-      "lastUpdated": "2026-09-14",
+      "lastUpdated": "2026-09-15",
       "scores": {
         "abie": 3804,
         "josh_d": 3608,
