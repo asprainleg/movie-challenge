@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "September 15, 2026",
+    "lastUpdated": "September 16, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 480192589,
+      "gross": 480196107,
       "metacritic": 73,
       "metacriticLocked": true,
       "metacriticSlug": "toy-story-5"
@@ -228,7 +228,7 @@
       "id": "moana",
       "title": "Moana",
       "releaseDate": "2026-07-10",
-      "gross": 126227887,
+      "gross": 126228406,
       "metacritic": 42,
       "metacriticLocked": true,
       "metacriticSlug": "moana-2026"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 600700025,
+      "gross": 601731560,
       "metacritic": 88,
       "metacriticLocked": true,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 935181631,
+      "gross": 935858050,
       "metacritic": 66,
       "metacriticLocked": true,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 53381105,
+      "gross": 53453257,
       "metacritic": 69,
       "metacriticLocked": true,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 51503529,
+      "gross": 51563775,
       "metacritic": 47,
       "metacriticLocked": true,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -327,7 +327,7 @@
       "id": "insidious",
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
-      "gross": 60583358,
+      "gross": 60911619,
       "metacritic": 47,
       "metacriticLocked": true,
       "metacriticSlug": "insidious-out-of-the-further"
@@ -345,7 +345,7 @@
       "id": "coyote",
       "title": "Coyote vs. Acme",
       "releaseDate": "2026-08-28",
-      "gross": 47681570,
+      "gross": 48428911,
       "metacritic": 77,
       "metacriticLocked": true,
       "metacriticSlug": "coyote-vs-acme"
@@ -354,7 +354,7 @@
       "id": "dogstars",
       "title": "The Dog Stars",
       "releaseDate": "2026-08-28",
-      "gross": 14785507,
+      "gross": 14815725,
       "metacritic": 49,
       "metacriticLocked": true,
       "metacriticSlug": "the-dog-stars"
@@ -895,20 +895,20 @@
       "week": 17,
       "weekStart": "2026-09-11",
       "label": "9/11",
-      "lastUpdated": "2026-09-15",
+      "lastUpdated": "2026-09-16",
       "scores": {
-        "abie": 3804,
-        "josh_d": 3608,
-        "taylor": 3377,
-        "tyler_b": 2583,
-        "gonzalo": 3457,
-        "josh_b": 3659,
-        "srujith": 3500,
-        "alex": 3749,
+        "abie": 3805,
+        "josh_d": 3609,
+        "taylor": 3378,
+        "tyler_b": 2584,
+        "gonzalo": 3458,
+        "josh_b": 3660,
+        "srujith": 3502,
+        "alex": 3750,
         "becky": 2685,
-        "peter": 3296,
-        "adam": 2010,
-        "tina": 3254
+        "peter": 3297,
+        "adam": 2011,
+        "tina": 3255
       }
     }
   ]
