@@ -2,7 +2,7 @@
   "meta": {
     "name": "Insights Summer Movie Challenge",
     "season": "Summer 2026",
-    "lastUpdated": "October 2, 2026",
+    "lastUpdated": "October 3, 2026",
     "start": "2026-05-22",
     "end": "2026-09-07",
     "metacriticLockDate": "September 8, 2026"
@@ -147,7 +147,7 @@
       "id": "toy5",
       "title": "Toy Story 5",
       "releaseDate": "2026-06-19",
-      "gross": 480291180,
+      "gross": 480294461,
       "metacritic": 73,
       "metacriticLocked": true,
       "metacriticSlug": "toy-story-5"
@@ -156,7 +156,7 @@
       "id": "invite",
       "title": "The Invite",
       "releaseDate": "2026-06-26",
-      "gross": 26075163,
+      "gross": 26086274,
       "metacritic": 82,
       "metacriticLocked": true,
       "metacriticSlug": "the-invite"
@@ -237,7 +237,7 @@
       "id": "odyssey",
       "title": "The Odyssey",
       "releaseDate": "2026-07-17",
-      "gross": 618964915,
+      "gross": 619163510,
       "metacritic": 88,
       "metacriticLocked": true,
       "metacriticSlug": "the-odyssey-2026"
@@ -273,7 +273,7 @@
       "id": "spiderman",
       "title": "Spider-Man: Brand New Day",
       "releaseDate": "2026-07-31",
-      "gross": 951771707,
+      "gross": 952026970,
       "metacritic": 66,
       "metacriticLocked": true,
       "metacriticSlug": "spider-man-brand-new-day"
@@ -309,7 +309,7 @@
       "id": "endofstreet",
       "title": "The End of Oak Street",
       "releaseDate": "2026-08-14",
-      "gross": 54185388,
+      "gross": 54188511,
       "metacritic": 69,
       "metacriticLocked": true,
       "metacriticSlug": "the-end-of-oak-street"
@@ -318,7 +318,7 @@
       "id": "pawpatrol",
       "title": "PAW Patrol: The Dino Movie",
       "releaseDate": "2026-08-14",
-      "gross": 52949549,
+      "gross": 52959426,
       "metacritic": 47,
       "metacriticLocked": true,
       "metacriticSlug": "paw-patrol-the-dino-movie"
@@ -327,7 +327,7 @@
       "id": "insidious",
       "title": "Insidious: Out of the Further",
       "releaseDate": "2026-08-21",
-      "gross": 65399117,
+      "gross": 65448995,
       "metacritic": 47,
       "metacriticLocked": true,
       "metacriticSlug": "insidious-out-of-the-further"
@@ -354,7 +354,7 @@
       "id": "dogstars",
       "title": "The Dog Stars",
       "releaseDate": "2026-08-28",
-      "gross": 14960718,
+      "gross": 14961776,
       "metacritic": 49,
       "metacriticLocked": true,
       "metacriticSlug": "the-dog-stars"
@@ -955,20 +955,20 @@
       "week": 20,
       "weekStart": "2026-10-02",
       "label": "10/2",
-      "lastUpdated": "2026-10-02",
+      "lastUpdated": "2026-10-03",
       "scores": {
-        "abie": 3838,
-        "josh_d": 3642,
-        "taylor": 3411,
-        "tyler_b": 2602,
-        "gonzalo": 3491,
-        "josh_b": 3693,
-        "srujith": 3570,
-        "alex": 3784,
-        "becky": 2702,
-        "peter": 3330,
-        "adam": 2029,
-        "tina": 3294
+        "abie": 3840,
+        "josh_d": 3644,
+        "taylor": 3413,
+        "tyler_b": 2603,
+        "gonzalo": 3493,
+        "josh_b": 3695,
+        "srujith": 3572,
+        "alex": 3786,
+        "becky": 2703,
+        "peter": 3332,
+        "adam": 2030,
+        "tina": 3296
       }
     }
   ]
